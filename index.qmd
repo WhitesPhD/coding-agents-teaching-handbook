@@ -6,6 +6,6 @@ The main text does not depend on a particular product. Notes headed *In Claude C
 
 The templates in the appendix are also files in the `templates/` folder of the repository. None has been tested on a live module.
 
-This is general guidance, not legal advice. Your own institution's policy takes precedence.
+This is general guidance and not legal advice. Your own institution's policy takes precedence.
 
 **Licence.** Text and templates are released under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/): you may reuse and adapt them for non-commercial purposes with attribution.

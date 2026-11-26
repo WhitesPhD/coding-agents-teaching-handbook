@@ -31,7 +31,7 @@ Individualised data or parameters (chapter 5) deter copying between students. Th
 
 **Sector position.** The [Russell Group principles](https://russellgroup.ac.uk/policy/policy-briefings/principles-use-generative-ai-tools-education) commit member universities to adapting teaching and assessment, upholding academic integrity, and attempting fair access where tools sit behind a paywall. If an assessment permits or expects AI use, check that every student can use an adequate tool at no cost.
 
-**Detection software is not a design strategy.** [UCL](https://www.ucl.ac.uk/teaching-learning/artificial-intelligence-education/using-ai-tools-assessment), for example, states that it is not investing in detection software and that staff must not submit student work to such tools.
+**Detection software.** [UCL](https://www.ucl.ac.uk/teaching-learning/artificial-intelligence-education/using-ai-tools-assessment) states that it is not investing in detection software and that staff must not submit student work to such tools.
 
 **Lead times.** Changing the assessment type or weighting usually needs a module amendment approved months ahead. A stress test in the spring leaves time to change the following year's assessment.
 

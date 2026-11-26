@@ -27,9 +27,9 @@ Compile the file and fix any errors before you finish.
 **What to watch.**
 
 - **Length.** Agents write too much. State the teaching time and the number of examples.
-- **Level.** It does not know what your students find hard. Say so in the plan: where to slow down, which step needs intuition before algebra.
+- **Level.** The agent has no information about what your students find hard. Say so in the plan: where to slow down, which step needs intuition before algebra.
 - **Invented support.** References, dates, numbers in a motivating example and attributed quotations all need checking against a source (chapter 8).
-- **Flat prose.** Material written from generic knowledge reads like a textbook summary. Your own notes are what give the module its character.
+- **Flat prose.** Material written from generic knowledge reads like a textbook summary. Your own notes give the module its character.
 
 **Updating a module year to year.** Ask the agent to list what has dated: data ending in an old year, superseded references, examples overtaken by events. Rerun the figure scripts with current data. Review the changes as a comparison against last year's files before accepting them.
 

@@ -1,6 +1,6 @@
 # Student data, copyright and institutional policy
 
-Your own teaching material is yours to use with these tools; student work and third-party material are not. Most of the risk in using an agent for teaching comes from the second and third categories, and the rules for both are set by your university, not by you. This chapter is general guidance and not legal advice.
+Your own teaching material is yours to use with these tools; student work and third-party material are not. Most of the risk in using an agent for teaching comes from the second and third categories, and your university sets the rules for both. This chapter is general guidance and not legal advice.
 
 **Three kinds of material.**
 
@@ -14,15 +14,15 @@ Your own teaching material is yours to use with these tools; student work and th
 
 - [Liverpool](https://www.liverpool.ac.uk/about/the-university/reports-policies-and-governance/ai-at-liverpool/policies-and-guidance/guidance-learning-teaching-and-assessment) lists uploading student work or personal data to public AI platforms as unacceptable without a data protection impact assessment or advice from the Data Protection Officer.
 - [York](https://www.york.ac.uk/about/ai/education/marking_and_feedback/) requires explicit student permission before student work or details go into a generative AI tool.
-- [Exeter](https://www.exeter.ac.uk/v8media/specificsites/tqa/Guidance_on_AI_in_Marking_and_Feedback.pdf) notes that student work is by default the student's intellectual property.
+- [Exeter](https://www.exeter.ac.uk/v8media/specificsites/epqs/Guidance_on_AI_in_Marking_and_Feedback.pdf) notes that student work is by default the student's intellectual property.
 
 Anonymising helps but does not settle the matter: an essay can identify its author through its content, and the work still belongs to the student.
 
 **Approved tools and account types.** Universities approve specific tools under specific contracts. A personal subscription to the same product is a different legal arrangement. The distinction that usually matters is whether the provider may train on what you send and how long it is kept.
 
-> **In Claude Code.** The [data usage page](https://code.claude.com/docs/en/data-usage) distinguishes two cases. On personal plans (Free, Pro, Max), data is used to train models when the account's setting allows it, with retention of five years if allowed and 30 days if not. Under commercial terms (Team, Enterprise, API), prompts and code are not used for training unless the customer opts in, and standard retention is 30 days.
+> **In Claude Code.** The [data usage page](https://code.claude.com/docs/en/data-usage) distinguishes two cases. On personal plans (Free, Pro, Max, Ultra), data is used to train models when the account's setting allows it, with retention of five years if allowed and 30 days if not. Under commercial terms (Team, Enterprise, API), prompts and code are not used for training unless the customer opts in, and standard retention is 30 days.
 >
-> Session transcripts are also stored on your own machine, unencrypted, for 30 days by default. On a shared or unencrypted laptop, that is a further copy of anything you worked on.
+> Session transcripts are also stored on your own machine, unencrypted, for 30 days by default, and transcripts of sessions started in the desktop app are kept with no age limit unless you set one. On a shared or unencrypted laptop, that is a further copy of anything you worked on.
 
 **Third-party teaching material.** Putting a textbook chapter or a publisher's test bank into a prompt is copying. Whether it is licensed depends on your university's agreements.
 

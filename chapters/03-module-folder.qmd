@@ -1,8 +1,8 @@
 # Setting up a module folder
 
-One folder per module, with your source material separated from what the agent produces, and one short instruction file at the top. Most of the quality of what follows depends on this setup.
+Each module needs one folder, with your source material separated from what the agent produces and one short instruction file at the top. Most of the quality of what follows depends on this setup.
 
-**Folder layout.** A layout that works for most modules:
+**Folder layout.** The layout below works for most modules.
 
 ```text
 ECN000-module-name/
@@ -34,4 +34,4 @@ Keep it to one or two pages. A long file is followed less reliably than a short 
 
 > **In Claude Code.** The instruction file is called `CLAUDE.md` and sits at the top of the folder. It is loaded at the start of every session, and the documentation recommends keeping it under 200 lines ([memory](https://code.claude.com/docs/en/memory)). The `/init` command drafts one from the folder's contents. A line such as `@assessment/rubric.md` imports another file.
 >
-> Claude Code treats the file as context, not as an enforced rule, so the read-only convention for `sources/` should also be set as a deny rule in the [permission settings](https://code.claude.com/docs/en/permissions). Claude Code also reads a file named `AGENTS.md` when no `CLAUDE.md` is present, which helps if colleagues use different tools. Separately, it keeps its own notes on your corrections (auto memory); review them occasionally.
+> Claude Code treats the file as context and does not enforce it, so the read-only convention for `sources/` should also be set as a deny rule in the [permission settings](https://code.claude.com/docs/en/permissions). Claude Code also reads a file named `AGENTS.md` when no `CLAUDE.md` is present, which helps if colleagues use different tools. Separately, it keeps its own notes on your corrections (auto memory); review them occasionally.

@@ -12,7 +12,7 @@ An assessment can be tested the way it will be used: one agent sets it, a second
 | Candidate | Only what a student receives | A complete submission | The rubric's marking notes, the setter's intentions, earlier rounds |
 | Examiner | The submission and the rubric | A mark per criterion with a one-line justification | Who or what wrote the submission |
 
-The separation is the design. A candidate that has seen the marking notes, or an examiner that knows the submission is machine-written, tells you nothing.
+The design depends on this separation: a candidate that has seen the marking notes, or an examiner that knows the submission is machine-written, tells you nothing.
 
 **One round.**
 
@@ -26,7 +26,7 @@ The separation is the design. A candidate that has seen the marking notes, or an
 
 Each pass runs left to right; an unmet stopping rule sends the examiner's report back to the setter.
 
-**The stopping rule.** Set it before the first round. For example: stop when the candidate's mark falls below 50, or after five rounds, or when the setter cannot propose a change that respects the constraints. The third condition matters. Some assessments cannot be made robust in their current format, and a report that says so is a useful result.
+**The stopping rule.** Set it before the first round. For example: stop when the candidate's mark falls below 50, or after five rounds, or when the setter cannot propose a change that respects the constraints. The third condition matters because some assessments cannot be made robust in their current format, and a report that says so is a useful result.
 
 **Constraints on the setter.** Without them the loop converges on an assessment that defeats the candidate and is worthless for students. State them as rules the setter must satisfy in every round:
 
@@ -42,8 +42,8 @@ The changes left open by these constraints mostly tie the task to something the 
 
 **What you still do.**
 
-- **Mark the final attempt yourself.** The examiner is a language model, and chapter 7 documents how such marks are compressed towards the middle. Its marks steer the loop. They are not evidence that the assessment is safe.
-- **Judge validity.** Read the final version as a student would. A harder assessment is not a better one.
+- **Mark the final attempt yourself.** The examiner is a language model, and chapter 7 documents how such marks are compressed towards the middle. Its marks steer the loop but are not evidence that the assessment is safe.
+- **Judge validity.** Read the final version as a student would. A harder assessment is not necessarily a better one.
 - **Check the examiner once.** Before trusting the loop, give the examiner two or three model answers you have written at known standards and see whether it ranks them correctly. Do not use real student scripts for this unless your university permits it (chapter 9).
 
 **Limits.**
@@ -55,7 +55,7 @@ The changes left open by these constraints mostly tie the task to something the 
 
 **Other uses of the same three roles.** For an invigilated exam, where AI use is not the concern, the loop still helps with quality: the candidate reports ambiguous wording and questions it could not finish in the time, and the examiner reports where the marking scheme gave no guidance. The setter revises for clarity instead of robustness.
 
-**By field.** For empirical coursework, give the candidate the dataset and let it run code. For a theory problem set, the examiner needs full worked solutions, not only final answers. For essay-based modules, expect the examiner's marks to be least reliable, and rely more on your own marking of the final attempt.
+**By field.** For empirical coursework, give the candidate the dataset and let it run code. For a theory problem set, the examiner needs full worked solutions in addition to final answers. For essay-based modules, expect the examiner's marks to be least reliable, and rely more on your own marking of the final attempt.
 
 > **In Claude Code.** The candidate and examiner are [subagents](https://code.claude.com/docs/en/sub-agents), each a file in `.claude/agents/` with its own instructions and tool list. Setting `omitClaudeMd: true` starts a subagent without the module instruction file, which the candidate needs. The main session plays the setter and runs the loop from a skill.
 >

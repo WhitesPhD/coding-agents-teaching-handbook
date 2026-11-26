@@ -55,7 +55,7 @@ description: Draft a problem set with verified solutions for one week of the mod
 
 Write a problem set for $ARGUMENTS.
 
-1. Read MODULE.md, the lecture notes for that week, and two past problem sets
+1. Read CLAUDE.md, the lecture notes for that week, and two past problem sets
    in problem-sets/ as the standard for style and difficulty.
 2. Propose a one-page plan: each question, the outcome it tests, the expected
    time, and whether it is mechanical, applied or stretch. Wait for approval.
@@ -243,7 +243,7 @@ Settings (edit before running):
   or when no revision satisfies the constraints.
 
 Constraints on every revision:
-  - every learning outcome in MODULE.md that the original assessed is still assessed
+  - every learning outcome in CLAUDE.md that the original assessed is still assessed
   - format, weighting, word limit and time allowance unchanged
   - a well-prepared student can complete it using only what the module taught
   - no trick wording and no reliance on information students cannot obtain

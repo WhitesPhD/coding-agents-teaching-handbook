@@ -15,28 +15,28 @@ Everything the agent produces is a draft until it has passed a check that does n
 | Inconsistent notation across weeks | Consistency pass against `MODULE.md` | Agent |
 | Wrong level, emphasis or tone | Your reading | You |
 
-**Why a fresh session.** A session that has just written a solution tends to confirm it when asked to check. A second session that sees only the question has no stake in the first answer. Where the two disagree, one of them is wrong, and that is where to spend your time.
+**Why a fresh session.** A session that has just written a solution tends to confirm it when asked to check. A second session that sees only the question has not seen the first answer. Where the two disagree, one of them is wrong, and that is where to spend your time.
 
-**An independent reviewer for everything, not only solutions.** A second agent should review every piece of material before the lecturer reads it. The agent that wrote the slides does not check them. A separate one does, in three passes:
+**An independent reviewer for all material.** A second agent should review every piece of material before the lecturer reads it. The agent that wrote the slides does not check them; a separate one does, in three passes:
 
 1. **Correctness.** Every statement, equation, number and reference is checked against the sources and the code output.
 2. **Typos and mechanics.** Spelling, broken cross-references, mislabelled figures, equations that do not compile, slides that overflow.
-3. **Conformance to a written standard.** The material is compared with a document that states how it should be written: the notation and house style in the module file, or a longer style guide stored as a workflow file (chapter 11). A guide to academic writing style, applied to papers and slides, is one example.
+3. **Conformance to a written standard.** The material is compared with a document that states how it should be written: the notation and house style in the instruction file, or a longer style guide stored as a workflow file (chapter 11). A guide to academic writing style, applied to papers and slides, is one example.
 
 The third pass depends on the standard being written down. "Make it sound like me" gives the reviewer nothing to check against. A page of explicit rules does.
 
-Keep the passes separate and ask for a list of findings with locations, not a corrected file. You then decide which findings to accept, and the writing agent applies them. In practice this catches many errors before the lecturer's own reading, though it does not replace that reading.
+Keep the passes separate and ask for a list of findings with locations rather than a corrected file. You then decide which findings to accept, and the writing agent applies them. In practice this catches many errors before the lecturer's own reading, though it does not replace that reading.
 
 **Independent re-derivation in practice.**
 
 1. Session A writes questions and solutions.
 2. Session B receives the questions only and writes its own solutions.
 3. A script or a third session compares the two and lists every disagreement.
-4. You resolve the disagreements. Agreement is evidence, not proof: both sessions can share a misconception.
+4. You resolve the disagreements. Agreement does not prove correctness, because both sessions can share a misconception.
 
 **References.** Require a DOI or stable URL for every reference in material the agent writes, and have each one opened and checked. Do not accept a reference the agent cannot open. For the handful of papers a lecture rests on, check them yourself.
 
-**What cannot be delegated.** Whether an explanation is pitched at the right level, whether an example is fair to all students, and whether an argument is the one you want to teach. Read everything that goes to students at least once in full.
+**What cannot be delegated.** Only you can judge whether an explanation is pitched at the right level, whether an example is fair to all students, and whether an argument is the one you want to teach. Read everything that goes to students at least once in full.
 
 **Before release.**
 
@@ -44,7 +44,7 @@ Keep the passes separate and ask for a list of findings with locations, not a co
 - [ ] Code and notebooks run clean from top to bottom
 - [ ] Derivations and proofs independently re-derived
 - [ ] Every reference opened and confirmed
-- [ ] Notation checked against the module file
+- [ ] Notation checked against the instruction file
 - [ ] Independent review done: correctness, typos, conformance to the written standard
 - [ ] Read in full by the lecturer
 

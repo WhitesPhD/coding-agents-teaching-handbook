@@ -1,6 +1,6 @@
 # What a coding agent is
 
-A coding agent does the work in your files; a chat window only talks about it. That one difference explains both why it is more useful for teaching preparation and why it needs more care.
+A coding agent works directly on the files in a folder, whereas a chat window works only on what is pasted or uploaded into the conversation. That one difference explains both why it is more useful for teaching preparation and why it needs more care.
 
 |  | Chat window | Coding agent |
 | --- | --- | --- |
@@ -12,14 +12,14 @@ A coding agent does the work in your files; a chat window only talks about it. T
 
 **What this changes in practice.** You can ask for a problem set and its solutions, have the solutions executed, and get back the files with the numerical answers already checked. You can ask for the notation in ten weeks of slides to be made consistent. Neither is practical by copying and pasting.
 
-**What it does not change.** The model still makes confident mistakes: a sign error in a derivation, a reference that does not exist, a question that is harder than intended. Running code catches numerical errors. It does not catch a wrong economic argument. Chapter 8 covers checking.
+**What it does not change.** The model still makes confident mistakes: a sign error in a derivation, a reference that does not exist, a question that is harder than intended. Running code catches numerical errors but not a wrong economic argument; chapter 8 covers checking.
 
 **Permissions.** Because the agent can edit and delete files, every product has a setting for what it may do without asking. Three habits are enough to start:
 
-- Open the agent in a folder made for the module, not in your home folder.
+- Open the agent in a folder made for the module and never in your home folder.
 - Begin in the mode that asks before each edit, and relax it once you have seen how the agent behaves.
 - Keep the folder under version control or in a synced drive with file history, so any change can be undone.
 
 > **In Claude Code.** It runs in a terminal, a desktop app, VS Code, JetBrains IDEs and the browser ([platforms](https://code.claude.com/docs/en/platforms)). The desktop app is the easiest start for colleagues who do not use a terminal.
 >
-> The [permission modes](https://code.claude.com/docs/en/permission-modes) are Manual (asks before edits and commands), `acceptEdits` (edits files in the folder without asking), `plan` (reads and proposes, changes nothing until you approve) and `auto` (acts without asking, with a separate model reviewing its actions). Recent versions start interactive sessions in `auto`, so switch to Manual or `plan` for a first session. In the terminal, Shift+Tab cycles through the modes.
+> The [permission modes](https://code.claude.com/docs/en/permission-modes) are Manual (asks before edits and commands), `acceptEdits` (edits files in the folder without asking), `plan` (reads and proposes, changes nothing until you approve) and `auto` (acts without asking, with a separate model reviewing its actions). Recent versions start interactive terminal and VS Code sessions in `auto`, so switch to Manual or `plan` for a first session. In the terminal, Shift+Tab cycles through the modes.

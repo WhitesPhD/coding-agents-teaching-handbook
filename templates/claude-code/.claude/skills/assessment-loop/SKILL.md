@@ -11,7 +11,7 @@ Settings (edit before running):
   or when no revision satisfies the constraints.
 
 Constraints on every revision:
-  - every learning outcome in MODULE.md that the original assessed is still assessed
+  - every learning outcome in CLAUDE.md that the original assessed is still assessed
   - format, weighting, word limit and time allowance unchanged
   - a well-prepared student can complete it using only what the module taught
   - no trick wording and no reliance on information students cannot obtain

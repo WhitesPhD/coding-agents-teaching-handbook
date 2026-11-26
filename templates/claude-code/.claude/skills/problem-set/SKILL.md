@@ -5,7 +5,7 @@ description: Draft a problem set with verified solutions for one week of the mod
 
 Write a problem set for $ARGUMENTS.
 
-1. Read MODULE.md, the lecture notes for that week, and two past problem sets
+1. Read CLAUDE.md, the lecture notes for that week, and two past problem sets
    in problem-sets/ as the standard for style and difficulty.
 2. Propose a one-page plan: each question, the outcome it tests, the expected
    time, and whether it is mechanical, applied or stretch. Wait for approval.
