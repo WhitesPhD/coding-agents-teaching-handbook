@@ -1,3 +1,8 @@
+---
+toc: true
+toc-title: "Templates"
+---
+
 # Templates {.unnumbered}
 
 Eight starting points to copy and edit. B, D, G and H use Claude Code's file formats and are easily adapted; the others work with any tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.

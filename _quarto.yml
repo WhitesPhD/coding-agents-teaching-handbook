@@ -31,6 +31,10 @@ book:
 format:
   html:
     theme: [cosmo, custom.scss]
-    toc: true
-    toc-title: "On this page"
+    toc: false
+    grid:
+      sidebar-width: 280px
+      body-width: 760px
+      margin-width: 180px
+      gutter-width: 2.5rem
     number-sections: true

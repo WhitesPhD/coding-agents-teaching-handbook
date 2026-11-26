@@ -33,17 +33,10 @@ main.content blockquote {
   line-height: 1.65;
 }
 
-main.content {
-  max-width: 46rem;
-}
-
-// Chapter title with a thin accent rule underneath
+// Chapter title
 .quarto-title .title {
   font-size: 2.1rem;
   letter-spacing: -0.01em;
-  padding-bottom: 0.6rem;
-  border-bottom: 3px solid $primary;
-  display: inline-block;
 }
 
 h2, h3 {
@@ -128,4 +121,17 @@ pre code { font-size: 0.85rem; }
 // Figures
 main.content img {
   border-radius: 6px;
+}
+
+// Pages without a contents column: centre the text in the space right of the menu
+@media (min-width: 992px) {
+  body.docked.fullcontent main.content {
+    grid-column: body-start / screen-end;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
