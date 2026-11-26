@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2e4c97a43803ed481078bdef9528fe0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A coding agent does the work in your files; a chat window only talks about it. That one difference explains both why it is more useful for teaching preparation and why it needs more care.</p>
+<p>A coding agent works directly on the files in a folder, whereas a chat window works only on what is pasted or uploaded into the conversation. That one difference explains both why it is more useful for teaching preparation and why it needs more care.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -274,16 +274,16 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p><strong>What this changes in practice.</strong> You can ask for a problem set and its solutions, have the solutions executed, and get back the files with the numerical answers already checked. You can ask for the notation in ten weeks of slides to be made consistent. Neither is practical by copying and pasting.</p>
-<p><strong>What it does not change.</strong> The model still makes confident mistakes: a sign error in a derivation, a reference that does not exist, a question that is harder than intended. Running code catches numerical errors. It does not catch a wrong economic argument. Chapter 8 covers checking.</p>
+<p><strong>What it does not change.</strong> The model still makes confident mistakes: a sign error in a derivation, a reference that does not exist, a question that is harder than intended. Running code catches numerical errors but not a wrong economic argument; chapter 8 covers checking.</p>
 <p><strong>Permissions.</strong> Because the agent can edit and delete files, every product has a setting for what it may do without asking. Three habits are enough to start:</p>
 <ul>
-<li>Open the agent in a folder made for the module, not in your home folder.</li>
+<li>Open the agent in a folder made for the module and never in your home folder.</li>
 <li>Begin in the mode that asks before each edit, and relax it once you have seen how the agent behaves.</li>
 <li>Keep the folder under version control or in a synced drive with file history, so any change can be undone.</li>
 </ul>
 <blockquote class="blockquote">
 <p><strong>In Claude Code.</strong> It runs in a terminal, a desktop app, VS Code, JetBrains IDEs and the browser (<a href="https://code.claude.com/docs/en/platforms">platforms</a>). The desktop app is the easiest start for colleagues who do not use a terminal.</p>
-<p>The <a href="https://code.claude.com/docs/en/permission-modes">permission modes</a> are Manual (asks before edits and commands), <code>acceptEdits</code> (edits files in the folder without asking), <code>plan</code> (reads and proposes, changes nothing until you approve) and <code>auto</code> (acts without asking, with a separate model reviewing its actions). Recent versions start interactive sessions in <code>auto</code>, so switch to Manual or <code>plan</code> for a first session. In the terminal, Shift+Tab cycles through the modes.</p>
+<p>The <a href="https://code.claude.com/docs/en/permission-modes">permission modes</a> are Manual (asks before edits and commands), <code>acceptEdits</code> (edits files in the folder without asking), <code>plan</code> (reads and proposes, changes nothing until you approve) and <code>auto</code> (acts without asking, with a separate model reviewing its actions). Recent versions start interactive terminal and VS Code sessions in <code>auto</code>, so switch to Manual or <code>plan</code> for a first session. In the terminal, Shift+Tab cycles through the modes.</p>
 </blockquote>
 
 

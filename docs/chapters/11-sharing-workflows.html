@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2e4c97a43803ed481078bdef9528fe0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Once a workflow works for one module, write it down as a file the agent can follow, and share the file. A department then needs each workflow to be worked out once, not once per lecturer.</p>
+<p>Once a workflow works for one module, write it down as a file the agent can follow, and share the file. A department then needs each workflow to be worked out only once for all its lecturers.</p>
 <p><strong>What is worth sharing.</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -259,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Checker</td>
-<td>The independent verifier from chapter 8, as a stored definition</td>
+<td>The independent checker from chapter 8, as a stored definition</td>
 <td>Lecturers and teaching assistants</td>
 </tr>
 <tr class="even">
@@ -277,8 +277,8 @@ ul.task-list li input[type="checkbox"] {
 <li>What the finished output looks like and where it goes.</li>
 <li>What the agent must not do.</li>
 </ul>
-<p>Test it by running it on a module other than the one it was written for. If it only works on your module, the module-specific parts belong in the instruction file, not the workflow.</p>
-<p><strong>Building a written standard for the reviewer.</strong> The third review pass in chapter 8 needs a document that says how your material should be written. It is built from your own work, not written from scratch.</p>
+<p>Test it by running it on a module other than the one it was written for. If it only works on your module, the module-specific parts belong in the instruction file.</p>
+<p><strong>Building a written standard for the reviewer.</strong> The third review pass in chapter 8 needs a document that says how your material should be written. It is built from your own work.</p>
 <ol type="1">
 <li><strong>Collect examples.</strong> Five to ten pieces you consider your best: lecture notes, slides, problem sets, or papers if the standard is for research writing.</li>
 <li><strong>Have the agent extract the rules.</strong> Ask it to read them and list what is consistent: sentence and paragraph length, how a slide is structured, how a result is introduced, how equations are referenced, what is never done.</li>
@@ -289,9 +289,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Test it on old material.</strong> Run the reviewer on something you wrote before the standard existed, and on something an agent wrote. Adjust rules that produce false alarms.</li>
 <li><strong>Keep it current.</strong> Each time you correct the agent’s writing by hand, ask whether the correction is a rule. If so, add it.</li>
 </ol>
-<p>One to three pages is enough. A standard built this way is specific to its author, so share the method and the template with colleagues, not your own rules. A skeleton is in the appendix.</p>
-<p><strong>Where to keep shared files.</strong> A departmental repository or shared drive, with one owner per file. Keep it free of student data and of assessment content: workflows and templates only.</p>
-<p><strong>Teaching assistants.</strong> Give assistants the checker and the problem-set workflow, not the assessment folder. Agree in advance what they may use an agent for, and apply the same rule to all assistants on a module.</p>
+<p>One to three pages is enough. A standard built this way is specific to its author, so share the method and the template with colleagues rather than your own rules. A skeleton is in the appendix.</p>
+<p><strong>Where to keep shared files.</strong> Keep them in a departmental repository or shared drive, with one owner per file, and keep that location free of student data and of assessment content: workflows and templates only.</p>
+<p><strong>Teaching assistants.</strong> Give assistants the checker and the problem-set workflow but not the assessment folder. Agree in advance what they may use an agent for, and apply the same rule to all assistants on a module.</p>
 <p><strong>Handing a module over.</strong> The instruction file with its decisions log, the figure and solution scripts, and the workflow files together are the handover. A successor can ask the agent to explain how any week’s material was built and regenerate it.</p>
 <blockquote class="blockquote">
 <p><strong>In Claude Code.</strong> A workflow file is a <a href="https://code.claude.com/docs/en/skills">skill</a>: a folder containing a <code>SKILL.md</code>, stored in <code>.claude/skills/&lt;name&gt;/</code> inside the module folder, or in <code>~/.claude/skills/&lt;name&gt;/</code> for personal use across modules. It runs when you type <code>/&lt;name&gt;</code>, or automatically when its description matches the task. Sharing is by committing <code>.claude/skills/</code> to the shared repository.</p>
