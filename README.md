@@ -35,7 +35,3 @@ Daniele Bianchi
 ## Licence
 
 Text and templates: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). See `LICENSE`.
-
-## Acknowledgement
-
-The idea of organising a guide around the agent's working files and repeatable workflows comes from Edward Chalk's [Claude Code Power User](https://github.com/pcoz/claude_code_power_user_ebook). No text from that book is reused here.
