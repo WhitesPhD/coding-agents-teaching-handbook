@@ -32,7 +32,7 @@ Test it by running it on a module other than the one it was written for. If it o
 7. **Test it on old material.** Run the reviewer on something you wrote before the standard existed, and on something an agent wrote. Adjust rules that produce false alarms.
 8. **Keep it current.** Each time you correct the agent's writing by hand, ask whether the correction is a rule. If so, add it.
 
-One to three pages is enough. A standard built this way is specific to its author, so share the method and the template with colleagues rather than your own rules. A skeleton is in the appendix.
+One to three pages is enough. A standard built this way is specific to its author, so share the method and the template with colleagues rather than your own rules. A skeleton is [template G](templates.qmd#tpl-g) in the appendix.
 
 **Where to keep shared files.** Keep them in a departmental repository or shared drive, with one owner per file, and keep that location free of student data and of assessment content: workflows and templates only.
 

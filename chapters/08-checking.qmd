@@ -21,7 +21,7 @@ Everything the agent produces is a draft until it has passed a check that does n
 
 1. **Correctness.** Every statement, equation, number and reference is checked against the sources and the code output.
 2. **Typos and mechanics.** Spelling, broken cross-references, mislabelled figures, equations that do not compile, slides that overflow.
-3. **Conformance to a written standard.** The material is compared with a document that states how it should be written: the notation and house style in the instruction file, or a longer style guide stored as a workflow file (chapter 11). A guide to academic writing style, applied to papers and slides, is one example.
+3. **Conformance to a written standard.** The material is compared with a document that states how it should be written: the notation and house style in the instruction file, or a longer style guide stored as a workflow file (chapter 11 and [template G](templates.qmd#tpl-g)). A guide to academic writing style, applied to papers and slides, is one example.
 
 The third pass depends on the standard being written down. "Make it sound like me" gives the reviewer nothing to check against. A page of explicit rules does.
 
@@ -48,4 +48,4 @@ Keep the passes separate and ask for a list of findings with locations rather th
 - [ ] Independent review done: correctness, typos, conformance to the written standard
 - [ ] Read in full by the lecturer
 
-> **In Claude Code.** A [subagent](https://code.claude.com/docs/en/sub-agents) runs in its own context window and can be limited to read-only tools, which makes it a natural session B. Store it as a file in `.claude/agents/` so the same checker is used every time (appendix).
+> **In Claude Code.** A [subagent](https://code.claude.com/docs/en/sub-agents) runs in its own context window and can be limited to read-only tools, which makes it a natural session B. Store it as a file in `.claude/agents/` so the same checker is used every time ([template D](templates.qmd#tpl-d) in the appendix).

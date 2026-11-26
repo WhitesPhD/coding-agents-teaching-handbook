@@ -7,7 +7,7 @@ toc-title: "Templates"
 
 Eight starting points to copy and edit. B, D, G and H use Claude Code's file formats and are easily adapted; the others work with any tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.
 
-### A. Module instruction file
+### A. Module instruction file {#tpl-a}
 
 Save as `MODULE.md`, or as `CLAUDE.md` in Claude Code.
 
@@ -48,7 +48,7 @@ One lecture is 100 minutes: at most 25 slides and two worked examples.
 2026-11-26  Dropped the Kalman filter lecture; replaced by a second GMM lab.
 ```
 
-### B. Problem-set workflow
+### B. Problem-set workflow {#tpl-b}
 
 Save as `.claude/skills/problem-set/SKILL.md`. Run with `/problem-set week05`.
 
@@ -74,7 +74,7 @@ Write a problem set for $ARGUMENTS.
 Do not reuse or paraphrase questions from textbooks in sources/.
 ```
 
-### C. Marking notes to feedback
+### C. Marking notes to feedback {#tpl-c}
 
 Use only with a tool your university has approved for student work (chapter 9).
 
@@ -93,7 +93,7 @@ Rubric: [paste]
 Notes: [paste]
 ```
 
-### D. Independent checker
+### D. Independent checker {#tpl-d}
 
 Save as `.claude/agents/checker.md`.
 
@@ -118,7 +118,7 @@ You are checking a problem set for a university module.
 You do not edit files or run code. You report.
 ```
 
-### E. Student-facing AI statement
+### E. Student-facing AI statement {#tpl-e}
 
 ```text
 Use of AI tools in ECN000
@@ -143,7 +143,7 @@ drafted with an AI coding agent from my own notes and checked by me. All
 marks are set by the teaching team. [State any use in feedback.]
 ```
 
-### F. Assessment stress test
+### F. Assessment stress test {#tpl-f}
 
 - [ ] Fresh session in an empty folder, no module files
 - [ ] Agent given only what a student receives
@@ -154,7 +154,7 @@ marks are set by the teaching team. [State any use in feedback.]
 - [ ] Decision recorded: keep, modify, or move to supervised conditions
 - [ ] Date and tool version recorded for next year's comparison
 
-### G. A written standard as a skill
+### G. A written standard as a skill {#tpl-g}
 
 Save as `.claude/skills/lecture-style/SKILL.md`, with more pairs of examples in `examples.md` in the same folder (a placeholder version is in the repository's `templates/` folder). The rules shown are placeholders: replace them with your own (chapter 11).
 
@@ -188,7 +188,7 @@ Do not rewrite. Report each finding as:
 Finish with a count of findings per rule.
 ```
 
-### H. Assessment loop: setter, candidate, examiner
+### H. Assessment loop: setter, candidate, examiner {#tpl-h}
 
 Three files for the system in chapter 12. Untested: run it first on a short problem set with a round limit of two.
 

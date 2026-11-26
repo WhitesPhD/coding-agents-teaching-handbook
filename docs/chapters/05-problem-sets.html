@@ -236,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Supply two or three of your own past questions</strong> as the standard for style and difficulty. Examples tend to calibrate the agent better than a written description.</li>
 <li><strong>Ask for questions and solutions as separate files</strong>, with the solution code in a third.</li>
 <li><strong>Have the solution code executed</strong> and the numbers in the written solutions taken from its output rather than typed by the model.</li>
-<li><strong>Have the questions solved again from scratch</strong> by a separate session that has not seen the solutions, and compare (chapter 8).</li>
+<li><strong>Have the questions solved again from scratch</strong> by a separate session that has not seen the solutions, and compare (chapter 8 and <a href="../chapters/templates.html#tpl-d">template D</a>).</li>
 <li><strong>Attempt the stretch questions yourself.</strong> Agents often misjudge how hard a question is.</li>
 </ol>
 <p><strong>Example: an empirical finance question.</strong> Students estimate the CAPM beta of five stocks on monthly returns and test whether the alphas are jointly zero. The agent writes the question, a script that downloads or loads the data and runs the regressions, and a solution whose betas, standard errors and test statistic are read from the script’s output. If the data file changes next year, rerunning the script updates the solution.</p>
@@ -261,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Questions that closely reproduce a textbook exercise (chapter 9).</li>
 </ul>
 <blockquote class="blockquote">
-<p><strong>In Claude Code.</strong> The agent runs the scripts and notebooks itself and reads the output, so step 4 is one instruction: “take every number in the solutions from the script output”. For step 5, a subagent starts with a fresh context and can be instructed to read only the questions (<a href="https://code.claude.com/docs/en/sub-agents">subagents</a>).</p>
+<p><strong>In Claude Code.</strong> The agent runs the scripts and notebooks itself and reads the output, so step 4 is one instruction: “take every number in the solutions from the script output”. For step 5, a subagent starts with a fresh context and can be instructed to read only the questions (<a href="https://code.claude.com/docs/en/sub-agents">subagents</a>). <a href="../chapters/templates.html#tpl-b">Template B</a> in the appendix stores steps 1 to 5 as a workflow file.</p>
 </blockquote>
 
 

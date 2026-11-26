@@ -10,7 +10,7 @@ Before setting any unsupervised assessment, give it to an agent yourself and mar
 4. Mark both outputs against your rubric, ideally mixed in with past student scripts and marked blind.
 5. Record where it lost marks. Those are the parts of the assessment that still discriminate.
 
-Repeat it each year. The answer changes as the tools improve, and a result from two years ago is not evidence about this year's cohort.
+[Template F](templates.qmd#tpl-f) in the appendix turns these steps into a checklist. Repeat it each year. The answer changes as the tools improve, and a result from two years ago is not evidence about this year's cohort.
 
 **Decide what must be shown unaided.** Go through the learning outcomes and sort them into two groups: those a student must demonstrate without assistance, and those where using the tools well is part of the skill. The first group needs supervised conditions. The second can be assessed in coursework where AI use is permitted and the standard is raised accordingly.
 

@@ -17,4 +17,4 @@ Put a short AI statement in the module outline that says what students may do in
 
 **Keep it consistent across the programme.** Agree a common format with colleagues so students see the same structure in every module, even where the permitted use differs. A shared scale (chapter 6) is one way to do this.
 
-A template statement is in the appendix.
+A model statement to adapt is [template E](templates.qmd#tpl-e) in the appendix.

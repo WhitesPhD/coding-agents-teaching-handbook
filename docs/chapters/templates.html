@@ -210,14 +210,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Templates</h2>
    
   <ul>
-  <li><a href="#a.-module-instruction-file" id="toc-a.-module-instruction-file" class="nav-link active" data-scroll-target="#a.-module-instruction-file">A. Module instruction file</a></li>
-  <li><a href="#b.-problem-set-workflow" id="toc-b.-problem-set-workflow" class="nav-link" data-scroll-target="#b.-problem-set-workflow">B. Problem-set workflow</a></li>
-  <li><a href="#c.-marking-notes-to-feedback" id="toc-c.-marking-notes-to-feedback" class="nav-link" data-scroll-target="#c.-marking-notes-to-feedback">C. Marking notes to feedback</a></li>
-  <li><a href="#d.-independent-checker" id="toc-d.-independent-checker" class="nav-link" data-scroll-target="#d.-independent-checker">D. Independent checker</a></li>
-  <li><a href="#e.-student-facing-ai-statement" id="toc-e.-student-facing-ai-statement" class="nav-link" data-scroll-target="#e.-student-facing-ai-statement">E. Student-facing AI statement</a></li>
-  <li><a href="#f.-assessment-stress-test" id="toc-f.-assessment-stress-test" class="nav-link" data-scroll-target="#f.-assessment-stress-test">F. Assessment stress test</a></li>
-  <li><a href="#g.-a-written-standard-as-a-skill" id="toc-g.-a-written-standard-as-a-skill" class="nav-link" data-scroll-target="#g.-a-written-standard-as-a-skill">G. A written standard as a skill</a></li>
-  <li><a href="#h.-assessment-loop-setter-candidate-examiner" id="toc-h.-assessment-loop-setter-candidate-examiner" class="nav-link" data-scroll-target="#h.-assessment-loop-setter-candidate-examiner">H. Assessment loop: setter, candidate, examiner</a></li>
+  <li><a href="#tpl-a" id="toc-tpl-a" class="nav-link active" data-scroll-target="#tpl-a">A. Module instruction file</a></li>
+  <li><a href="#tpl-b" id="toc-tpl-b" class="nav-link" data-scroll-target="#tpl-b">B. Problem-set workflow</a></li>
+  <li><a href="#tpl-c" id="toc-tpl-c" class="nav-link" data-scroll-target="#tpl-c">C. Marking notes to feedback</a></li>
+  <li><a href="#tpl-d" id="toc-tpl-d" class="nav-link" data-scroll-target="#tpl-d">D. Independent checker</a></li>
+  <li><a href="#tpl-e" id="toc-tpl-e" class="nav-link" data-scroll-target="#tpl-e">E. Student-facing AI statement</a></li>
+  <li><a href="#tpl-f" id="toc-tpl-f" class="nav-link" data-scroll-target="#tpl-f">F. Assessment stress test</a></li>
+  <li><a href="#tpl-g" id="toc-tpl-g" class="nav-link" data-scroll-target="#tpl-g">G. A written standard as a skill</a></li>
+  <li><a href="#tpl-h" id="toc-tpl-h" class="nav-link" data-scroll-target="#tpl-h">H. Assessment loop: setter, candidate, examiner</a></li>
   </ul>
 </nav>
     </div>
@@ -244,8 +244,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Eight starting points to copy and edit. B, D, G and H use Claude Code’s file formats and are easily adapted; the others work with any tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the <code>templates/</code> folder of the repository.</p>
-<section id="a.-module-instruction-file" class="level3">
-<h3 class="anchored" data-anchor-id="a.-module-instruction-file">A. Module instruction file</h3>
+<section id="tpl-a" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-a">A. Module instruction file</h3>
 <p>Save as <code>MODULE.md</code>, or as <code>CLAUDE.md</code> in Claude Code.</p>
 <pre class="text"><code># ECN000 Module Title
 
@@ -282,8 +282,8 @@ One lecture is 100 minutes: at most 25 slides and two worked examples.
 ## Decisions log
 2026-11-26  Dropped the Kalman filter lecture; replaced by a second GMM lab.</code></pre>
 </section>
-<section id="b.-problem-set-workflow" class="level3">
-<h3 class="anchored" data-anchor-id="b.-problem-set-workflow">B. Problem-set workflow</h3>
+<section id="tpl-b" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-b">B. Problem-set workflow</h3>
 <p>Save as <code>.claude/skills/problem-set/SKILL.md</code>. Run with <code>/problem-set week05</code>.</p>
 <pre class="text"><code>---
 name: problem-set
@@ -305,8 +305,8 @@ Write a problem set for $ARGUMENTS.
 
 Do not reuse or paraphrase questions from textbooks in sources/.</code></pre>
 </section>
-<section id="c.-marking-notes-to-feedback" class="level3">
-<h3 class="anchored" data-anchor-id="c.-marking-notes-to-feedback">C. Marking notes to feedback</h3>
+<section id="tpl-c" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-c">C. Marking notes to feedback</h3>
 <p>Use only with a tool your university has approved for student work (chapter 9).</p>
 <pre class="text"><code>Below are my marking notes for one anonymised script and the rubric.
 I have already set the mark; do not suggest or comment on a mark.
@@ -321,8 +321,8 @@ Use only what is in my notes. Do not add observations of your own.
 Rubric: [paste]
 Notes: [paste]</code></pre>
 </section>
-<section id="d.-independent-checker" class="level3">
-<h3 class="anchored" data-anchor-id="d.-independent-checker">D. Independent checker</h3>
+<section id="tpl-d" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-d">D. Independent checker</h3>
 <p>Save as <code>.claude/agents/checker.md</code>.</p>
 <pre class="text"><code>---
 name: checker
@@ -343,8 +343,8 @@ You are checking a problem set for a university module.
 
 You do not edit files or run code. You report.</code></pre>
 </section>
-<section id="e.-student-facing-ai-statement" class="level3">
-<h3 class="anchored" data-anchor-id="e.-student-facing-ai-statement">E. Student-facing AI statement</h3>
+<section id="tpl-e" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-e">E. Student-facing AI statement</h3>
 <pre class="text"><code>Use of AI tools in ECN000
 
 Problem sets (not assessed): any use is permitted. You will learn more by
@@ -366,8 +366,8 @@ How AI was used in preparing this module: lecture notes and problem sets were
 drafted with an AI coding agent from my own notes and checked by me. All
 marks are set by the teaching team. [State any use in feedback.]</code></pre>
 </section>
-<section id="f.-assessment-stress-test" class="level3">
-<h3 class="anchored" data-anchor-id="f.-assessment-stress-test">F. Assessment stress test</h3>
+<section id="tpl-f" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-f">F. Assessment stress test</h3>
 <ul class="task-list">
 <li><label><input type="checkbox">Fresh session in an empty folder, no module files</label></li>
 <li><label><input type="checkbox">Agent given only what a student receives</label></li>
@@ -379,8 +379,8 @@ marks are set by the teaching team. [State any use in feedback.]</code></pre>
 <li><label><input type="checkbox">Date and tool version recorded for next year’s comparison</label></li>
 </ul>
 </section>
-<section id="g.-a-written-standard-as-a-skill" class="level3">
-<h3 class="anchored" data-anchor-id="g.-a-written-standard-as-a-skill">G. A written standard as a skill</h3>
+<section id="tpl-g" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-g">G. A written standard as a skill</h3>
 <p>Save as <code>.claude/skills/lecture-style/SKILL.md</code>, with more pairs of examples in <code>examples.md</code> in the same folder (a placeholder version is in the repository’s <code>templates/</code> folder). The rules shown are placeholders: replace them with your own (chapter 11).</p>
 <pre class="text"><code>---
 name: lecture-style
@@ -410,8 +410,8 @@ Do not rewrite. Report each finding as:
   file and location | rule number | what is wrong | suggested fix
 Finish with a count of findings per rule.</code></pre>
 </section>
-<section id="h.-assessment-loop-setter-candidate-examiner" class="level3">
-<h3 class="anchored" data-anchor-id="h.-assessment-loop-setter-candidate-examiner">H. Assessment loop: setter, candidate, examiner</h3>
+<section id="tpl-h" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-h">H. Assessment loop: setter, candidate, examiner</h3>
 <p>Three files for the system in chapter 12. Untested: run it first on a short problem set with a round limit of two.</p>
 <p>Save as <code>.claude/agents/candidate.md</code>:</p>
 <pre class="text"><code>---
