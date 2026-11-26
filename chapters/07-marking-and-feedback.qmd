@@ -1,13 +1,13 @@
 # Marking and feedback
 
-The lecturer reads the work and sets the mark; the agent can help with everything around that. This is the position in the UK university guidance that addresses marking, and the evidence on machine marking supports it. Check your own institution's rule before uploading any student work to any tool (chapter 9).
+The lecturer reads the work and sets the mark; the agent can help with everything around that. This is the position in the university guidance cited below, and the evidence on machine marking supports it. Check your own institution's rule before uploading any student work to any tool (chapter 9).
 
 **What the evidence says.** Two recent UK studies of extended written work reach the same conclusion.
 
 - Kay, Rutherford, Smith, Shore and Francis (2026), in [Assessment & Evaluation in Higher Education](https://shura.shu.ac.uk/id/eprint/37854), find that language models gave higher marks than human markers with much less spread: weak essays were marked up and strong essays marked down.
 - [Corsi et al. (2026)](https://arxiv.org/abs/2610.18019) compare three models on 761 undergraduate psychology assignments from three UK universities. Agreement with human marks varied widely by model, prompt and institution, all models pulled marks towards the middle, and averaging across models did not remove the problem.
 
-Compression towards the middle matters for classification boundaries: the scripts most likely to be mis-marked are the fails and the firsts. Results are better for short structured answers. A [study of an introductory programming course](https://pure.uva.nl/ws/files/259493635/978-3-031-99264-3_5.pdf) reports exact agreement between a model and human graders on 80% of 6,345 answers. None of these studies covers economics or finance.
+Compression towards the middle matters for classification boundaries: if it carries over to UK degree marking, the scripts most at risk are the fails and the firsts. Results are better for short structured answers. A [study of an introductory programming course](https://pure.uva.nl/ws/files/259493635/978-3-031-99264-3_5.pdf) reports exact agreement between a model and human graders on 80% of 6,345 answers. None of these studies covers economics or finance.
 
 **What universities allow.** Rules differ, but published guidance shares a core.
 

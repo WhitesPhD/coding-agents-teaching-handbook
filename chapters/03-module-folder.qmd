@@ -1,6 +1,6 @@
 # Setting up a module folder
 
-Each module needs one folder, with your source material separated from what the agent produces and one short instruction file at the top. Most of the quality of what follows depends on this setup.
+Each module needs one folder, with your source material separated from what the agent produces and one short instruction file at the top. The chapters that follow assume this setup.
 
 **Folder layout.** The layout below works for most modules.
 

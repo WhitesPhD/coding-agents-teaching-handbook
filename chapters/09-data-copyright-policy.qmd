@@ -24,7 +24,7 @@ Anonymising helps but does not settle the matter: an essay can identify its auth
 >
 > Session transcripts are also stored on your own machine, unencrypted, for 30 days by default, and transcripts of sessions started in the desktop app are kept with no age limit unless you set one. On a shared or unencrypted laptop, that is a further copy of anything you worked on.
 
-**Third-party teaching material.** Putting a textbook chapter or a publisher's test bank into a prompt is copying. Whether it is licensed depends on your university's agreements.
+**Third-party teaching material.** Putting a textbook chapter or a publisher's test bank into a prompt is likely to count as copying for copyright purposes. Whether it is licensed depends on your university's agreements.
 
 - The Copyright Licensing Agency added permission for copying into generative AI prompts to its business licences in May 2025. For the Higher Education licence, publishers were [consulted in summer 2026](https://www.alpsp.org/news-publications/industry-news/pls-consultation-on-workplace-generative-ai-permissions-in-cla-education-and-higher-education-licences/) on adding equivalent permissions. Whether these are now in force was not confirmed at the time of writing, so ask your library.
 - Where such permissions exist in other CLA licences, they exclude training and require a tool whose terms do not allow training on prompts. A personal account with training switched on would not qualify.

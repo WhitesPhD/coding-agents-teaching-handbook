@@ -15,7 +15,7 @@ Everything the agent produces is a draft until it has passed a check that does n
 | Inconsistent notation across weeks | Consistency pass against `MODULE.md` | Agent |
 | Wrong level, emphasis or tone | Your reading | You |
 
-**Why a fresh session.** A session that has just written a solution tends to confirm it when asked to check. A second session that sees only the question has not seen the first answer. Where the two disagree, one of them is wrong, and that is where to spend your time.
+**Why a fresh session.** A session that has just written a solution may simply confirm it when asked to check. A second session that sees only the question has not seen the first answer. Where the two disagree, one of them is wrong, and that is where to spend your time.
 
 **An independent reviewer for all material.** A second agent should review every piece of material before the lecturer reads it. The agent that wrote the slides does not check them; a separate one does, in three passes:
 
@@ -25,7 +25,7 @@ Everything the agent produces is a draft until it has passed a check that does n
 
 The third pass depends on the standard being written down. "Make it sound like me" gives the reviewer nothing to check against. A page of explicit rules does.
 
-Keep the passes separate and ask for a list of findings with locations rather than a corrected file. You then decide which findings to accept, and the writing agent applies them. In practice this catches many errors before the lecturer's own reading, though it does not replace that reading.
+Keep the passes separate and ask for a list of findings with locations rather than a corrected file. You then decide which findings to accept, and the writing agent applies them. This can catch errors before the lecturer's own reading, though it does not replace that reading.
 
 **Independent re-derivation in practice.**
 

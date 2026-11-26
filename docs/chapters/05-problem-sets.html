@@ -231,15 +231,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>No solution goes to students unless it has been produced by code that ran, or re-derived independently. This is the single rule that makes agent-written exercises safe to use, and it is the main advantage an agent has over a chat window.</p>
+<p>No solution goes to students unless it has been produced by code that ran, or re-derived independently. This rule is the main safeguard for agent-written exercises, and it is the main advantage an agent has over a chat window.</p>
 <p><strong>Writing a problem set.</strong></p>
 <ol type="1">
 <li><strong>Specify before generating.</strong> The topic, the learning outcome each question tests, the number of questions, the intended time, and the mix of mechanical, applied and stretch questions.</li>
-<li><strong>Supply two or three of your own past questions</strong> as the standard for style and difficulty. This calibrates better than any description.</li>
+<li><strong>Supply two or three of your own past questions</strong> as the standard for style and difficulty. Examples tend to calibrate the agent better than a written description.</li>
 <li><strong>Ask for questions and solutions as separate files</strong>, with the solution code in a third.</li>
 <li><strong>Have the solution code executed</strong> and the numbers in the written solutions taken from its output rather than typed by the model.</li>
 <li><strong>Have the questions solved again from scratch</strong> by a separate session that has not seen the solutions, and compare (chapter 8).</li>
-<li><strong>Attempt the stretch questions yourself.</strong> Difficulty is the thing agents judge worst.</li>
+<li><strong>Attempt the stretch questions yourself.</strong> Agents often misjudge how hard a question is.</li>
 </ol>
 <p><strong>Example: an empirical finance question.</strong> Students estimate the CAPM beta of five stocks on monthly returns and test whether the alphas are jointly zero. The agent writes the question, a script that downloads or loads the data and runs the regressions, and a solution whose betas, standard errors and test statistic are read from the script’s output. If the data file changes next year, rerunning the script updates the solution.</p>
 <p><strong>Variants.</strong> Once a question is driven by a script, variants are cheap: change the seed, the sample period or the parameter values, rerun, and a new numerical answer follows. Variants are useful for tutorial groups, resits and individualised coursework. Keep the seed and parameters for each variant in a file so any version can be reproduced.</p>
