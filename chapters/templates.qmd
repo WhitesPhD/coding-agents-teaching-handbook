@@ -150,7 +150,7 @@ marks are set by the teaching team. [State any use in feedback.]
 
 ### G. A written standard as a skill
 
-Save as `.claude/skills/lecture-style/SKILL.md`, with longer examples in a file alongside it. The rules shown are placeholders: replace them with your own (chapter 11).
+Save as `.claude/skills/lecture-style/SKILL.md`, with more pairs of examples in `examples.md` in the same folder (a placeholder version is in the repository's `templates/` folder). The rules shown are placeholders: replace them with your own (chapter 11).
 
 ```text
 ---
