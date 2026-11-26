@@ -1,4 +1,4 @@
-# Coding Agents for Teaching Economics and Finance
+# Coding Agents for Teaching Economics
 
 A handbook for lecturers on using a coding agent to prepare and run a module: lecture material, problem sets, assessment design, marking, checking, and the rules that apply at UK universities.
 
