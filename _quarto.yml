@@ -1,0 +1,31 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Coding Agents for Teaching Economics and Finance"
+  subtitle: "A Handbook for Lecturers"
+  author: "Daniele Bianchi"
+  date: "2026-11-26"
+  chapters:
+    - index.qmd
+    - chapters/01-scope.qmd
+    - chapters/02-what-is-a-coding-agent.qmd
+    - chapters/03-module-folder.qmd
+    - chapters/04-lecture-material.qmd
+    - chapters/05-problem-sets.qmd
+    - chapters/06-assessment-design.qmd
+    - chapters/07-marking-and-feedback.qmd
+    - chapters/08-checking.qmd
+    - chapters/09-data-copyright-policy.qmd
+    - chapters/10-telling-students.qmd
+    - chapters/11-sharing-workflows.qmd
+    - chapters/12-agent-worked-example.qmd
+  appendices:
+    - chapters/templates.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: true

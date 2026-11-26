@@ -1,0 +1,267 @@
+# Templates {.unnumbered}
+
+Eight starting points to copy and edit. B, D, G and H use Claude Code's file formats and are easily adapted; the others work with any tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.
+
+### A. Module instruction file
+
+Save as `MODULE.md`, or as `CLAUDE.md` in Claude Code.
+
+```text
+# ECN000 Module Title
+
+## Module facts
+Level 6, 15 credits, about 120 students. Prerequisites: ECN000, ECN000.
+
+## Learning outcomes
+1. ...
+2. ...
+
+## What students know
+Assume: linear algebra to eigenvalues, OLS, basic Python (pandas, numpy).
+Do not assume: maximum likelihood, matrix calculus, any R or Stata.
+
+## Notation
+Returns r_t, excess returns r^e_t. Vectors bold lower case, matrices bold upper case.
+Estimators carry a hat. Follow the conventions of [textbook], chapters [x-y].
+
+## Software
+Python 3.12. Packages pinned in requirements.txt. No other packages.
+
+## House style
+British spelling. Lecture notes in LaTeX using lectures/template.tex.
+One lecture is 100 minutes: at most 25 slides and two worked examples.
+
+## Rules
+- Never edit anything in sources/.
+- Never supply a reference, fact or number that is not in sources/ or code output.
+  If something is missing, stop and list it.
+- Every number in a solution comes from a script that has been run.
+- Compile or run every file before reporting it finished.
+- No student work or personal data is stored in this folder.
+
+## Decisions log
+2026-11-26  Dropped the Kalman filter lecture; replaced by a second GMM lab.
+```
+
+### B. Problem-set workflow
+
+Save as `.claude/skills/problem-set/SKILL.md`. Run with `/problem-set week05`.
+
+```text
+---
+name: problem-set
+description: Draft a problem set with verified solutions for one week of the module.
+---
+
+Write a problem set for $ARGUMENTS.
+
+1. Read MODULE.md, the lecture notes for that week, and two past problem sets
+   in problem-sets/ as the standard for style and difficulty.
+2. Propose a one-page plan: each question, the outcome it tests, the expected
+   time, and whether it is mechanical, applied or stretch. Wait for approval.
+3. Write questions.tex, solutions.tex and solve.py in a new folder.
+4. Run solve.py. Take every number in solutions.tex from its output.
+5. For derivations, verify each final expression symbolically or numerically.
+6. Compile both .tex files and fix any errors.
+7. Report: what was produced, what was verified and how, and anything you
+   could not verify.
+
+Do not reuse or paraphrase questions from textbooks in sources/.
+```
+
+### C. Marking notes to feedback
+
+Use only with a tool your university has approved for student work (chapter 9).
+
+```text
+Below are my marking notes for one anonymised script and the rubric.
+I have already set the mark; do not suggest or comment on a mark.
+
+Write feedback of about 150 words:
+- one sentence on what the script did well, taken from my notes;
+- the two most important improvements, each tied to a rubric criterion;
+- one concrete step for the next assessment.
+
+Use only what is in my notes. Do not add observations of your own.
+
+Rubric: [paste]
+Notes: [paste]
+```
+
+### D. Independent checker
+
+Save as `.claude/agents/checker.md`.
+
+```text
+---
+name: checker
+description: Independently solves a problem set from the questions alone and reports disagreements with the official solutions. Use before any solutions are released.
+tools: Read, Grep, Glob, Bash
+---
+
+You are checking a problem set for a university module.
+
+1. Read the questions file only. Do not open the solutions yet.
+2. Solve every question yourself. Write code where a number is required and run it.
+3. Only then read the official solutions.
+4. For each question report: agree, or disagree with both answers and the
+   likely source of the difference.
+5. Separately list any question that is ambiguous, answerable without the
+   intended method, or harder than its stated level.
+
+You do not edit files. You report.
+```
+
+### E. Student-facing AI statement
+
+```text
+Use of AI tools in ECN000
+
+Problem sets (not assessed): any use is permitted. You will learn more by
+attempting each question before asking a tool.
+
+Coursework (40%): you may use AI tools to debug code and to check grammar.
+You may not use them to write the interpretation of results or the conclusion.
+Add a short declaration at the end of your submission naming any tool used
+and what you used it for. You are responsible for everything you submit,
+including errors and references introduced by a tool. You may be asked to
+explain your submission in person.
+
+Exam (60%): invigilated, no AI tools.
+
+The university provides [tool] to all students at no cost. No assessment in
+this module requires a paid subscription.
+
+How AI was used in preparing this module: lecture notes and problem sets were
+drafted with an AI coding agent from my own notes and checked by me. All
+marks are set by the teaching team. [State any use in feedback.]
+```
+
+### F. Assessment stress test
+
+- [ ] Fresh session in an empty folder, no module files
+- [ ] Agent given only what a student receives
+- [ ] One-pass attempt saved
+- [ ] Attempt with one round of student-style follow-up saved
+- [ ] Both marked against the rubric, blind where possible
+- [ ] Criteria where marks were lost recorded
+- [ ] Decision recorded: keep, modify, or move to supervised conditions
+- [ ] Date and tool version recorded for next year's comparison
+
+### G. A written standard as a skill
+
+Save as `.claude/skills/lecture-style/SKILL.md`, with longer examples in a file alongside it. The rules shown are placeholders: replace them with your own (chapter 11).
+
+```text
+---
+name: lecture-style
+description: House style for lecture notes and slides in my modules. Use when writing or reviewing any teaching material.
+---
+
+## Rules
+1. One idea per slide. A slide has a title that states the point, not the topic.
+2. Paragraphs in notes are at most four sentences.
+3. Every equation that is used later is numbered; no others are.
+4. A new symbol is defined in the sentence where it first appears.
+5. Each result is followed by one sentence of interpretation in plain words.
+6. Worked examples use real data and state the source and sample period.
+
+## Do not
+- Open a section by announcing what it will do.
+- Use rhetorical questions as slide titles.
+- Use: "it is important to note", "delve", "crucial", "in today's world".
+
+## Examples
+Breaks rule 1:   title "Fama-MacBeth regressions"
+Corrected:       title "Fama-MacBeth: estimate the price of risk period by period"
+(more pairs in examples.md)
+
+## When reviewing
+Do not rewrite. Report each finding as:
+  file and location | rule number | what is wrong | suggested fix
+Finish with a count of findings per rule.
+```
+
+### H. Assessment loop: setter, candidate, examiner
+
+Three files for the system in chapter 12. Untested: run it first on a short problem set with a round limit of two.
+
+Save as `.claude/agents/candidate.md`:
+
+```text
+---
+name: candidate
+description: Attempts an assessment exactly as a student would, from the student-facing files only.
+omitClaudeMd: true
+---
+
+You are a student taking this module. You have been given a folder containing
+the assessment brief and any data. Read only the files in that folder.
+
+Complete the assessment in full and save your submission in the folder.
+Work as a capable student would with the tools available: write and run code
+where needed, and check your own work once before submitting.
+
+Do not look for a rubric, marking notes or solutions. Do not ask questions.
+When finished, list any wording you found ambiguous.
+```
+
+Save as `.claude/agents/examiner.md`:
+
+```text
+---
+name: examiner
+description: Marks one anonymous submission against a rubric, criterion by criterion.
+tools: Read, Grep, Glob, Bash
+---
+
+You are marking one anonymous submission. You are given the submission and
+the rubric. Assume nothing about who wrote it.
+
+For each criterion give: a mark, the band, and one sentence quoting or
+pointing to the evidence in the submission. Rerun any code and confirm the
+reported numbers before awarding marks for them.
+
+Then give the total, and list the two criteria on which the submission was
+strongest. Report any place where the rubric gave you no guidance.
+You do not edit files.
+```
+
+Save as `.claude/skills/assessment-loop/SKILL.md`. Run with `/assessment-loop assessment/coursework1`.
+
+```text
+---
+name: assessment-loop
+description: Iteratively tests and revises an assessment using a candidate and an examiner subagent.
+disable-model-invocation: true
+---
+
+You are the setter for the assessment in $ARGUMENTS.
+
+Settings (edit before running):
+  stop when the candidate's total is below 50, or after 3 rounds,
+  or when no revision satisfies the constraints.
+
+Constraints on every revision:
+  - every learning outcome in MODULE.md that the original assessed is still assessed
+  - format, weighting, word limit and time allowance unchanged
+  - a well-prepared student can complete it using only what the module taught
+  - no trick wording and no reliance on information students cannot obtain
+
+Each round:
+  1. Copy the student-facing files to rounds/roundN/student/.
+  2. Use the candidate subagent on that folder only.
+  3. Use the examiner subagent on the submission and the rubric.
+  4. Save the examiner's report to rounds/roundN/report.md.
+  5. Check the stopping rule. If met, go to the final report.
+  6. Identify the criteria passed most easily. Propose one or two revisions
+     that satisfy every constraint. Record each in changes.md with the
+     criterion it targets and the reason. Apply them to a new version.
+
+Final report (report.md): original and final versions, the change log,
+marks by criterion for every round, the final attempt in full, and which
+constraints came under strain. State plainly if the format could not be
+made robust.
+
+Never edit the original assessment files. Work on copies.
+```

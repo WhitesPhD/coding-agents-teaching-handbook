@@ -1,0 +1,38 @@
+# Assessment design when students have the same tools
+
+Before setting any unsupervised assessment, give it to an agent yourself and mark what comes back. The result tells you what the assessment still measures, which is more useful than a general view on whether students "will use AI".
+
+**The stress test.**
+
+1. Start a fresh session in an empty folder, with none of your module files.
+2. Give the agent exactly what a student receives: the brief, the data, the reading list.
+3. Ask it to complete the assessment in one pass, then once more with one round of the kind of follow-up a student would give ("make it more critical", "check the code runs").
+4. Mark both outputs against your rubric, ideally mixed in with past student scripts and marked blind.
+5. Record where it lost marks. Those are the parts of the assessment that still discriminate.
+
+Repeat it each year. The answer changes as the tools improve, and a result from two years ago is not evidence about this year's cohort.
+
+**Decide what must be shown unaided.** Go through the learning outcomes and sort them into two groups: those a student must demonstrate without assistance, and those where using the tools well is part of the skill. The first group needs supervised conditions. The second can be assessed in coursework where AI use is permitted and the standard is raised accordingly.
+
+**Formats and what they still tell you.**
+
+| Format | What it shows | Main cost |
+| --- | --- | --- |
+| Invigilated written exam | Unaided knowledge and reasoning | Narrow range of skills; exam logistics |
+| Invigilated computer exam, no network | Unaided coding and data work | Lab capacity; technical setup |
+| Coursework plus short oral examination | Whether the student understands what they submitted | Staff time per student |
+| Coursework with process evidence (drafts, version history, a log of AI use) | How the work was produced | Marking load; evidence can be manufactured |
+| Coursework with AI permitted and assessed | Judgement: framing, verification, critique of output | Needs a rubric that rewards those things |
+| In-class tasks and presentations | Performance in real time | Timetabling; anxiety for some students |
+
+Individualised data or parameters (chapter 5) deter copying between students. They do not make a task harder for an agent.
+
+**State the rule for each assessment.** Students need to know, per assessment, what use is allowed. A published scale helps keep this consistent across a programme. The [AI Assessment Scale](https://arxiv.org/abs/2412.09029) of Perkins, Roe and Furze is one widely adopted option, with five levels running from "No AI" to "AI Exploration".
+
+**Sector position.** The [Russell Group principles](https://russellgroup.ac.uk/policy/policy-briefings/principles-use-generative-ai-tools-education) commit member universities to adapting teaching and assessment, upholding academic integrity, and attempting fair access where tools sit behind a paywall. If an assessment permits or expects AI use, check that every student can use an adequate tool at no cost.
+
+**Detection software is not a design strategy.** [UCL](https://www.ucl.ac.uk/teaching-learning/artificial-intelligence-education/using-ai-tools-assessment), for example, states that it is not investing in detection software and that staff must not submit student work to such tools.
+
+**Lead times.** Changing the assessment type or weighting usually needs a module amendment approved months ahead. A stress test in the spring leaves time to change the following year's assessment.
+
+**By field.** Take-home problem sets and empirical projects with a standard dataset are the most exposed. Proof-based theory questions and essays on well-covered topics should not be assumed safe; test them the same way. Work that depends on material the agent cannot see, such as an in-class experiment, a local dataset the student collected or a seminar discussion, is less so.

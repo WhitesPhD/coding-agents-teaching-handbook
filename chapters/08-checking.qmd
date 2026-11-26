@@ -1,0 +1,51 @@
+# Checking the output
+
+Everything the agent produces is a draft until it has passed a check that does not rely on the session that wrote it. Students treat teaching material as correct, so an error in a solution or a slide costs more than an error in a draft paper.
+
+**Match the check to the kind of error.**
+
+| Kind of error | Check | Who |
+| --- | --- | --- |
+| Wrong number in a solution or table | Number is read from the output of code that ran | Agent |
+| Code that fails on a student's machine | Run from top to bottom in a clean environment with pinned versions | Agent |
+| Algebra slip in a derivation | Symbolic or numerical verification of the result | Agent |
+| Flawed step in a proof or argument | Independent re-derivation in a fresh session, then your own reading | Agent, then you |
+| Reference that does not exist or does not say what is claimed | Each reference opened at its DOI or URL and the claim located in it | Agent, then you for key ones |
+| Wrong fact, date or figure in an example | Traced to a document in `sources/` or a cited official series | Agent |
+| Inconsistent notation across weeks | Consistency pass against `MODULE.md` | Agent |
+| Wrong level, emphasis or tone | Your reading | You |
+
+**Why a fresh session.** A session that has just written a solution tends to confirm it when asked to check. A second session that sees only the question has no stake in the first answer. Where the two disagree, one of them is wrong, and that is where to spend your time.
+
+**An independent reviewer for everything, not only solutions.** A second agent should review every piece of material before the lecturer reads it. The agent that wrote the slides does not check them. A separate one does, in three passes:
+
+1. **Correctness.** Every statement, equation, number and reference is checked against the sources and the code output.
+2. **Typos and mechanics.** Spelling, broken cross-references, mislabelled figures, equations that do not compile, slides that overflow.
+3. **Conformance to a written standard.** The material is compared with a document that states how it should be written: the notation and house style in the module file, or a longer style guide stored as a workflow file (chapter 11). A guide to academic writing style, applied to papers and slides, is one example.
+
+The third pass depends on the standard being written down. "Make it sound like me" gives the reviewer nothing to check against. A page of explicit rules does.
+
+Keep the passes separate and ask for a list of findings with locations, not a corrected file. You then decide which findings to accept, and the writing agent applies them. In practice this catches many errors before the lecturer's own reading, though it does not replace that reading.
+
+**Independent re-derivation in practice.**
+
+1. Session A writes questions and solutions.
+2. Session B receives the questions only and writes its own solutions.
+3. A script or a third session compares the two and lists every disagreement.
+4. You resolve the disagreements. Agreement is evidence, not proof: both sessions can share a misconception.
+
+**References.** Require a DOI or stable URL for every reference in material the agent writes, and have each one opened and checked. Do not accept a reference the agent cannot open. For the handful of papers a lecture rests on, check them yourself.
+
+**What cannot be delegated.** Whether an explanation is pitched at the right level, whether an example is fair to all students, and whether an argument is the one you want to teach. Read everything that goes to students at least once in full.
+
+**Before release.**
+
+- [ ] Every number traced to code output
+- [ ] Code and notebooks run clean from top to bottom
+- [ ] Derivations and proofs independently re-derived
+- [ ] Every reference opened and confirmed
+- [ ] Notation checked against the module file
+- [ ] Independent review done: correctness, typos, conformance to the written standard
+- [ ] Read in full by the lecturer
+
+> **In Claude Code.** A [subagent](https://code.claude.com/docs/en/sub-agents) runs in its own context window and can be limited to read-only tools, which makes it a natural session B. Store it as a file in `.claude/agents/` so the same checker is used every time (appendix).

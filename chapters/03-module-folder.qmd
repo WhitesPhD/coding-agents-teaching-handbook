@@ -1,0 +1,37 @@
+# Setting up a module folder
+
+One folder per module, with your source material separated from what the agent produces, and one short instruction file at the top. Most of the quality of what follows depends on this setup.
+
+**Folder layout.** A layout that works for most modules:
+
+```text
+ECN000-module-name/
+  MODULE.md            standing instructions (see below)
+  sources/             your notes, papers, past slides, textbook references (read-only)
+  lectures/            week01/, week02/, ... notes and slides
+  problem-sets/        ps1/ questions, solutions, code, data
+  assessment/          coursework briefs, exams, rubrics, marking schemes
+  data/                datasets used in labs and coursework
+  admin/               module outline, schedule, announcements
+```
+
+Keep `sources/` read-only by convention: the agent reads from it and never edits it. Keep `assessment/` out of any folder that is shared with students or synced to the virtual learning environment.
+
+**The module instruction file.** This is the file the agent reads at the start of every session. It replaces the paragraph of context you would otherwise retype each time. It should hold:
+
+- **Module facts:** code, title, level, credits, cohort size, prerequisites.
+- **Learning outcomes:** as approved in the module specification.
+- **What students already know:** which mathematics, statistics and programming can be assumed, and what cannot.
+- **Notation:** your symbols for returns, expectations, estimators, vectors and matrices, and which textbook's conventions you follow.
+- **Software:** language and version, permitted libraries, how code is run.
+- **House style:** slide template, length of a lecture, how worked examples are laid out, British spelling.
+- **Rules:** never invent a reference; never edit `sources/`; every numerical answer must come from code that has been run.
+- **Decisions log:** dated one-line notes on choices made, so they are not reopened next year.
+
+Keep it to one or two pages. A long file is followed less reliably than a short one. Put detail that applies to one task, such as a marking rubric, in its own file and point to it.
+
+**Other fields.** For a theory or macroeconomics module, the notation and assumed-mathematics entries matter most. For an applied or policy module, add the data sources you use and the standard of evidence you expect in written work.
+
+> **In Claude Code.** The instruction file is called `CLAUDE.md` and sits at the top of the folder. It is loaded at the start of every session, and the documentation recommends keeping it under 200 lines ([memory](https://code.claude.com/docs/en/memory)). The `/init` command drafts one from the folder's contents. A line such as `@assessment/rubric.md` imports another file.
+>
+> Claude Code treats the file as context, not as an enforced rule, so the read-only convention for `sources/` should also be set as a deny rule in the [permission settings](https://code.claude.com/docs/en/permissions). Claude Code also reads a file named `AGENTS.md` when no `CLAUDE.md` is present, which helps if colleagues use different tools. Separately, it keeps its own notes on your corrections (auto memory); review them occasionally.

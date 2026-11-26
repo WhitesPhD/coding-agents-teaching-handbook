@@ -1,0 +1,37 @@
+# Problem sets, solutions and code labs
+
+No solution goes to students unless it has been produced by code that ran, or re-derived independently. This is the single rule that makes agent-written exercises safe to use, and it is the main advantage an agent has over a chat window.
+
+**Writing a problem set.**
+
+1. **Specify before generating.** The topic, the learning outcome each question tests, the number of questions, the intended time, and the mix of mechanical, applied and stretch questions.
+2. **Supply two or three of your own past questions** as the standard for style and difficulty. This calibrates better than any description.
+3. **Ask for questions and solutions as separate files**, with the solution code in a third.
+4. **Have the solution code executed** and the numbers in the written solutions taken from its output, not typed by the model.
+5. **Have the questions solved again from scratch** by a separate session that has not seen the solutions, and compare (chapter 8).
+6. **Attempt the stretch questions yourself.** Difficulty is the thing agents judge worst.
+
+**Example: an empirical finance question.** Students estimate the CAPM beta of five stocks on monthly returns and test whether the alphas are jointly zero. The agent writes the question, a script that downloads or loads the data and runs the regressions, and a solution whose betas, standard errors and test statistic are read from the script's output. If the data file changes next year, rerunning the script updates the solution.
+
+**Variants.** Once a question is driven by a script, variants are cheap: change the seed, the sample period or the parameter values, rerun, and a new numerical answer follows. This is useful for tutorial groups, resits and individualised coursework. Keep the seed and parameters for each variant in a file so any version can be reproduced.
+
+**Code labs and notebooks.**
+
+- Require that each notebook runs from top to bottom in a clean environment before it is released. Ask the agent to do exactly that and report failures.
+- Pin the software: language version and package versions in a file in the folder.
+- Produce the student version from the solution version by removing marked cells, so the two cannot drift apart.
+- Keep data small and included in the folder, or downloaded by a script with the date recorded.
+
+**Questions without code.**
+
+- **Derivations and proofs (theory, macro):** the equivalent of running the code is a symbolic or numerical check. Ask the agent to verify a closed-form answer with a computer algebra system, or to confirm a comparative-statics sign numerically at several parameter values. This catches algebra slips, not flawed arguments.
+- **Short-answer and essay questions (applied, policy):** ask for a marking scheme alongside each question, stating what a pass, merit and distinction answer contains. Writing the scheme exposes questions that are vague or have several defensible answers.
+
+**What to watch.**
+
+- Questions that are answerable without the intended method.
+- Numbers chosen so that the answer is uninformative, such as a test statistic nowhere near the critical value.
+- Solutions that state a correct number with an incorrect interpretation.
+- Questions that closely reproduce a textbook exercise (chapter 9).
+
+> **In Claude Code.** The agent runs the scripts and notebooks itself and reads the output, so step 4 is one instruction: "take every number in the solutions from the script output". For step 5, a subagent starts with a fresh context and can be instructed to read only the questions ([subagents](https://code.claude.com/docs/en/sub-agents)).

@@ -1,0 +1,43 @@
+# Lecture material from your own sources
+
+The agent is most reliable when it reorganises material you supply and least reliable when it writes from its own knowledge. Build lectures from your `sources/` folder and treat anything it adds from outside as unverified.
+
+**A workflow that holds up.**
+
+1. **Collect the sources.** Put your notes, the papers and chapters the lecture draws on, and last year's slides in `sources/`.
+2. **Ask for a plan before any writing.** One page per lecture: the outcomes it serves, the sequence of ideas, the worked examples, what is cut. Edit the plan yourself. This is where your judgement about the cohort enters.
+3. **Write the notes first.** Full lecture notes in prose and mathematics, from the approved plan.
+4. **Derive the slides from the notes.** Slides are then a view of one source, and a later correction is made in one place.
+5. **Generate every figure from code.** Keep the script next to the figure so it can be rerun with new data.
+6. **Run a consistency pass.** Across all weeks: notation, numbering, cross-references, terms defined before use.
+
+**File formats.** Plain-text formats work best because the agent can compile them and compare versions: LaTeX and Beamer, or Markdown with Quarto. It can also produce PowerPoint and Word files, but changes are harder to review.
+
+**An example request.**
+
+```text
+Read sources/week05/ and the plan in lectures/week05/plan.md.
+Write lecture notes for week 5 (generalised method of moments) in LaTeX.
+Use only the material in sources/. Follow the notation in MODULE.md.
+If you need a result that is not in the sources, stop and list it; do not supply it.
+Aim for what can be taught in 100 minutes, with two worked examples.
+Compile the file and fix any errors before you finish.
+```
+
+**What to watch.**
+
+- **Length.** Agents write too much. State the teaching time and the number of examples.
+- **Level.** It does not know what your students find hard. Say so in the plan: where to slow down, which step needs intuition before algebra.
+- **Invented support.** References, dates, numbers in a motivating example and attributed quotations all need checking against a source (chapter 8).
+- **Flat prose.** Material written from generic knowledge reads like a textbook summary. Your own notes are what give the module its character.
+
+**Updating a module year to year.** Ask the agent to list what has dated: data ending in an old year, superseded references, examples overtaken by events. Rerun the figure scripts with current data. Review the changes as a comparison against last year's files before accepting them.
+
+**By field.**
+
+- **Econometrics and quantitative finance:** have every estimate, table and figure in the notes produced by a script in the folder, on data students can also access.
+- **Macroeconomics:** model derivations benefit from the independent re-derivation in chapter 8. Charts of UK or international data should be built from the official series by script, with the download date recorded.
+- **Economic theory:** ask for proofs with every step written out, then have them checked separately. Agents skip steps that look obvious and are sometimes wrong.
+- **Applied and policy modules:** case studies are where invented facts appear most often. Supply the documents and require a citation for each factual claim.
+
+> **In Claude Code.** Use `plan` mode for step 2: the agent reads the sources and proposes, and nothing is written until you approve. Once the workflow is settled, store it as a skill so that a new lecture is one command (chapter 11).

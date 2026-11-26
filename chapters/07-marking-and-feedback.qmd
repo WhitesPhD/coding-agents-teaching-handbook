@@ -1,0 +1,42 @@
+# Marking and feedback
+
+The lecturer reads the work and sets the mark; the agent can help with everything around that. This is the position in the UK university guidance that addresses marking, and it is what the evidence on machine marking supports. Check your own institution's rule before uploading any student work to any tool (chapter 9).
+
+**What the evidence says.** Two recent UK studies of extended written work reach the same conclusion.
+
+- Kay, Rutherford, Smith, Shore and Francis, in [Assessment & Evaluation in Higher Education](https://shura.shu.ac.uk/id/eprint/37854), find that language models gave higher marks than human markers with much less spread: weak essays were marked up and strong essays marked down.
+- [Corsi et al. (2026)](https://arxiv.org/abs/2610.18019) compare three models on 761 undergraduate psychology assignments from three UK universities. Agreement with human marks varied widely by model, prompt and institution, all models pulled marks towards the middle, and averaging across models did not remove the problem.
+
+Compression towards the middle matters for classification boundaries: the scripts most likely to be mis-marked are the fails and the firsts. Results are better for short structured answers. A [study of an introductory programming course](https://pure.uva.nl/ws/files/259493635/978-3-031-99264-3_5.pdf) reports exact agreement between a model and human graders on 80% of 6,345 answers. None of these studies covers economics or finance.
+
+**What universities allow.** Rules differ, but published guidance shares a core.
+
+| Rule | Example |
+| --- | --- |
+| A human allocates the mark | [York](https://www.york.ac.uk/about/ai/education/marking_and_feedback/): marking is not delegated to AI, except questions with no academic judgement such as multiple choice |
+| A subject expert reads every script | [Exeter](https://www.exeter.ac.uk/v8media/specificsites/tqa/Guidance_on_AI_in_Marking_and_Feedback.pdf) (May 2026) |
+| Student work goes only into approved tools, or not at all | York requires explicit student permission; Exeter restricts it to licensed tools |
+| Students are told when and how AI is used | York, Exeter |
+| All markers on an assessment use the same approach | York, Exeter |
+
+A [Loughborough review](https://blog.lboro.ac.uk/ai-education/?p=19) of staff guidance at 16 UK universities found that only a minority gave concrete direction on marking, moderation or feedback. If yours is silent, ask before proceeding.
+
+**Uses that stay inside these rules.**
+
+- **Rubric design.** Draft and test a rubric against the learning outcomes before the assessment is set. No student work is involved.
+- **Marking schemes for numerical work.** Generate the scheme from the solution script, with method marks and common wrong answers.
+- **Feedback from your notes.** You read the script and write brief notes; the agent expands them into full sentences mapped to the rubric criteria. You approve the result.
+- **Cohort-level feedback.** Summarise the themes in your own comments across all scripts into a report for the class.
+- **Automated checks on code.** Run each submission's code against tests you wrote. This is conventional autograding, and the agent's role is to help write the tests.
+- **Consistency checks.** After marking, ask whether your comments and marks on a criterion are consistent across scripts. The agent sees your marks and comments, anonymised.
+
+**Uses to avoid.**
+
+- Asking for a mark and adopting it.
+- Asking for a mark first and then reading the script. The suggested mark can anchor your judgement.
+- Uploading scripts with names or student numbers to a tool your university has not approved.
+- Sending feedback you have not read in full.
+
+**Where it is permitted and you want a second view.** Mark first, record your mark, then compare. Treat a disagreement as a prompt to reread, in the same way as a second marker's view, and keep the decision yours.
+
+> **In Claude Code.** Marking support works on files in a folder, so anonymise first: one file per script named by candidate number, with your notes alongside. Whether the tool may be used at all depends on the account type and your university's approval (chapter 9).
