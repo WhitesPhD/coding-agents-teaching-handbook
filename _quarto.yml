@@ -21,7 +21,6 @@ book:
     - chapters/10-telling-students.qmd
     - chapters/11-sharing-workflows.qmd
     - chapters/12-agent-worked-example.qmd
-  appendices:
     - chapters/templates.qmd
   sidebar:
     style: docked

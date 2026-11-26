@@ -25,7 +25,7 @@ A [Loughborough review](https://blog.lboro.ac.uk/ai-education/?p=19) of staff gu
 
 - **Rubric design.** Draft and test a rubric against the learning outcomes before the assessment is set. No student work is involved.
 - **Marking schemes for numerical work.** Generate the scheme from the solution script, with method marks and common wrong answers.
-- **Feedback from your notes.** You read the script and write brief notes; the agent expands them into full sentences mapped to the rubric criteria. A prompt for this step is [template C](templates.qmd#tpl-c) in the appendix. You approve the result.
+- **Feedback from your notes.** You read the script and write brief notes; the agent expands them into full sentences mapped to the rubric criteria. A prompt for this step is [template C](templates.qmd#tpl-c). You approve the result.
 - **Cohort-level feedback.** Summarise the themes in your own comments across all scripts into a report for the class.
 - **Automated checks on code.** Run each submission's code against tests you wrote. This is conventional autograding, and the agent's role is to help write the tests.
 - **Consistency checks.** After marking, ask whether your comments and marks on a criterion are consistent across scripts. The agent sees your marks and comments, anonymised.

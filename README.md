@@ -7,7 +7,7 @@ The main text is tool-agnostic. Notes headed *In Claude Code* give the specifics
 ## Contents
 
 - `chapters/` the handbook, one file per chapter
-- `templates/` the files described in the appendix, ready to copy
+- `templates/` the files described on the Templates page, ready to copy
   - `module-template/` an empty module folder with a skeleton instruction file
   - `claude-code/.claude/` skills and subagent definitions for Claude Code
   - `prompts/`, `student-ai-statement.md`, `assessment-stress-test.md`

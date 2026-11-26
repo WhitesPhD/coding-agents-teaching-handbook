@@ -4,7 +4,7 @@ This handbook is for people who teach economics and want to use a coding agent t
 
 The main text does not depend on a particular product. Notes headed *In Claude Code* give the specifics for that tool. Those notes, and the university policies cited, were checked on 26 November 2026 and will date.
 
-The templates in the appendix are also files in the `templates/` folder of the repository. None has been tested on a live module.
+The [templates](chapters/templates.qmd) at the end of the handbook are also files in the `templates/` folder of the repository. None has been tested on a live module.
 
 This is general guidance and not legal advice. Your own institution's policy takes precedence.
 

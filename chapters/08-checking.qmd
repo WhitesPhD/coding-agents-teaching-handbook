@@ -48,4 +48,4 @@ Keep the passes separate and ask for a list of findings with locations rather th
 - [ ] Independent review done: correctness, typos, conformance to the written standard
 - [ ] Read in full by the lecturer
 
-> **In Claude Code.** A [subagent](https://code.claude.com/docs/en/sub-agents) runs in its own context window and can be limited to read-only tools, which makes it a natural session B. Store it as a file in `.claude/agents/` so the same checker is used every time ([template D](templates.qmd#tpl-d) in the appendix).
+> **In Claude Code.** A [subagent](https://code.claude.com/docs/en/sub-agents) runs in its own context window and can be limited to read-only tools, which makes it a natural session B. Store it as a file in `.claude/agents/` so the same checker is used every time ([template D](templates.qmd#tpl-d)).
