@@ -13,7 +13,11 @@ Write a problem set for $ARGUMENTS.
 4. Run solve.py. Take every number in solutions.tex from its output.
 5. For derivations, verify each final expression symbolically or numerically.
 6. Compile both .tex files and fix any errors.
-7. Report: what was produced, what was verified and how, and anything you
-   could not verify.
+7. Use the checker subagent on the new folder: it solves questions.tex
+   without seeing solutions.tex, then compares. Do not change a solution
+   to match the checker; list every disagreement for me to resolve.
+8. Report: what was produced, what was verified and how, every disagreement
+   the checker found, and anything you could not verify. List the stretch
+   questions so that I can attempt them myself.
 
 Do not reuse or paraphrase questions from textbooks in sources/.
