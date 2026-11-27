@@ -65,6 +65,6 @@ Every lecture plan, problem set and assessment says which outcomes it serves.
 - Module outline and schedule: admin/outline.md.
 
 ## Decisions log
-One dated line per decision, newest last, so settled questions stay settled.
+One dated line per decision, newest last, so that settled questions are not reopened.
 - 2026-11-26  Dropped the Kalman filter lecture; replaced by a second GMM lab.
 - [date]  [decision, and the reason for it]

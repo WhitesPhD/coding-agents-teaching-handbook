@@ -36,9 +36,9 @@ In the same session, send one follow-up of the kind a student would, such as:
 | Total | 100 | | | | |
 
 "Typical student" is the average mark on that criterion in recent years.
-A criterion on which both attempts reach it no longer discriminates in
-unsupervised conditions. A criterion on which the attempts lose marks still
-does, and the last column says why.
+A criterion on which both attempts score at or above the typical student no
+longer discriminates in unsupervised conditions. A criterion on which they
+score below it still does, and the last column records why.
 
 ## Decision
 - [ ] Keep / modify (state how) / move to supervised conditions

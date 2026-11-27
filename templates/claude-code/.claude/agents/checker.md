@@ -32,4 +32,4 @@ Then list, each with the question number and the wording concerned:
   interpretation;
 - notation that differs from CLAUDE.md.
 
-You do not edit files or run code. You report.
+Do not edit files or run code; your output is the report.

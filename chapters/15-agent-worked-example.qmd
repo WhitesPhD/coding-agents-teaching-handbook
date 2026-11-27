@@ -38,6 +38,15 @@ Each pass runs left to right; an unmet stopping rule sends the examiner's report
 
 The changes left open by these constraints mostly tie the task to something the candidate does not have: work done in class, data the student collects, a position defended orally, or a judgement that must be justified against material specific to the module.
 
+**Starting a run.** You start the setter and nothing else. The setter is the session you open in the module folder and give the loop's instructions to. In each round it starts the candidate and the examiner itself, as separate sessions with their own instructions, gives each only the files its role allows, and applies the stopping rule. The candidate and the examiner are role definitions that the setter calls, so you never run them yourself.
+
+1. **Put the files in place.** The setter's instructions are a skill, and the candidate and examiner are subagents ([template H](templates.qmd#tpl-h)).
+2. **Arrange the assessment folder.** Its `student/` subfolder holds exactly what a student receives, and `marking/` holds the rubric and any marking notes. The setter gives the candidate a copy of `student/` only, and gives the examiner the submission and the rubric.
+3. **Open the agent in the module folder on your own computer,** in a mode that lets it write files in the folder without asking each time, since a run writes many. Commands the candidate runs, such as its code, may still ask for your approval.
+4. **Start the skill with the path of the assessment folder.** Before the first round the setter lists the files it found, the constraints and the stopping rule, and waits for your approval.
+5. **Let it run.** Each round leaves its files in a numbered folder and each revision in a numbered version, so a run can be stopped at any point without losing what it has produced.
+6. **Read the report** when the setter stops, then mark the final attempt yourself.
+
 **The report.** It gives the original and final versions side by side, the change log, the mark by criterion in every round, the final attempt in full, and the setter's own assessment of which constraints came under strain.
 
 **The lecturer's part.**
@@ -58,6 +67,6 @@ The changes left open by these constraints mostly tie the task to something the 
 
 **By field.** For empirical coursework, give the candidate the dataset and let it run code. For a theory problem set, the examiner needs full worked solutions in addition to final answers. For essay-based modules, expect the examiner's marks to be least reliable, and rely more on your own marking of the final attempt.
 
-> **In Claude Code.** The candidate and examiner are [subagents](https://code.claude.com/docs/en/sub-agents), each a file in `.claude/agents/` with its own instructions and tool list. Setting `omitClaudeMd: true` starts a subagent without the module instruction file, which the candidate needs. The main session plays the setter and runs the loop from a skill.
+> **In Claude Code.** Save the three files of template H in the module folder as `.claude/skills/assessment-loop/SKILL.md`, `.claude/agents/candidate.md` and `.claude/agents/examiner.md`. Start Claude Code in the module folder in `acceptEdits` mode and type `/assessment-loop assessment/coursework1`. The main session reads the skill and acts as the setter. It calls the candidate and examiner [subagents](https://code.claude.com/docs/en/sub-agents) by name in each round, and each one starts with a fresh context, its own instructions and its own tool list. The skill's `disable-model-invocation: true` means the loop starts only when you type the command. Press Esc to interrupt a run.
 >
-> A subagent in the same folder can still open files it is told not to. For a stricter test, copy the student-facing files to an empty folder outside the module and run the candidate there.
+> `omitClaudeMd: true` starts the candidate without the module instruction file, and needs a recent version of Claude Code. A subagent starts in the main session's folder and can still open files it is told not to. For a stricter test, copy `student/` to an empty folder outside the module, start a separate session there, and give it the candidate's instructions.

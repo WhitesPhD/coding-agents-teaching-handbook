@@ -301,6 +301,15 @@ ul.task-list li input[type="checkbox"] {
 <li>Each change is logged with the criterion it targets.</li>
 </ul>
 <p>The changes left open by these constraints mostly tie the task to something the candidate does not have: work done in class, data the student collects, a position defended orally, or a judgement that must be justified against material specific to the module.</p>
+<p><strong>Starting a run.</strong> You start the setter and nothing else. The setter is the session you open in the module folder and give the loop’s instructions to. In each round it starts the candidate and the examiner itself, as separate sessions with their own instructions, gives each only the files its role allows, and applies the stopping rule. The candidate and the examiner are role definitions that the setter calls, so you never run them yourself.</p>
+<ol type="1">
+<li><strong>Put the files in place.</strong> The setter’s instructions are a skill, and the candidate and examiner are subagents (<a href="../chapters/templates.html#tpl-h">template H</a>).</li>
+<li><strong>Arrange the assessment folder.</strong> Its <code>student/</code> subfolder holds exactly what a student receives, and <code>marking/</code> holds the rubric and any marking notes. The setter gives the candidate a copy of <code>student/</code> only, and gives the examiner the submission and the rubric.</li>
+<li><strong>Open the agent in the module folder on your own computer,</strong> in a mode that lets it write files in the folder without asking each time, since a run writes many. Commands the candidate runs, such as its code, may still ask for your approval.</li>
+<li><strong>Start the skill with the path of the assessment folder.</strong> Before the first round the setter lists the files it found, the constraints and the stopping rule, and waits for your approval.</li>
+<li><strong>Let it run.</strong> Each round leaves its files in a numbered folder and each revision in a numbered version, so a run can be stopped at any point without losing what it has produced.</li>
+<li><strong>Read the report</strong> when the setter stops, then mark the final attempt yourself.</li>
+</ol>
 <p><strong>The report.</strong> It gives the original and final versions side by side, the change log, the mark by criterion in every round, the final attempt in full, and the setter’s own assessment of which constraints came under strain.</p>
 <p><strong>The lecturer’s part.</strong></p>
 <ul>
@@ -319,8 +328,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Other uses of the same three roles.</strong> For an invigilated exam, where AI use is not the concern, the loop still improves quality, because the candidate reports ambiguous wording and questions it could not finish in the time, and the examiner reports where the marking scheme gave no guidance. The setter revises for clarity instead of robustness.</p>
 <p><strong>By field.</strong> For empirical coursework, give the candidate the dataset and let it run code. For a theory problem set, the examiner needs full worked solutions in addition to final answers. For essay-based modules, expect the examiner’s marks to be least reliable, and rely more on your own marking of the final attempt.</p>
 <blockquote class="blockquote">
-<p><strong>In Claude Code.</strong> The candidate and examiner are <a href="https://code.claude.com/docs/en/sub-agents">subagents</a>, each a file in <code>.claude/agents/</code> with its own instructions and tool list. Setting <code>omitClaudeMd: true</code> starts a subagent without the module instruction file, which the candidate needs. The main session plays the setter and runs the loop from a skill.</p>
-<p>A subagent in the same folder can still open files it is told not to. For a stricter test, copy the student-facing files to an empty folder outside the module and run the candidate there.</p>
+<p><strong>In Claude Code.</strong> Save the three files of template H in the module folder as <code>.claude/skills/assessment-loop/SKILL.md</code>, <code>.claude/agents/candidate.md</code> and <code>.claude/agents/examiner.md</code>. Start Claude Code in the module folder in <code>acceptEdits</code> mode and type <code>/assessment-loop assessment/coursework1</code>. The main session reads the skill and acts as the setter. It calls the candidate and examiner <a href="https://code.claude.com/docs/en/sub-agents">subagents</a> by name in each round, and each one starts with a fresh context, its own instructions and its own tool list. The skill’s <code>disable-model-invocation: true</code> means the loop starts only when you type the command. Press Esc to interrupt a run.</p>
+<p><code>omitClaudeMd: true</code> starts the candidate without the module instruction file, and needs a recent version of Claude Code. A subagent starts in the main session’s folder and can still open files it is told not to. For a stricter test, copy <code>student/</code> to an empty folder outside the module, start a separate session there, and give it the candidate’s instructions.</p>
 </blockquote>
 
 
