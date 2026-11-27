@@ -8,9 +8,10 @@ The main text is tool-agnostic. Notes headed *In Claude Code* give the specifics
 
 - `chapters/` the handbook, one file per chapter
 - `templates/` the files described on the Templates page, ready to copy
-  - `module-template/` an empty module folder with a skeleton instruction file
+  - `module-template/` an empty module folder with a skeleton instruction file and a `.gitignore`
   - `skill-skeleton/` the parts of a skill, to fill in
-  - `claude-code/.claude/` skills (with a bundled script and test cases) and subagent definitions for Claude Code
+  - `claude-code/.claude/` skills (with a bundled script and test cases), subagent definitions and a hook for Claude Code
+  - `github-actions/` a workflow that compiles documents and runs notebooks on every change
   - `prompts/`, `student-ai-statement.md`, `assessment-stress-test.md`
 - `docs/` the rendered HTML book
 

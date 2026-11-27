@@ -1,0 +1,64 @@
+# Save as .github/workflows/module-checks.yml in the module repository.
+# On every push to main and every pull request, it compiles each LaTeX file
+# that contains \documentclass and runs each notebook from top to bottom,
+# in lectures/ and problem-sets/. Untested on a live module. If GitHub
+# reports an action version below as out of date, update it.
+name: Module checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended latexmk
+      - name: Compile every document
+        run: |
+          status=0
+          while IFS= read -r -d '' f; do
+            grep -q '\\documentclass' "$f" || continue
+            echo "::group::$f"
+            if ! (cd "$(dirname "$f")" && latexmk -pdf -interaction=nonstopmode -halt-on-error "$(basename "$f")"); then
+              echo "::error file=$f::did not compile"
+              status=1
+            fi
+            echo "::endgroup::"
+          done < <(find lectures problem-sets -name '*.tex' -print0 2>/dev/null)
+          exit $status
+
+  notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the pinned packages
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install nbconvert ipykernel
+      - name: Run every notebook from top to bottom
+        run: |
+          status=0
+          while IFS= read -r -d '' nb; do
+            echo "::group::$nb"
+            if ! jupyter nbconvert --to notebook --execute --output-dir "$RUNNER_TEMP/executed" "$nb"; then
+              echo "::error file=$nb::did not run"
+              status=1
+            fi
+            echo "::endgroup::"
+          done < <(find lectures problem-sets -name '*.ipynb' -not -name '*-student.ipynb' -not -path '*/.ipynb_checkpoints/*' -print0 2>/dev/null)
+          exit $status

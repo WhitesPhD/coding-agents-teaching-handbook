@@ -12,7 +12,7 @@ Inputs
 
 Steps
 1. ...
-2. [a check from chapter 8, written as a step]
+2. [a check from chapter 9, written as a step]
 3. ...
 
 Output

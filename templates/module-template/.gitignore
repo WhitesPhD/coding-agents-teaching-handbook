@@ -1,0 +1,24 @@
+# Material that must never be recorded (chapter 4)
+assessment/
+sources/third-party/
+data/licensed/
+admin/students/
+*.env
+.env
+
+# Files the computer generates
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Personal agent settings
+.claude/settings.local.json

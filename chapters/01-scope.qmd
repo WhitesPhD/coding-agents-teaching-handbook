@@ -2,18 +2,18 @@
 
 This handbook is for colleagues who teach economics and want to use a coding agent to prepare and run a module. It covers lecture material, problem sets and code labs, assessment design, marking, checking, and the rules that apply.
 
-A coding agent is a language model that reads the files in a folder on your computer, writes new ones and runs code. Chapter 2 explains how that differs from a chat window. No programming is needed to follow the handbook, although chapter 5 is most useful for modules with a computational component.
+A coding agent is a language model that reads the files in a folder on your computer, writes new ones and runs code. Chapter 2 explains how that differs from a chat window. No programming is needed to follow the handbook, although chapter 6 is most useful for modules with a computational component.
 
 **Tool.** The main text does not depend on a particular product. Where the mechanics matter, a short note headed *In Claude Code* gives the specifics. Those notes were checked against the Claude Code documentation on 26 and 27 November 2026 and will date faster than the rest.
 
 **Examples.** Most worked examples come from quantitative finance and econometrics. Each section also says how the same workflow applies to macroeconomics, applied economics and economic theory, where the material is more often derivations, models and essays than code.
 
-**Policy.** Chapters 6, 7, 9 and 10 describe the position at UK universities in general. Your own institution's policy takes precedence, and several of the rules differ across universities.
+**Policy.** Chapters 7, 8, 10 and 11 describe the position at UK universities in general. Your own institution's policy takes precedence, and several of the rules differ across universities.
 
 **Out of scope.** This is not a guide for students, and it does not cover research use. It does not compare products or discuss procurement.
 
 **Reading paths.**
 
-- New to coding agents: chapters 2 and 3, then whichever of 4 to 7 matches the task in front of you.
-- Already using one: chapters 5 to 8 and 11, and the [templates](templates.qmd).
-- Module or programme lead: chapters 6, 7, 9 and 10.
+- New to coding agents: chapters 2 to 4, then whichever of 5 to 8 matches the task in front of you.
+- Already using one: chapters 6 to 9, 12 and 14, and the [templates](templates.qmd).
+- Module or programme lead: chapters 7, 8, 10 and 11.

@@ -2,7 +2,7 @@
 
 An assessment can be tested by three agents, one that sets it, one that sits it and one that marks it, in a cycle that repeats until a stopping rule set in advance is met. It is the only system in the handbook in which the software decides its own next step.
 
-**Assistant or agent.** In chapters 4 to 8 you set each task, approve the plan and fix the steps in advance. The work is therefore supervised. An agent in the stricter sense is given a goal and a stopping rule and chooses its own actions from what it observes. The stress test in chapter 6 is the manual version of this system.
+**Assistant or agent.** In chapters 5 to 9 you set each task, approve the plan and fix the steps in advance. The work is therefore supervised. An agent in the stricter sense is given a goal and a stopping rule and chooses its own actions from what it observes. The stress test in chapter 7 is the manual version of this system.
 
 **Separate roles.**
 
@@ -42,9 +42,9 @@ The changes left open by these constraints mostly tie the task to something the 
 
 **The lecturer's part.**
 
-- **Mark the final attempt yourself.** The examiner is a language model, and chapter 7 documents how such marks are compressed towards the middle. Its marks steer the loop but are not evidence that the assessment is safe.
+- **Mark the final attempt yourself.** The examiner is a language model, and chapter 8 documents how such marks are compressed towards the middle. Its marks steer the loop but are not evidence that the assessment is safe.
 - **Judge validity.** Read the final version as a student would, and check that it is still a valid test of the learning outcomes and not only a harder one.
-- **Check the examiner once.** Before trusting the loop, give the examiner two or three model answers you have written at known standards and see whether it ranks them correctly. Do not use real student scripts for this unless your university permits it (chapter 9).
+- **Check the examiner once.** Before trusting the loop, give the examiner two or three model answers you have written at known standards and see whether it ranks them correctly. Do not use real student scripts for this unless your university permits it (chapter 10).
 
 **Limits.**
 

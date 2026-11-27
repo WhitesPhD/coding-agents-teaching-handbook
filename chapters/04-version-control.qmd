@@ -1,0 +1,44 @@
+# Version control and GitHub
+
+An agent can change dozens of files in one task, so you need to see exactly what it changed and to be able to undo it. Version control records each change to the module folder as a dated step, and the agent can operate it for you. Git is the standard tool for this, and GitHub is the most widely used service for keeping a copy of the folder online.
+
+**Undo, review and record.** Each saved step, called a commit, is a snapshot of the whole folder, so a task can be reversed in one step however many files it touched. The change view, or diff, shows the lines added and removed in each file. It is how you review an agent's work before accepting it, and how you compare this year's module with last year's (chapter 5). Each commit also carries a dated message saying what changed and why, which complements the decisions log in the instruction file. File history on a synced drive restores one file at a time and shows neither the lines that changed nor which files changed together.
+
+> **In Claude Code.** Checkpoints let you rewind the agent's edits within a session, but they track only changes made by its file-editing tools. A file changed by a command, such as a script that rewrites a dataset, is not tracked, and snapshots are kept for about 30 days. The documentation recommends Git for permanent history ([checkpointing](https://code.claude.com/docs/en/checkpointing)).
+
+**Vocabulary.**
+
+| Term | Meaning | In a module |
+| --- | --- | --- |
+| Repository | A folder whose history Git records | `ECN000-module-name/` |
+| Commit | A saved state of the whole folder, with a message | "Week 5 notes: GMM example replaced" |
+| Diff | The lines added and removed between two commits | The agent's changes to the week 5 slides |
+| Branch | A separate line of commits for trying something | A trial reordering of weeks 3 and 4 |
+| Remote | A copy of the repository elsewhere, usually on GitHub | The module's private repository on GitHub |
+| Push and pull | Sending commits to the remote, and fetching them from it | Updating GitHub after a day's work |
+| Pull request | A proposal to bring a branch into the main version, with its diff and comments | A teaching assistant's corrections to problem set 3 |
+| `.gitignore` | A file listing what Git must never record | `assessment/`, licensed data |
+
+**The agent does the typing.** You do not need to learn Git commands, because the agent runs them when asked in plain words: "commit these changes with a message saying what changed", "show me what changed in week 5 since last term", "undo your last change", "start a branch to try a new order for weeks 3 and 4". Commit before and after each agent task, so that each task is one step in the history and can be undone on its own. Before a commit, ask the agent to list the files it includes, and check that none of them is material that must stay out of the repository. If you prefer not to use a terminal, the desktop app's change view and GitHub Desktop show the same diffs.
+
+**Setting up.**
+
+1. **Install Git.** On a Mac it comes with Apple's command-line tools (`xcode-select --install`); on Windows, install Git for Windows. GitHub Desktop is an optional program that does the same tasks through windows and buttons.
+2. **Ask IT first.** Your university may already provide an approved GitHub organisation, which settles where the repository lives and who can see it.
+3. **Create a GitHub account** if you need one. Staff at accredited institutions can apply for GitHub Education with an institutional email address and proof of employment. At the time of writing, verified teachers get a GitHub Team account and Copilot at no cost ([GitHub Education](https://github.com/education/teachers)).
+4. **Create one private repository per module,** and sign in to GitHub on your own computer yourself. The agent should never handle your password or access tokens.
+5. **Make the first commit with the agent,** after it has added the `.gitignore` file and shown you the list of files. [Template N](templates.qmd#tpl-n) is a prompt for this step.
+
+**Material to keep out.** Student work and marks, unreleased exam papers, licensed datasets and textbook material (chapter 10), and passwords or keys never go into a repository. A file deleted after it was committed remains in the history and in every copy anyone has made, and GitHub's guidance says such data cannot be removed from other people's copies ([removing sensitive data](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)). A password or key committed by mistake must be changed at once.
+
+The `.gitignore` file keeps this material out automatically. The one in [template M](templates.qmd#tpl-m) excludes `assessment/`, the third-party subfolder of `sources/` and licensed data, so exam drafts need to be kept in whatever storage your university approves for them. A private repository is still held on GitHub's servers, so the question in chapter 10 about approved tools applies to GitHub as well as to the agent.
+
+**Branches and pull requests.** A branch is a trial version of the module. Restructure weeks 3 and 4 on a branch, compare the result with the main version, and keep or discard it; the main version is untouched until you decide. A pull request proposes bringing a branch into the main version and shows its diff, which you, a co-lecturer or a teaching assistant can comment on line by line before it is accepted. The independent review in chapter 9 then leaves a written record of what was checked and by whom.
+
+> **In Claude Code.** The desktop app shows the agent's changes file by file and takes comments on individual lines, which the agent then acts on. It can also open a pull request from the session ([desktop](https://code.claude.com/docs/en/desktop)).
+
+**Issues as an errata list.** An issue is a numbered note attached to the repository. Report each mistake in the material as an issue, and you or the agent can work through the list. A commit whose message says "Fixes #12" closes issue 12 when it reaches the main version, so the history shows when each error was reported and when it was corrected. In a private repository only invited collaborators can open issues, so students usually report mistakes through the virtual learning environment, and you copy each report in.
+
+**Publishing a module site.** GitHub Pages publishes a website from a repository, as it publishes this handbook. On a free or Pro personal account it publishes only from public repositories, and publishing privately requires an organisation on GitHub Enterprise Cloud ([GitHub's plans](https://docs.github.com/en/get-started/learning-about-github/githubs-plans)). Keep the module repository private, publish released material from a separate public repository, and add each set of solutions to it only when the solutions are released.
+
+**Sharing.** A department's shared skills (chapter 13) are kept in a GitHub repository, and so is a plugin marketplace. A colleague can copy a repository and adapt it within the terms of its licence file. This handbook's licence, CC BY-NC, allows non-commercial reuse with attribution.

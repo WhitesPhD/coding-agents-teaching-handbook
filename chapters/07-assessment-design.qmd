@@ -25,7 +25,7 @@ Before setting any unsupervised assessment, give it to an agent yourself and mar
 | Coursework with AI permitted and assessed | Judgement: framing, verification, critique of output | Needs a rubric that rewards those things |
 | In-class tasks and presentations | Performance in real time | Timetabling; anxiety for some students |
 
-Individualised data or parameters (chapter 5) deter copying between students but do not make a task harder for an agent.
+Individualised data or parameters (chapter 6) deter copying between students but do not make a task harder for an agent.
 
 **State the rule for each assessment.** Students need to know, per assessment, what use is allowed. A published scale helps keep this consistent across a programme. The [AI Assessment Scale](https://arxiv.org/abs/2412.09029) of Perkins, Roe and Furze is one such scale, with five levels running from "No AI" to "AI Exploration".
 

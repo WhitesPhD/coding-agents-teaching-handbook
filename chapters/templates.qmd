@@ -5,7 +5,7 @@ toc-title: "Templates"
 
 # Templates {.unnumbered}
 
-The twelve templates below are starting points to copy and edit. A, C, E, F and L work with any tool. B, G and I are skills, stored as a `SKILL.md` file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change, except that B hands its checking step to the subagent in D. J and K are skills that also use Claude Code settings, such as `disable-model-invocation`, which other tools may not accept. D defines a subagent with Claude Code's settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.
+The sixteen templates below are starting points to copy and edit. A, C, E, F, L, M and N work with any tool, and O works with any repository on GitHub. B, G and I are skills, stored as a `SKILL.md` file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change, except that B hands its checking step to the subagent in D. J and K are skills that also use Claude Code settings, such as `disable-model-invocation`, which other tools may not accept. D defines a subagent with Claude Code's settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool, as does the Claude Code hook in P. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.
 
 ### A. Module instruction file {#tpl-a}
 
@@ -80,7 +80,7 @@ Do not reuse or paraphrase questions from textbooks in sources/.
 
 ### C. Marking notes to feedback {#tpl-c}
 
-Use only with a tool your university has approved for student work (chapter 9).
+Use only with a tool your university has approved for student work (chapter 10).
 
 ```text
 Below are my marking notes for one anonymised script and the rubric.
@@ -160,7 +160,7 @@ marks are set by the teaching team. [State any use in feedback.]
 
 ### G. A written standard as a skill {#tpl-g}
 
-Save as `.claude/skills/lecture-style/SKILL.md`, with more pairs of examples in `examples.md` in the same folder (a placeholder version is in the repository's `templates/` folder). The rules shown are placeholders, to be replaced with your own (chapter 12).
+Save as `.claude/skills/lecture-style/SKILL.md`, with more pairs of examples in `examples.md` in the same folder (a placeholder version is in the repository's `templates/` folder). The rules shown are placeholders, to be replaced with your own (chapter 13).
 
 ```text
 ---
@@ -194,7 +194,7 @@ Finish with a count of findings per rule.
 
 ### H. Assessment loop: setter, candidate, examiner {#tpl-h}
 
-Three files make up the system in chapter 13. It is untested, so run it first on a short problem set with a round limit of two.
+Three files make up the system in chapter 15. It is untested, so run it first on a short problem set with a round limit of two.
 
 Save as `.claude/agents/candidate.md`:
 
@@ -279,7 +279,7 @@ Never edit the original assessment files. Work on copies.
 
 ### I. Skill skeleton {#tpl-i}
 
-The parts of a skill from chapter 11, to fill in. Save as `SKILL.md` in a folder named after the task: `.claude/skills/<name>/` in Claude Code.
+The parts of a skill from chapter 12, to fill in. Save as `SKILL.md` in a folder named after the task: `.claude/skills/<name>/` in Claude Code.
 
 ```text
 ---
@@ -296,7 +296,7 @@ Inputs
 
 Steps
 1. ...
-2. [a check from chapter 8, written as a step]
+2. [a check from chapter 9, written as a step]
 3. ...
 
 Output
@@ -317,7 +317,7 @@ Changes:
 
 ### J. Annual update {#tpl-j}
 
-The year-to-year update from chapter 4. Save as `.claude/skills/annual-update/SKILL.md`. Run with `/annual-update 2027-28`.
+The year-to-year update from chapter 5. Save as `.claude/skills/annual-update/SKILL.md`. Run with `/annual-update 2027-28`.
 
 ```text
 ---
@@ -350,7 +350,7 @@ weightings: list any that look out of date for me to raise at module review.
 
 ### K. Notebook release {#tpl-k}
 
-The release checks from chapter 5, with the mechanical part in a script (chapter 11). Save as `.claude/skills/notebook-release/SKILL.md`, with the script `scripts/release.py` from the repository's `templates/` folder in the same skill folder. Mark solution cells with the tag `solution` in Jupyter. The script needs Jupyter installed in the module's environment. Run with `/notebook-release problem-sets/ps3/ps3.ipynb`.
+The release checks from chapter 6, with the mechanical part in a script (chapter 12). Save as `.claude/skills/notebook-release/SKILL.md`, with the script `scripts/release.py` from the repository's `templates/` folder in the same skill folder. Mark solution cells with the tag `solution` in Jupyter. The script needs Jupyter installed in the module's environment. Run with `/notebook-release problem-sets/ps3/ps3.ipynb`.
 
 ```text
 ---
@@ -383,7 +383,7 @@ Never release a student version from a notebook that did not run.
 
 ### L. Test cases for a skill {#tpl-l}
 
-The test file from chapter 11, filled in for template B. Save as `tests.md` in the skill's folder, and do not mention it in `SKILL.md`.
+The test file from chapter 12, filled in for template B. Save as `tests.md` in the skill's folder, and do not mention it in `SKILL.md`.
 
 ```text
 # Test cases for the problem-set skill
@@ -426,4 +426,154 @@ A correct output:
 | Date | Tool and model | Case 1 | Case 2 | Case 3 | Trigger | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |
+```
+
+### M. Module `.gitignore` {#tpl-m}
+
+The material chapter 4 keeps out of a repository. Save as `.gitignore` at the top of the module folder, and adjust the folder names to your own layout. The module template in the repository already contains it.
+
+```text
+# Material that must never be recorded (chapter 4)
+assessment/
+sources/third-party/
+data/licensed/
+admin/students/
+*.env
+.env
+
+# Files the computer generates
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Personal agent settings
+.claude/settings.local.json
+```
+
+### N. First commit {#tpl-n}
+
+A prompt that puts a module folder under version control (chapter 4), with a check of what goes in before anything is recorded.
+
+```text
+This folder is a teaching module that is not yet under version control.
+
+1. Check that Git is installed and tell me which version. If it is not
+   installed, stop and tell me how to install it on this computer. Do not
+   install it yourself.
+2. If there is no .gitignore file, create one from the module template's
+   .gitignore and show it to me.
+3. List every file the first commit would include, grouped by folder.
+   Flag anything that looks like student work, marks, an unreleased exam,
+   licensed data, or a password or key. Wait for my approval.
+4. Initialise the repository and make the first commit, with the message
+   "Module as of [today's date]".
+5. Explain briefly what you did and how I can undo a change later.
+
+Do not create a GitHub repository and do not push anything. I will do that
+myself.
+```
+
+### O. Checks on every change {#tpl-o}
+
+The GitHub Actions workflow from chapter 14. It compiles every LaTeX document and runs every notebook in `lectures/` and `problem-sets/`, and needs a `requirements.txt` listing the module's Python packages. Save as `.github/workflows/module-checks.yml`.
+
+```yaml
+# Save as .github/workflows/module-checks.yml in the module repository.
+# On every push to main and every pull request, it compiles each LaTeX file
+# that contains \documentclass and runs each notebook from top to bottom,
+# in lectures/ and problem-sets/. Untested on a live module. If GitHub
+# reports an action version below as out of date, update it.
+name: Module checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended latexmk
+      - name: Compile every document
+        run: |
+          status=0
+          while IFS= read -r -d '' f; do
+            grep -q '\\documentclass' "$f" || continue
+            echo "::group::$f"
+            if ! (cd "$(dirname "$f")" && latexmk -pdf -interaction=nonstopmode -halt-on-error "$(basename "$f")"); then
+              echo "::error file=$f::did not compile"
+              status=1
+            fi
+            echo "::endgroup::"
+          done < <(find lectures problem-sets -name '*.tex' -print0 2>/dev/null)
+          exit $status
+
+  notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the pinned packages
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install nbconvert ipykernel
+      - name: Run every notebook from top to bottom
+        run: |
+          status=0
+          while IFS= read -r -d '' nb; do
+            echo "::group::$nb"
+            if ! jupyter nbconvert --to notebook --execute --output-dir "$RUNNER_TEMP/executed" "$nb"; then
+              echo "::error file=$nb::did not run"
+              status=1
+            fi
+            echo "::endgroup::"
+          done < <(find lectures problem-sets -name '*.ipynb' -not -name '*-student.ipynb' -not -path '*/.ipynb_checkpoints/*' -print0 2>/dev/null)
+          exit $status
+```
+
+### P. A hook that protects `sources/` {#tpl-p}
+
+The hook from chapter 14, for Claude Code. Save the script as `.claude/hooks/protect-sources.py` (it is in the repository's `templates/` folder), and add the settings below to `.claude/settings.json`. The deny rule covers the editing tools and the shell commands Claude Code recognises, and the hook gives the agent a clear reason when it blocks an edit. Neither stops a script the agent runs from writing into the folder, so make `sources/` read-only on your computer as well.
+
+```json
+{
+  "permissions": {
+    "deny": ["Edit(/sources/**)"]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/protect-sources.py"
+          }
+        ]
+      }
+    ]
+  }
+}
 ```

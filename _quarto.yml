@@ -12,16 +12,18 @@ book:
     - chapters/01-scope.qmd
     - chapters/02-what-is-a-coding-agent.qmd
     - chapters/03-module-folder.qmd
-    - chapters/04-lecture-material.qmd
-    - chapters/05-problem-sets.qmd
-    - chapters/06-assessment-design.qmd
-    - chapters/07-marking-and-feedback.qmd
-    - chapters/08-checking.qmd
-    - chapters/09-data-copyright-policy.qmd
-    - chapters/10-telling-students.qmd
-    - chapters/11-writing-skills.qmd
-    - chapters/12-sharing-skills.qmd
-    - chapters/13-agent-worked-example.qmd
+    - chapters/04-version-control.qmd
+    - chapters/05-lecture-material.qmd
+    - chapters/06-problem-sets.qmd
+    - chapters/07-assessment-design.qmd
+    - chapters/08-marking-and-feedback.qmd
+    - chapters/09-checking.qmd
+    - chapters/10-data-copyright-policy.qmd
+    - chapters/11-telling-students.qmd
+    - chapters/12-writing-skills.qmd
+    - chapters/13-sharing-skills.qmd
+    - chapters/14-automation.qmd
+    - chapters/15-agent-worked-example.qmd
     - chapters/templates.qmd
   sidebar:
     style: docked

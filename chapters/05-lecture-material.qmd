@@ -28,16 +28,16 @@ Compile the file and fix any errors before you finish.
 
 - **Length.** Agents write too much. State the teaching time and the number of examples.
 - **Level.** The agent has no information about what your students find hard. Say so in the plan: where to slow down, which step needs intuition before algebra.
-- **Invented support.** References, dates, numbers in a motivating example and attributed quotations all need checking against a source (chapter 8).
+- **Invented support.** References, dates, numbers in a motivating example and attributed quotations all need checking against a source (chapter 9).
 - **Flat prose.** Material written from generic knowledge reads like a textbook summary, whereas material built from your own notes keeps your examples and emphasis.
 
-**Updating a module year to year.** Ask the agent to list what has dated: data ending in an old year, superseded references, examples overtaken by events. Rerun the figure scripts with current data. Review the changes as a comparison against last year's files before accepting them.
+**Updating a module year to year.** Ask the agent to list what has dated: data ending in an old year, superseded references, examples overtaken by events. Rerun the figure scripts with current data. Review the changes in the change view against last year's version before accepting them (chapter 4).
 
 **By field.**
 
 - **Econometrics and quantitative finance:** have every estimate, table and figure in the notes produced by a script in the folder, on data students can also access.
-- **Macroeconomics:** model derivations benefit from the independent re-derivation in chapter 8. Charts of UK or international data should be built from the official series by script, with the download date recorded.
+- **Macroeconomics:** model derivations benefit from the independent re-derivation in chapter 9. Charts of UK or international data should be built from the official series by script, with the download date recorded.
 - **Economic theory:** ask for proofs with every step written out, then have them checked separately. Agents skip steps that look obvious and are sometimes wrong.
 - **Applied and policy modules:** case studies are where invented facts appear most often. Supply the documents and require a citation for each factual claim.
 
-> **In Claude Code.** Use `plan` mode for step 2: the agent reads the sources and proposes, and nothing is written until you approve. Once the workflow is settled, store it as a skill so that a new lecture is one command (chapter 11).
+> **In Claude Code.** Use `plan` mode for step 2: the agent reads the sources and proposes, and nothing is written until you approve. Once the workflow is settled, store it as a skill so that a new lecture is one command (chapter 12).

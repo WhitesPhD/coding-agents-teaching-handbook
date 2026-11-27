@@ -14,13 +14,13 @@ A coding agent works directly on the files in a folder, whereas a chat window wo
 
 **In practice.** You can ask for a problem set and its solutions, have the solutions executed, and get back the files with the numerical answers already checked. You can ask for the notation in ten weeks of slides to be made consistent. Neither is practical by copying and pasting.
 
-**Limits.** The model still makes confident mistakes: a sign error in a derivation, a reference that does not exist, a question that is harder than intended. Running code catches numerical errors but not a wrong economic argument. Chapter 8 covers checking.
+**Limits.** The model still makes confident mistakes: a sign error in a derivation, a reference that does not exist, a question that is harder than intended. Running code catches numerical errors but not a wrong economic argument. Chapter 9 covers checking.
 
 **Permissions.** Because the agent can edit and delete files, every product has a setting for what it may do without asking. For a first module:
 
 - Open the agent in a folder made for the module and never in your home folder.
 - Begin in the mode that asks before each edit, and relax it once you have seen how the agent behaves.
-- Keep the folder under version control or in a synced drive with file history, so any change can be undone.
+- Keep the folder under version control (chapter 4), or at least in a synced drive with file history, so any change can be undone.
 
 > **In Claude Code.** It runs in a terminal, a desktop app, VS Code, JetBrains IDEs and the browser ([platforms](https://code.claude.com/docs/en/platforms)). The desktop app is the easiest start for colleagues who do not use a terminal.
 >

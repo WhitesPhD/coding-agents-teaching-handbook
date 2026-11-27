@@ -8,7 +8,7 @@ No solution goes to students unless it has been produced by code that ran, or re
 2. **Supply two or three of your own past questions** as the standard for style and difficulty. Examples set the standard more reliably than a written description.
 3. **Ask for questions and solutions as separate files**, with the solution code in a third.
 4. **Have the solution code executed** and the numbers in the written solutions taken from its output rather than typed by the model.
-5. **Have the questions solved again from scratch** by a separate session that has not seen the solutions, and compare (chapter 8 and [template D](templates.qmd#tpl-d)).
+5. **Have the questions solved again from scratch** by a separate session that has not seen the solutions, and compare (chapter 9 and [template D](templates.qmd#tpl-d)).
 6. **Attempt the stretch questions yourself.** Agents often misjudge how hard a question is.
 
 **Example: an empirical finance question.** Students estimate the CAPM beta of five stocks on monthly returns and test whether the alphas are jointly zero. The agent writes the question, a script that downloads or loads the data and runs the regressions, and a solution whose betas, standard errors and test statistic are read from the script's output. If the data file changes next year, rerunning the script updates the solution.
@@ -22,7 +22,7 @@ No solution goes to students unless it has been produced by code that ran, or re
 - Produce the student version from the solution version by removing marked cells, so the two cannot drift apart.
 - Keep data small and included in the folder, or downloaded by a script with the date recorded.
 
-**Software other than Python.** The rule that numbers come from code that ran applies to any language the module uses. An agent can write a MATLAB, Stata or R script and run it from the command line, as long as the software is installed on the same computer and its licence covers that use: MATLAB through `matlab -batch`, Stata in batch mode, R through `Rscript`. The agent then reads the output as it would for Python. Some vendors also provide a connector that gives the agent more direct access to their software. Connectors use the Model Context Protocol (MCP), an open standard for linking an agent to other programs and services, and chapter 9 covers what to check before using one.
+**Software other than Python.** The rule that numbers come from code that ran applies to any language the module uses. An agent can write a MATLAB, Stata or R script and run it from the command line, as long as the software is installed on the same computer and its licence covers that use: MATLAB through `matlab -batch`, Stata in batch mode, R through `Rscript`. The agent then reads the output as it would for Python. Some vendors also provide a connector that gives the agent more direct access to their software. Connectors use the Model Context Protocol (MCP), an open standard for linking an agent to other programs and services, and chapter 10 covers what to check before using one.
 
 > **In Claude Code.** MathWorks publishes an official [MATLAB MCP Server](https://github.com/matlab/matlab-mcp-server). It lets the agent start MATLAB, run code, scripts and unit tests, and check a script for style and errors without running it. It needs MATLAB R2021a or later installed on your computer, and is added with `claude mcp add --transport stdio matlab -- /fullpath/to/matlab-mcp-server-binary`. According to its documentation, the server sends anonymised usage data to MathWorks unless it is started with `--disable-telemetry=true`, and under the MathWorks licence a server must not be shared by several users, so each lecturer or teaching assistant runs their own.
 
@@ -36,6 +36,6 @@ No solution goes to students unless it has been produced by code that ran, or re
 - Questions that are answerable without the intended method.
 - Numbers chosen so that the answer is uninformative, such as a test statistic nowhere near the critical value.
 - Solutions that state a correct number with an incorrect interpretation.
-- Questions that closely reproduce a textbook exercise (chapter 9).
+- Questions that closely reproduce a textbook exercise (chapter 10).
 
-> **In Claude Code.** The agent runs the scripts and notebooks itself and reads the output, so step 4 is one instruction: "take every number in the solutions from the script output". For step 5, a subagent starts with a fresh context and can be instructed to read only the questions ([subagents](https://code.claude.com/docs/en/sub-agents)). [Template B](templates.qmd#tpl-b) stores steps 1 to 5 as a skill (chapter 11), using the checker in [template D](templates.qmd#tpl-d) for step 5, and lists the stretch questions for step 6.
+> **In Claude Code.** The agent runs the scripts and notebooks itself and reads the output, so step 4 is one instruction: "take every number in the solutions from the script output". For step 5, a subagent starts with a fresh context and can be instructed to read only the questions ([subagents](https://code.claude.com/docs/en/sub-agents)). [Template B](templates.qmd#tpl-b) stores steps 1 to 5 as a skill (chapter 12), using the checker in [template D](templates.qmd#tpl-d) for step 5, and lists the stretch questions for step 6.

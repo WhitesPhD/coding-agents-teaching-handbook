@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/13-agent-worked-example.html" rel="prev">
+<link href="../chapters/15-agent-worked-example.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -131,62 +165,74 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-lecture-material.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lecture material from your own sources</span></span></a>
+  <a href="../chapters/04-version-control.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Version control and GitHub</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-problem-sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Problem sets, solutions and code labs</span></span></a>
+  <a href="../chapters/05-lecture-material.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lecture material from your own sources</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-assessment-design.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Assessment design when students have the same tools</span></span></a>
+  <a href="../chapters/06-problem-sets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Problem sets, solutions and code labs</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-marking-and-feedback.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Marking and feedback</span></span></a>
+  <a href="../chapters/07-assessment-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Assessment design when students have the same tools</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-checking.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Checking the output</span></span></a>
+  <a href="../chapters/08-marking-and-feedback.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Marking and feedback</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-data-copyright-policy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Student data, copyright and institutional policy</span></span></a>
+  <a href="../chapters/09-checking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Checking the output</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-telling-students.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">What to tell students</span></span></a>
+  <a href="../chapters/10-data-copyright-policy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Student data, copyright and institutional policy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-writing-skills.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Writing skills</span></span></a>
+  <a href="../chapters/11-telling-students.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">What to tell students</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-sharing-skills.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Sharing skills across a teaching team</span></span></a>
+  <a href="../chapters/12-writing-skills.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Writing skills</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/13-agent-worked-example.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">From assistant to agent: a worked example</span></span></a>
+  <a href="../chapters/13-sharing-skills.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Sharing skills across a teaching team</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/14-automation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Automation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/15-agent-worked-example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">From assistant to agent: a worked example</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -217,6 +263,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tpl-j" id="toc-tpl-j" class="nav-link" data-scroll-target="#tpl-j">J. Annual update</a></li>
   <li><a href="#tpl-k" id="toc-tpl-k" class="nav-link" data-scroll-target="#tpl-k">K. Notebook release</a></li>
   <li><a href="#tpl-l" id="toc-tpl-l" class="nav-link" data-scroll-target="#tpl-l">L. Test cases for a skill</a></li>
+  <li><a href="#tpl-m" id="toc-tpl-m" class="nav-link" data-scroll-target="#tpl-m">M. Module <code>.gitignore</code></a></li>
+  <li><a href="#tpl-n" id="toc-tpl-n" class="nav-link" data-scroll-target="#tpl-n">N. First commit</a></li>
+  <li><a href="#tpl-o" id="toc-tpl-o" class="nav-link" data-scroll-target="#tpl-o">O. Checks on every change</a></li>
+  <li><a href="#tpl-p" id="toc-tpl-p" class="nav-link" data-scroll-target="#tpl-p">P. A hook that protects <code>sources/</code></a></li>
   </ul>
 </nav>
     </div>
@@ -242,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The twelve templates below are starting points to copy and edit. A, C, E, F and L work with any tool. B, G and I are skills, stored as a <code>SKILL.md</code> file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change, except that B hands its checking step to the subagent in D. J and K are skills that also use Claude Code settings, such as <code>disable-model-invocation</code>, which other tools may not accept. D defines a subagent with Claude Code’s settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the <code>templates/</code> folder of the repository.</p>
+<p>The sixteen templates below are starting points to copy and edit. A, C, E, F, L, M and N work with any tool, and O works with any repository on GitHub. B, G and I are skills, stored as a <code>SKILL.md</code> file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change, except that B hands its checking step to the subagent in D. J and K are skills that also use Claude Code settings, such as <code>disable-model-invocation</code>, which other tools may not accept. D defines a subagent with Claude Code’s settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool, as does the Claude Code hook in P. None has been tested on a live module, so run each on a small example first. Each is also a file in the <code>templates/</code> folder of the repository.</p>
 <section id="tpl-a" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-a">A. Module instruction file</h3>
 <p>Save as <code>MODULE.md</code>, or under the name your agent reads at the start of every session: <code>CLAUDE.md</code> in Claude Code, <code>AGENTS.md</code> in Codex, <code>GEMINI.md</code> in Gemini CLI.</p>
@@ -310,7 +360,7 @@ Do not reuse or paraphrase questions from textbooks in sources/.</code></pre>
 </section>
 <section id="tpl-c" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-c">C. Marking notes to feedback</h3>
-<p>Use only with a tool your university has approved for student work (chapter 9).</p>
+<p>Use only with a tool your university has approved for student work (chapter 10).</p>
 <pre class="text"><code>Below are my marking notes for one anonymised script and the rubric.
 I have already set the mark; do not suggest or comment on a mark.
 
@@ -384,7 +434,7 @@ marks are set by the teaching team. [State any use in feedback.]</code></pre>
 </section>
 <section id="tpl-g" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-g">G. A written standard as a skill</h3>
-<p>Save as <code>.claude/skills/lecture-style/SKILL.md</code>, with more pairs of examples in <code>examples.md</code> in the same folder (a placeholder version is in the repository’s <code>templates/</code> folder). The rules shown are placeholders, to be replaced with your own (chapter 12).</p>
+<p>Save as <code>.claude/skills/lecture-style/SKILL.md</code>, with more pairs of examples in <code>examples.md</code> in the same folder (a placeholder version is in the repository’s <code>templates/</code> folder). The rules shown are placeholders, to be replaced with your own (chapter 13).</p>
 <pre class="text"><code>---
 name: lecture-style
 description: House style for lecture notes and slides in my modules. Use when writing or reviewing any teaching material.
@@ -415,7 +465,7 @@ Finish with a count of findings per rule.</code></pre>
 </section>
 <section id="tpl-h" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-h">H. Assessment loop: setter, candidate, examiner</h3>
-<p>Three files make up the system in chapter 13. It is untested, so run it first on a short problem set with a round limit of two.</p>
+<p>Three files make up the system in chapter 15. It is untested, so run it first on a short problem set with a round limit of two.</p>
 <p>Save as <code>.claude/agents/candidate.md</code>:</p>
 <pre class="text"><code>---
 name: candidate
@@ -488,7 +538,7 @@ Never edit the original assessment files. Work on copies.</code></pre>
 </section>
 <section id="tpl-i" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-i">I. Skill skeleton</h3>
-<p>The parts of a skill from chapter 11, to fill in. Save as <code>SKILL.md</code> in a folder named after the task: <code>.claude/skills/&lt;name&gt;/</code> in Claude Code.</p>
+<p>The parts of a skill from chapter 12, to fill in. Save as <code>SKILL.md</code> in a folder named after the task: <code>.claude/skills/&lt;name&gt;/</code> in Claude Code.</p>
 <pre class="text"><code>---
 name: task-name
 description: What the skill does and when to use it. Put the main use first, in the words a colleague would use to ask for it.
@@ -503,7 +553,7 @@ Inputs
 
 Steps
 1. ...
-2. [a check from chapter 8, written as a step]
+2. [a check from chapter 9, written as a step]
 3. ...
 
 Output
@@ -523,7 +573,7 @@ Changes:
 </section>
 <section id="tpl-j" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-j">J. Annual update</h3>
-<p>The year-to-year update from chapter 4. Save as <code>.claude/skills/annual-update/SKILL.md</code>. Run with <code>/annual-update 2027-28</code>.</p>
+<p>The year-to-year update from chapter 5. Save as <code>.claude/skills/annual-update/SKILL.md</code>. Run with <code>/annual-update 2027-28</code>.</p>
 <pre class="text"><code>---
 name: annual-update
 description: Prepare the module for a new academic year. Finds dated material, reruns figure and solution scripts on current data, and reports every change against last year. Use once a year before teaching starts.
@@ -553,7 +603,7 @@ weightings: list any that look out of date for me to raise at module review.</co
 </section>
 <section id="tpl-k" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-k">K. Notebook release</h3>
-<p>The release checks from chapter 5, with the mechanical part in a script (chapter 11). Save as <code>.claude/skills/notebook-release/SKILL.md</code>, with the script <code>scripts/release.py</code> from the repository’s <code>templates/</code> folder in the same skill folder. Mark solution cells with the tag <code>solution</code> in Jupyter. The script needs Jupyter installed in the module’s environment. Run with <code>/notebook-release problem-sets/ps3/ps3.ipynb</code>.</p>
+<p>The release checks from chapter 6, with the mechanical part in a script (chapter 12). Save as <code>.claude/skills/notebook-release/SKILL.md</code>, with the script <code>scripts/release.py</code> from the repository’s <code>templates/</code> folder in the same skill folder. Mark solution cells with the tag <code>solution</code> in Jupyter. The script needs Jupyter installed in the module’s environment. Run with <code>/notebook-release problem-sets/ps3/ps3.ipynb</code>.</p>
 <pre class="text"><code>---
 name: notebook-release
 description: Check that a solution notebook runs from top to bottom and produce the student version without the solution cells. Use before releasing any notebook to students.
@@ -583,7 +633,7 @@ Never release a student version from a notebook that did not run.</code></pre>
 </section>
 <section id="tpl-l" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-l">L. Test cases for a skill</h3>
-<p>The test file from chapter 11, filled in for template B. Save as <code>tests.md</code> in the skill’s folder, and do not mention it in <code>SKILL.md</code>.</p>
+<p>The test file from chapter 12, filled in for template B. Save as <code>tests.md</code> in the skill’s folder, and do not mention it in <code>SKILL.md</code>.</p>
 <pre class="text"><code># Test cases for the problem-set skill
 
 Not read in normal use: SKILL.md does not point to this file. Run each case
@@ -624,6 +674,144 @@ A correct output:
 | Date | Tool and model | Case 1 | Case 2 | Case 3 | Trigger | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |</code></pre>
+</section>
+<section id="tpl-m" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-m">M. Module <code>.gitignore</code></h3>
+<p>The material chapter 4 keeps out of a repository. Save as <code>.gitignore</code> at the top of the module folder, and adjust the folder names to your own layout. The module template in the repository already contains it.</p>
+<pre class="text"><code># Material that must never be recorded (chapter 4)
+assessment/
+sources/third-party/
+data/licensed/
+admin/students/
+*.env
+.env
+
+# Files the computer generates
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Personal agent settings
+.claude/settings.local.json</code></pre>
+</section>
+<section id="tpl-n" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-n">N. First commit</h3>
+<p>A prompt that puts a module folder under version control (chapter 4), with a check of what goes in before anything is recorded.</p>
+<pre class="text"><code>This folder is a teaching module that is not yet under version control.
+
+1. Check that Git is installed and tell me which version. If it is not
+   installed, stop and tell me how to install it on this computer. Do not
+   install it yourself.
+2. If there is no .gitignore file, create one from the module template's
+   .gitignore and show it to me.
+3. List every file the first commit would include, grouped by folder.
+   Flag anything that looks like student work, marks, an unreleased exam,
+   licensed data, or a password or key. Wait for my approval.
+4. Initialise the repository and make the first commit, with the message
+   "Module as of [today's date]".
+5. Explain briefly what you did and how I can undo a change later.
+
+Do not create a GitHub repository and do not push anything. I will do that
+myself.</code></pre>
+</section>
+<section id="tpl-o" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-o">O. Checks on every change</h3>
+<p>The GitHub Actions workflow from chapter 14. It compiles every LaTeX document and runs every notebook in <code>lectures/</code> and <code>problem-sets/</code>, and needs a <code>requirements.txt</code> listing the module’s Python packages. Save as <code>.github/workflows/module-checks.yml</code>.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save as .github/workflows/module-checks.yml in the module repository.</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># On every push to main and every pull request, it compiles each LaTeX file</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># that contains \documentclass and runs each notebook from top to bottom,</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># in lectures/ and problem-sets/. Untested on a live module. If GitHub</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># reports an action version below as out of date, update it.</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Module checks</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">main</span><span class="kw">]</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pull_request</span><span class="kw">:</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">workflow_dispatch</span><span class="kw">:</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="fu">permissions</span><span class="kw">:</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> read</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">latex</span><span class="kw">:</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install LaTeX</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>          sudo apt-get update</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>          sudo apt-get install -y --no-install-recommends \</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>            texlive-latex-recommended texlive-latex-extra \</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>            texlive-fonts-recommended latexmk</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Compile every document</span></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>          status=0</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>          while IFS= read -r -d '' f; do</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>            grep -q '\\documentclass' "$f" || continue</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>            echo "::group::$f"</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>            if ! (cd "$(dirname "$f")" &amp;&amp; latexmk -pdf -interaction=nonstopmode -halt-on-error "$(basename "$f")"); then</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>              echo "::error file=$f::did not compile"</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>              status=1</span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>            fi</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>            echo "::endgroup::"</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>          done &lt; &lt;(find lectures problem-sets -name '*.tex' -print0 2&gt;/dev/null)</span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>          exit $status</span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">notebooks</span><span class="kw">:</span></span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v5</span></span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.12"</span></span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install the pinned packages</span></span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi</span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>          pip install nbconvert ipykernel</span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Run every notebook from top to bottom</span></span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>          status=0</span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>          while IFS= read -r -d '' nb; do</span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>            echo "::group::$nb"</span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>            if ! jupyter nbconvert --to notebook --execute --output-dir "$RUNNER_TEMP/executed" "$nb"; then</span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>              echo "::error file=$nb::did not run"</span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a>              status=1</span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>            fi</span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a>            echo "::endgroup::"</span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a>          done &lt; &lt;(find lectures problem-sets -name '*.ipynb' -not -name '*-student.ipynb' -not -path '*/.ipynb_checkpoints/*' -print0 2&gt;/dev/null)</span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a>          exit $status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tpl-p" class="level3">
+<h3 class="anchored" data-anchor-id="tpl-p">P. A hook that protects <code>sources/</code></h3>
+<p>The hook from chapter 14, for Claude Code. Save the script as <code>.claude/hooks/protect-sources.py</code> (it is in the repository’s <code>templates/</code> folder), and add the settings below to <code>.claude/settings.json</code>. The deny rule covers the editing tools and the shell commands Claude Code recognises, and the hook gives the agent a clear reason when it blocks an edit. Neither stops a script the agent runs from writing into the folder, so make <code>sources/</code> read-only on your computer as well.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"permissions"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"deny"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"Edit(/sources/**)"</span><span class="ot">]</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"hooks"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"PreToolUse"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"matcher"</span><span class="fu">:</span> <span class="st">"Edit|Write|NotebookEdit"</span><span class="fu">,</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"hooks"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"command"</span><span class="fu">,</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"python3 </span><span class="ch">\"</span><span class="st">$CLAUDE_PROJECT_DIR</span><span class="ch">\"</span><span class="st">/.claude/hooks/protect-sources.py"</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -1048,8 +1236,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/13-agent-worked-example.html" class="pagination-link" aria-label="From assistant to agent: a worked example">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">From assistant to agent: a worked example</span></span>
+      <a href="../chapters/15-agent-worked-example.html" class="pagination-link" aria-label="From assistant to agent: a worked example">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">From assistant to agent: a worked example</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

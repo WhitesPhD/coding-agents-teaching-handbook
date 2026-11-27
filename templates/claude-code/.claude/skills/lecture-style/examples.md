@@ -1,6 +1,6 @@
 # Examples for the lecture-style skill
 
-One pair per rule in SKILL.md: a passage that breaks the rule and the corrected version. The pairs below are placeholders from an asset-pricing module. Replace them with passages from your own material (chapter 11, step 4), keeping one pair for each rule you rely on.
+One pair per rule in SKILL.md: a passage that breaks the rule and the corrected version. The pairs below are placeholders from an asset-pricing module. Replace them with passages from your own material (chapter 13, step 4), keeping one pair for each rule you rely on.
 
 ## Rule 1: one idea per slide, and a title that states the point
 

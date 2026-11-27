@@ -1,6 +1,6 @@
 # Marking and feedback
 
-The lecturer reads the work and sets the mark; the agent can help with everything around that. The university guidance cited below takes this position, and the evidence on machine marking supports it. Check your own institution's rule before uploading any student work to any tool (chapter 9).
+The lecturer reads the work and sets the mark; the agent can help with everything around that. The university guidance cited below takes this position, and the evidence on machine marking supports it. Check your own institution's rule before uploading any student work to any tool (chapter 10).
 
 **Evidence.** Two recent UK studies of extended written work find that language models compress marks towards the middle.
 
@@ -39,4 +39,4 @@ A [Loughborough review](https://blog.lboro.ac.uk/ai-education/?p=19) of staff gu
 
 **Where it is permitted and you want a second view.** Mark first, record your mark, then compare. Treat a disagreement as a prompt to reread, in the same way as a second marker's view, and keep the decision yours.
 
-> **In Claude Code.** Marking support works on files in a folder, so anonymise first: one file per script named by candidate number, with your notes alongside. Whether the tool may be used at all depends on the account type and your university's approval (chapter 9).
+> **In Claude Code.** Marking support works on files in a folder, so anonymise first: one file per script named by candidate number, with your notes alongside. Whether the tool may be used at all depends on the account type and your university's approval (chapter 10).
