@@ -25,7 +25,7 @@ Everything the agent produces is a draft until it has passed a check that does n
 
 The third pass needs a written standard, such as a page of explicit rules. An instruction like "make it sound like me" gives the reviewer nothing to check against.
 
-Keep the passes separate and ask for a list of findings with locations rather than a corrected file. You then decide which findings to accept, and the writing agent applies them. The review can catch errors before your own reading but does not replace it.
+Keep the passes separate and ask for a list of findings with locations rather than a corrected file. You then decide which findings to accept, and the writing agent applies them. On GitHub, a pull request keeps the findings, your decisions and the resulting changes together (chapter 4). The review can catch errors before your own reading but does not replace it.
 
 **Independent re-derivation in practice.**
 
@@ -46,6 +46,7 @@ Keep the passes separate and ask for a list of findings with locations rather th
 - [ ] Every reference opened and confirmed
 - [ ] Notation checked against the instruction file
 - [ ] Independent review done: correctness, typos, conformance to the written standard
+- [ ] Automatic checks passed on the final version, if the module uses them (chapter 14)
 - [ ] Read in full by the lecturer
 
 > **In Claude Code.** A [subagent](https://code.claude.com/docs/en/sub-agents) runs in its own context window and can be limited to read-only tools, which makes it a natural session B. Store it as a file in `.claude/agents/` so the same checker is used every time ([template D](templates.qmd#tpl-d)).

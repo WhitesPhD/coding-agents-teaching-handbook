@@ -35,6 +35,7 @@ A [Loughborough review](https://blog.lboro.ac.uk/ai-education/?p=19) of staff gu
 - Asking for a mark and adopting it.
 - Asking for a mark first and then reading the script. The suggested mark can anchor your judgement.
 - Uploading scripts with names or student numbers to a tool your university has not approved.
+- Committing scripts, marks or feedback to a repository, even a private one (chapter 4).
 - Sending feedback you have not read in full.
 
 **Where it is permitted and you want a second view.** Mark first, record your mark, then compare. Treat a disagreement as a prompt to reread, in the same way as a second marker's view, and keep the decision yours.

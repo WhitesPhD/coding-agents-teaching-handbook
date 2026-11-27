@@ -240,13 +240,14 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Folder layout.</strong> The layout below works for most modules.</p>
 <pre class="text"><code>ECN000-module-name/
   MODULE.md            standing instructions (see below)
-  sources/             your notes, papers, past slides, textbook references (read-only)
+  .gitignore           what version control must never record (chapter 4)
+  sources/             your notes, papers, past slides (read-only); third-party/ for licensed material
   lectures/            week01/, week02/, ... notes and slides
   problem-sets/        ps1/ questions, solutions, code, data
   assessment/          coursework briefs, exams, rubrics, marking schemes
   data/                datasets used in labs and coursework
   admin/               module outline, schedule, announcements</code></pre>
-<p>Keep <code>sources/</code> read-only by convention, so that the agent reads from it and never edits it. Keep <code>assessment/</code> out of any folder that is shared with students or synced to the virtual learning environment.</p>
+<p>Keep <code>sources/</code> read-only by convention, so that the agent reads from it and never edits it. Keep <code>assessment/</code> out of version control (chapter 4) and out of any folder that is shared with students or synced to the virtual learning environment.</p>
 <p><strong>The module instruction file.</strong> The agent reads this file at the start of every session, so it replaces the paragraph of context you would otherwise retype each time. It should hold:</p>
 <ul>
 <li><strong>Module facts:</strong> code, title, level, credits, cohort size, prerequisites.</li>
@@ -254,8 +255,10 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>What students already know:</strong> which mathematics, statistics and programming can be assumed, and what cannot.</li>
 <li><strong>Notation:</strong> your symbols for returns, expectations, estimators, vectors and matrices, and which textbook’s conventions you follow.</li>
 <li><strong>Software:</strong> language and version, permitted libraries, how code is run.</li>
+<li><strong>Folders and file names:</strong> where each kind of file goes, so that new files land in the right place.</li>
 <li><strong>House style:</strong> slide template, length of a lecture, how worked examples are laid out, British spelling.</li>
 <li><strong>Rules:</strong> never invent a reference; never edit <code>sources/</code>; every numerical answer must come from code that has been run.</li>
+<li><strong>Related files:</strong> where task-specific files such as the rubric are, and when to read them.</li>
 <li><strong>Decisions log:</strong> dated one-line notes on choices made, so they are not reopened next year.</li>
 </ul>
 <p>Keep it to one or two pages, because a long file is followed less reliably than a short one, and put detail that applies to one task, such as a marking rubric, in its own file and point to it. A skeleton is <a href="../chapters/templates.html#tpl-a">template A</a>.</p>

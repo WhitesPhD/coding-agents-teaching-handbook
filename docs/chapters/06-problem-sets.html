@@ -247,12 +247,12 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Attempt the stretch questions yourself.</strong> Agents often misjudge how hard a question is.</li>
 </ol>
 <p><strong>Example: an empirical finance question.</strong> Students estimate the CAPM beta of five stocks on monthly returns and test whether the alphas are jointly zero. The agent writes the question, a script that downloads or loads the data and runs the regressions, and a solution whose betas, standard errors and test statistic are read from the script’s output. If the data file changes next year, rerunning the script updates the solution.</p>
-<p><strong>Variants.</strong> Once a question is driven by a script, a variant needs only a new seed, sample period or set of parameter values, and a rerun. Variants are useful for tutorial groups, resits and individualised coursework. Keep the seed and parameters for each variant in a file so any version can be reproduced.</p>
+<p><strong>Variants.</strong> Once a question is driven by a script, a variant needs only a new seed, sample period or set of parameter values, and a rerun. Variants are useful for tutorial groups, resits and individualised coursework. Keep the seed and parameters for each variant in a file under version control, so any version can be reproduced.</p>
 <p><strong>Code labs and notebooks.</strong></p>
 <ul>
-<li>Require that each notebook runs from top to bottom in a clean environment before it is released. Ask the agent to do exactly that and report failures.</li>
+<li>Require that each notebook runs from top to bottom in a clean environment before it is released. Ask the agent to do exactly that and report failures. Once the module is on GitHub, the checks in chapter 14 repeat this on every change.</li>
 <li>Pin the software: language version and package versions in a file in the folder.</li>
-<li>Produce the student version from the solution version by removing marked cells, so the two cannot drift apart.</li>
+<li>Produce the student version from the solution version by removing marked cells, so the two cannot drift apart (<a href="../chapters/templates.html#tpl-k">template K</a>). If the module has a public site, the student version goes there on release and the solution version stays in the private repository (chapter 4).</li>
 <li>Keep data small and included in the folder, or downloaded by a script with the date recorded.</li>
 </ul>
 <p><strong>Software other than Python.</strong> The rule that numbers come from code that ran applies to any language the module uses. An agent can write a MATLAB, Stata or R script and run it from the command line, as long as the software is installed on the same computer and its licence covers that use: MATLAB through <code>matlab -batch</code>, Stata in batch mode, R through <code>Rscript</code>. The agent then reads the output as it would for Python. Some vendors also provide a connector that gives the agent more direct access to their software. Connectors use the Model Context Protocol (MCP), an open standard for linking an agent to other programs and services, and chapter 10 covers what to check before using one.</p>

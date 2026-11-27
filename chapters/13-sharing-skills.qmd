@@ -30,9 +30,9 @@ One to three pages is enough. A standard built this way is specific to its autho
 
 **Where to keep shared files.** Keep them in a departmental repository (chapter 4) or shared drive, with one owner per file, and keep that location free of student data and of assessment content: skills and templates only.
 
-**Teaching assistants.** Give assistants the checker and the problem-set skill but not the assessment folder. Agree in advance what they may use an agent for, and apply the same rule to all assistants on a module.
+**Teaching assistants.** Give assistants the checker and the problem-set skill but not the assessment folder. On GitHub, add them as collaborators on the module repository, which holds no assessment content, and ask them to propose changes as pull requests. Agree in advance what they may use an agent for, and apply the same rule to all assistants on a module.
 
-**Handing a module over.** The instruction file with its decisions log, the figure and solution scripts, and the module's skills together are the handover. A successor can ask the agent to explain how any week's material was built and regenerate it.
+**Handing a module over.** The module repository is the handover. It holds the instruction file with its decisions log, the figure and solution scripts, the module's skills, and a record of every change and the reason for it (chapter 4). A successor can ask the agent to explain how any week's material was built and regenerate it.
 
 > **In Claude Code.** Module skills are committed with the module folder in `.claude/skills/`, and personal skills sit in `~/.claude/skills/` (chapter 12). The checker is a subagent definition in `.claude/agents/`. A department can package its skills and subagents as a [plugin](https://code.claude.com/docs/en/plugins) and list it in a marketplace, which is a Git repository containing a `.claude-plugin/marketplace.json` file. Colleagues add the marketplace with `claude plugin marketplace add` and install from it with `claude plugin install`. A plugin's skills are called as `/plugin-name:skill-name`, so they cannot clash with a module's own skills.
 >

@@ -10,6 +10,7 @@ Put a short AI statement in the module outline that says what students may do in
 - **Access:** which tool the university provides at no cost, so that no assessment depends on a paid subscription.
 - **Verification:** that you may ask any student to explain their submission in person.
 - **Your own use:** how AI was used in preparing materials and, if at all, in marking and feedback.
+- **Errors:** where to report a mistake in the material. Each report becomes an entry in your errata list (chapter 4).
 
 **Disclosing your own use.** Guidance at several universities, including [York](https://www.york.ac.uk/about/ai/education/marking_and_feedback/) and [Exeter](https://www.exeter.ac.uk/v8media/specificsites/epqs/Guidance_on_AI_in_Marking_and_Feedback.pdf), asks staff to tell students when and how AI is used in marking and feedback. Extending it to teaching materials takes one sentence and makes it easier to ask students for the same openness.
 

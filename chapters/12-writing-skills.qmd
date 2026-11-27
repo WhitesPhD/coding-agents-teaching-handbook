@@ -54,7 +54,7 @@ Rerun the test cases after every edit and after each update to the tool or the m
 
 **Maintaining a skill.**
 
-- End the file with an owner, the date it was last tested and a short change log.
+- End the file with an owner, the date it was last tested and a short change log. Under version control the commit history records each change, and the file needs only the owner and the test date.
 - When you correct the agent's output in the same way twice, add the correction to the skill as a rule. Chapter 13 applies the same rule to a written style standard.
 - Archive a skill nobody has used for a year, so that it does not mislead a successor.
 - Keep skills free of student data and assessment content, because anything in a skill is shared with it.

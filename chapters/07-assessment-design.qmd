@@ -10,7 +10,7 @@ Before setting any unsupervised assessment, give it to an agent yourself and mar
 4. Mark both outputs against your rubric, ideally mixed in with past student scripts and marked blind.
 5. Record where it lost marks, since those parts of the assessment still discriminate.
 
-[Template F](templates.qmd#tpl-f) turns these steps into a checklist. Repeat the test each year, because the tools improve and a result from two years ago says little about this year's cohort.
+[Template F](templates.qmd#tpl-f) turns these steps into a checklist and a record sheet. Keep the attempts and their marks in `assessment/`, which stays out of version control (chapter 4). Repeat the test each year, because the tools improve and a result from two years ago says little about this year's cohort.
 
 **Decide what must be shown unaided.** Go through the learning outcomes and sort them into two groups: those a student must demonstrate without assistance, and those where using the tools well is part of the skill. The first group needs supervised conditions. The second can be assessed in coursework where AI use is permitted and the standard is raised accordingly.
 
