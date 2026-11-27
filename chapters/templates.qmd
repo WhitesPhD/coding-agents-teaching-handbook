@@ -5,7 +5,7 @@ toc-title: "Templates"
 
 # Templates {.unnumbered}
 
-Twelve starting points to copy and edit. A, C, E, F and L work with any tool. B, G and I are skills, stored as a `SKILL.md` file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change, except that B hands its checking step to the subagent in D. J and K are skills that also use Claude Code settings, such as `disable-model-invocation`, which other tools may not accept. D defines a subagent with Claude Code's settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.
+The twelve templates below are starting points to copy and edit. A, C, E, F and L work with any tool. B, G and I are skills, stored as a `SKILL.md` file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change, except that B hands its checking step to the subagent in D. J and K are skills that also use Claude Code settings, such as `disable-model-invocation`, which other tools may not accept. D defines a subagent with Claude Code's settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.
 
 ### A. Module instruction file {#tpl-a}
 
@@ -160,7 +160,7 @@ marks are set by the teaching team. [State any use in feedback.]
 
 ### G. A written standard as a skill {#tpl-g}
 
-Save as `.claude/skills/lecture-style/SKILL.md`, with more pairs of examples in `examples.md` in the same folder (a placeholder version is in the repository's `templates/` folder). The rules shown are placeholders: replace them with your own (chapter 12).
+Save as `.claude/skills/lecture-style/SKILL.md`, with more pairs of examples in `examples.md` in the same folder (a placeholder version is in the repository's `templates/` folder). The rules shown are placeholders, to be replaced with your own (chapter 12).
 
 ```text
 ---
@@ -194,7 +194,7 @@ Finish with a count of findings per rule.
 
 ### H. Assessment loop: setter, candidate, examiner {#tpl-h}
 
-Three files for the system in chapter 13. Untested: run it first on a short problem set with a round limit of two.
+Three files make up the system in chapter 13. It is untested, so run it first on a short problem set with a round limit of two.
 
 Save as `.claude/agents/candidate.md`:
 

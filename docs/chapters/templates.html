@@ -242,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Twelve starting points to copy and edit. A, C, E, F and L work with any tool. B, G and I are skills, stored as a <code>SKILL.md</code> file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change, except that B hands its checking step to the subagent in D. J and K are skills that also use Claude Code settings, such as <code>disable-model-invocation</code>, which other tools may not accept. D defines a subagent with Claude Code’s settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the <code>templates/</code> folder of the repository.</p>
+<p>The twelve templates below are starting points to copy and edit. A, C, E, F and L work with any tool. B, G and I are skills, stored as a <code>SKILL.md</code> file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change, except that B hands its checking step to the subagent in D. J and K are skills that also use Claude Code settings, such as <code>disable-model-invocation</code>, which other tools may not accept. D defines a subagent with Claude Code’s settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the <code>templates/</code> folder of the repository.</p>
 <section id="tpl-a" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-a">A. Module instruction file</h3>
 <p>Save as <code>MODULE.md</code>, or under the name your agent reads at the start of every session: <code>CLAUDE.md</code> in Claude Code, <code>AGENTS.md</code> in Codex, <code>GEMINI.md</code> in Gemini CLI.</p>
@@ -384,7 +384,7 @@ marks are set by the teaching team. [State any use in feedback.]</code></pre>
 </section>
 <section id="tpl-g" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-g">G. A written standard as a skill</h3>
-<p>Save as <code>.claude/skills/lecture-style/SKILL.md</code>, with more pairs of examples in <code>examples.md</code> in the same folder (a placeholder version is in the repository’s <code>templates/</code> folder). The rules shown are placeholders: replace them with your own (chapter 12).</p>
+<p>Save as <code>.claude/skills/lecture-style/SKILL.md</code>, with more pairs of examples in <code>examples.md</code> in the same folder (a placeholder version is in the repository’s <code>templates/</code> folder). The rules shown are placeholders, to be replaced with your own (chapter 12).</p>
 <pre class="text"><code>---
 name: lecture-style
 description: House style for lecture notes and slides in my modules. Use when writing or reviewing any teaching material.
@@ -415,7 +415,7 @@ Finish with a count of findings per rule.</code></pre>
 </section>
 <section id="tpl-h" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-h">H. Assessment loop: setter, candidate, examiner</h3>
-<p>Three files for the system in chapter 13. Untested: run it first on a short problem set with a round limit of two.</p>
+<p>Three files make up the system in chapter 13. It is untested, so run it first on a short problem set with a round limit of two.</p>
 <p>Save as <code>.claude/agents/candidate.md</code>:</p>
 <pre class="text"><code>---
 name: candidate

@@ -15,9 +15,9 @@ ECN000-module-name/
   admin/               module outline, schedule, announcements
 ```
 
-Keep `sources/` read-only by convention: the agent reads from it and never edits it. Keep `assessment/` out of any folder that is shared with students or synced to the virtual learning environment.
+Keep `sources/` read-only by convention, so that the agent reads from it and never edits it. Keep `assessment/` out of any folder that is shared with students or synced to the virtual learning environment.
 
-**The module instruction file.** This is the file the agent reads at the start of every session. It replaces the paragraph of context you would otherwise retype each time. It should hold:
+**The module instruction file.** The agent reads this file at the start of every session, so it replaces the paragraph of context you would otherwise retype each time. It should hold:
 
 - **Module facts:** code, title, level, credits, cohort size, prerequisites.
 - **Learning outcomes:** as approved in the module specification.
@@ -28,7 +28,7 @@ Keep `sources/` read-only by convention: the agent reads from it and never edits
 - **Rules:** never invent a reference; never edit `sources/`; every numerical answer must come from code that has been run.
 - **Decisions log:** dated one-line notes on choices made, so they are not reopened next year.
 
-A skeleton is [template A](templates.qmd#tpl-a). Keep it to one or two pages. A long file is followed less reliably than a short one. Put detail that applies to one task, such as a marking rubric, in its own file and point to it.
+Keep it to one or two pages, because a long file is followed less reliably than a short one, and put detail that applies to one task, such as a marking rubric, in its own file and point to it. A skeleton is [template A](templates.qmd#tpl-a).
 
 **Other fields.** For a theory or macroeconomics module, the notation and assumed-mathematics entries matter most. For an applied or policy module, add the data sources you use and the standard of evidence you expect in written work.
 

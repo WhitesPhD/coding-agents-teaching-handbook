@@ -1,10 +1,10 @@
 # From assistant to agent: a worked example
 
-An assessment can be tested the way it will be used: one agent sets it, a second sits it, a third marks it, and the cycle repeats until the assessment holds up. This chapter builds that system. It is the one place in the handbook where the software decides its own next step.
+An assessment can be tested by three agents, one that sets it, one that sits it and one that marks it, in a cycle that repeats until a stopping rule set in advance is met. It is the only system in the handbook in which the software decides its own next step.
 
-**Assistant or agent.** In chapters 4 to 8 you set each task, approve the plan and fix the steps in advance. That is a supervised workflow. An agent, in the stricter sense, is given a goal and a stopping rule, and chooses its own actions from what it observes. The stress test in chapter 6 is the manual version of what follows.
+**Assistant or agent.** In chapters 4 to 8 you set each task, approve the plan and fix the steps in advance. The work is therefore supervised. An agent in the stricter sense is given a goal and a stopping rule and chooses its own actions from what it observes. The stress test in chapter 6 is the manual version of this system.
 
-**Three roles, kept apart.**
+**Separate roles.**
 
 | Role | Sees | Produces | Must not see |
 | --- | --- | --- | --- |
@@ -12,7 +12,7 @@ An assessment can be tested the way it will be used: one agent sets it, a second
 | Candidate | Only what a student receives | A complete submission | The rubric's marking notes, the setter's intentions, earlier rounds |
 | Examiner | The submission and the rubric | A mark per criterion with a one-line justification | Who or what wrote the submission |
 
-The design depends on this separation: a candidate that has seen the marking notes, or an examiner that knows the submission is machine-written, tells you nothing.
+The design depends on this separation, because a candidate that has seen the marking notes, or an examiner that knows the submission is machine-written, gives no information about the assessment.
 
 **One round.**
 
@@ -38,22 +38,22 @@ Each pass runs left to right; an unmet stopping rule sends the examiner's report
 
 The changes left open by these constraints mostly tie the task to something the candidate does not have: work done in class, data the student collects, a position defended orally, or a judgement that must be justified against material specific to the module.
 
-**What the report contains.** The original and final versions side by side, the change log, the mark by criterion in every round, the final attempt in full, and the setter's own assessment of which constraints came under strain.
+**The report.** It gives the original and final versions side by side, the change log, the mark by criterion in every round, the final attempt in full, and the setter's own assessment of which constraints came under strain.
 
-**What you still do.**
+**The lecturer's part.**
 
 - **Mark the final attempt yourself.** The examiner is a language model, and chapter 7 documents how such marks are compressed towards the middle. Its marks steer the loop but are not evidence that the assessment is safe.
-- **Judge validity.** Read the final version as a student would. A harder assessment is not necessarily a better one.
+- **Judge validity.** Read the final version as a student would, and check that it is still a valid test of the learning outcomes and not only a harder one.
 - **Check the examiner once.** Before trusting the loop, give the examiner two or three model answers you have written at known standards and see whether it ranks them correctly. Do not use real student scripts for this unless your university permits it (chapter 9).
 
 **Limits.**
 
-- The candidate is not a student. It models a capable student using a current tool with little effort, which is the case the assessment has to withstand. It says nothing about how real students at different levels will perform.
+- The candidate models a capable student using a current tool with little effort, which is the case the assessment has to withstand, and says nothing about how real students at different levels will perform.
 - The result is specific to the tool and the date. Record both and rerun each year.
 - A full run uses many times the computation of a single request. Start with a round limit of three.
 - This system has not been run on a live module. Treat the files in [template H](templates.qmd#tpl-h) as a starting design.
 
-**Other uses of the same three roles.** For an invigilated exam, where AI use is not the concern, the loop still helps with quality: the candidate reports ambiguous wording and questions it could not finish in the time, and the examiner reports where the marking scheme gave no guidance. The setter revises for clarity instead of robustness.
+**Other uses of the same three roles.** For an invigilated exam, where AI use is not the concern, the loop still improves quality, because the candidate reports ambiguous wording and questions it could not finish in the time, and the examiner reports where the marking scheme gave no guidance. The setter revises for clarity instead of robustness.
 
 **By field.** For empirical coursework, give the candidate the dataset and let it run code. For a theory problem set, the examiner needs full worked solutions in addition to final answers. For essay-based modules, expect the examiner's marks to be least reliable, and rely more on your own marking of the final attempt.
 

@@ -1,6 +1,6 @@
 # What a coding agent is
 
-A coding agent works directly on the files in a folder, whereas a chat window works only on what is pasted or uploaded into the conversation. That one difference explains both why it is more useful for teaching preparation and why it needs more care.
+A coding agent works directly on the files in a folder, whereas a chat window works only on what is pasted or uploaded into the conversation. It is therefore more useful for preparing teaching material, and because it can change and delete files it needs closer supervision.
 
 |  | Chat window | Coding agent |
 | --- | --- | --- |
@@ -12,11 +12,11 @@ A coding agent works directly on the files in a folder, whereas a chat window wo
 
 **Products.** Anthropic, OpenAI and Google each offer a coding agent alongside their chat products: Claude Code, Codex and Gemini CLI. The chapters that follow apply to all three. The notes headed *In Claude Code* give the specifics for one of them, and the other two have equivalent settings under different names.
 
-**What this changes in practice.** You can ask for a problem set and its solutions, have the solutions executed, and get back the files with the numerical answers already checked. You can ask for the notation in ten weeks of slides to be made consistent. Neither is practical by copying and pasting.
+**In practice.** You can ask for a problem set and its solutions, have the solutions executed, and get back the files with the numerical answers already checked. You can ask for the notation in ten weeks of slides to be made consistent. Neither is practical by copying and pasting.
 
-**What it does not change.** The model still makes confident mistakes: a sign error in a derivation, a reference that does not exist, a question that is harder than intended. Running code catches numerical errors but not a wrong economic argument; chapter 8 covers checking.
+**Limits.** The model still makes confident mistakes: a sign error in a derivation, a reference that does not exist, a question that is harder than intended. Running code catches numerical errors but not a wrong economic argument. Chapter 8 covers checking.
 
-**Permissions.** Because the agent can edit and delete files, every product has a setting for what it may do without asking. Three habits are enough to start:
+**Permissions.** Because the agent can edit and delete files, every product has a setting for what it may do without asking. For a first module:
 
 - Open the agent in a folder made for the module and never in your home folder.
 - Begin in the mode that asks before each edit, and relax it once you have seen how the agent behaves.

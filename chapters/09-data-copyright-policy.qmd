@@ -1,8 +1,8 @@
 # Student data, copyright and institutional policy
 
-Your own teaching material is yours to use with these tools; student work and third-party material are not. Most of the risk in using an agent for teaching comes from the second and third categories, and your university sets the rules for both. This chapter is general guidance and not legal advice.
+You may use your own teaching material with these tools. Student work and third-party material carry most of the risk, and your university sets the rules for both. This chapter is general guidance and not legal advice.
 
-**Three kinds of material.**
+**Kinds of material.**
 
 | Material | Examples | Default position |
 | --- | --- | --- |
@@ -16,7 +16,7 @@ Your own teaching material is yours to use with these tools; student work and th
 - [York](https://www.york.ac.uk/about/ai/education/marking_and_feedback/) requires explicit student permission before student work or details go into a generative AI tool.
 - [Exeter](https://www.exeter.ac.uk/v8media/specificsites/epqs/Guidance_on_AI_in_Marking_and_Feedback.pdf) notes that student work is by default the student's intellectual property.
 
-Anonymising helps but does not settle the matter: an essay can identify its author through its content, and the work still belongs to the student.
+Anonymising helps, but an essay can still identify its author through its content, and the work still belongs to the student.
 
 **Approved tools and account types.** Universities approve specific tools under specific contracts. A personal subscription to the same product is a different legal arrangement. The distinction that usually matters is whether the provider may train on what you send and how long it is kept.
 

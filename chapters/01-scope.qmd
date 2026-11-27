@@ -2,7 +2,7 @@
 
 This handbook is for colleagues who teach economics and want to use a coding agent to prepare and run a module. It covers lecture material, problem sets and code labs, assessment design, marking, checking, and the rules that apply.
 
-A coding agent is a language model that works inside a folder on your computer: it reads your files, writes new ones and runs code. Chapter 2 explains how that differs from a chat window. No programming is needed to follow the handbook, although chapter 5 is most useful for modules with a computational component.
+A coding agent is a language model that reads the files in a folder on your computer, writes new ones and runs code. Chapter 2 explains how that differs from a chat window. No programming is needed to follow the handbook, although chapter 5 is most useful for modules with a computational component.
 
 **Tool.** The main text does not depend on a particular product. Where the mechanics matter, a short note headed *In Claude Code* gives the specifics. Those notes were checked against the Claude Code documentation on 26 and 27 November 2026 and will date faster than the rest.
 
@@ -10,7 +10,7 @@ A coding agent is a language model that works inside a folder on your computer: 
 
 **Policy.** Chapters 6, 7, 9 and 10 describe the position at UK universities in general. Your own institution's policy takes precedence, and several of the rules differ across universities.
 
-**What is left out.** This is not a guide for students, and it does not cover research use. It does not compare products or discuss procurement.
+**Out of scope.** This is not a guide for students, and it does not cover research use. It does not compare products or discuss procurement.
 
 **Reading paths.**
 

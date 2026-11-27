@@ -2,18 +2,18 @@
 
 Put a short AI statement in the module outline that says what students may do in each assessment and what you did in preparing the module. Permitted use differs across modules and assessments, so students need the rule for yours in writing.
 
-**What the statement should cover.**
+**Contents.**
 
-- **Per assessment:** what use is permitted, in concrete terms. "You may use AI to debug code but not to write the interpretation" is usable. "Use AI responsibly" is not.
+- **Per assessment:** what use is permitted, in concrete terms. "You may use AI to debug code but not to write the interpretation" can be applied; "Use AI responsibly" is too vague to apply.
 - **Disclosure:** what students must declare and where, for example a short paragraph at the end of the submission naming the tool and what it was used for.
 - **Responsibility:** the student answers for everything submitted, including errors and invented references introduced by a tool.
 - **Access:** which tool the university provides at no cost, so that no assessment depends on a paid subscription.
 - **Verification:** that you may ask any student to explain their submission in person.
 - **Your own use:** how AI was used in preparing materials and, if at all, in marking and feedback.
 
-**Why include your own use.** Guidance at several universities, including [York](https://www.york.ac.uk/about/ai/education/marking_and_feedback/) and [Exeter](https://www.exeter.ac.uk/v8media/specificsites/epqs/Guidance_on_AI_in_Marking_and_Feedback.pdf), asks staff to tell students when and how AI is used in marking and feedback. Extending that to teaching materials costs one sentence and makes it easier to ask the same openness of students.
+**Disclosing your own use.** Guidance at several universities, including [York](https://www.york.ac.uk/about/ai/education/marking_and_feedback/) and [Exeter](https://www.exeter.ac.uk/v8media/specificsites/epqs/Guidance_on_AI_in_Marking_and_Feedback.pdf), asks staff to tell students when and how AI is used in marking and feedback. Extending it to teaching materials takes one sentence and makes it easier to ask students for the same openness.
 
-**Teach the checking as well as the rule.** The first two [Russell Group principles](https://russellgroup.ac.uk/policy/policy-briefings/principles-use-generative-ai-tools-education) are about AI literacy and about equipping staff to support students' use of AI. In a quantitative module, the most transferable habit is the one in chapter 5: a number is not trusted until the code that produced it has run. A short in-class demonstration of an agent producing a plausible but wrong answer makes the point concretely.
+**Teach the checking as well as the rule.** The first two [Russell Group principles](https://russellgroup.ac.uk/policy/policy-briefings/principles-use-generative-ai-tools-education) are about AI literacy and about equipping staff to support students' use of AI. In a quantitative module, the most useful habit to teach is the rule from chapter 5 that a number is not trusted until the code that produced it has run. A short in-class demonstration of an agent producing a plausible but wrong answer makes the point concretely.
 
 **Keep it consistent across the programme.** Agree a common format with colleagues so students see the same structure in every module, even where the permitted use differs. A shared scale (chapter 6) is one way to do this.
 

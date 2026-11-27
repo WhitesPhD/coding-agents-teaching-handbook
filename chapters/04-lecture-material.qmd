@@ -2,12 +2,12 @@
 
 The agent is most reliable when it reorganises material you supply and least reliable when it writes from its own knowledge. Build lectures from your `sources/` folder and treat anything it adds from outside as unverified.
 
-**A workflow that holds up.**
+**Workflow.**
 
 1. **Collect the sources.** Put your notes, the papers and chapters the lecture draws on, and last year's slides in `sources/`.
-2. **Ask for a plan before any writing.** One page per lecture: the outcomes it serves, the sequence of ideas, the worked examples, what is cut. Edit the plan yourself. This is where your judgement about the cohort enters.
+2. **Ask for a plan before any writing.** One page per lecture: the outcomes it serves, the sequence of ideas, the worked examples, what is cut. Edit the plan yourself to reflect what you know about the cohort.
 3. **Write the notes first.** Full lecture notes in prose and mathematics, from the approved plan.
-4. **Derive the slides from the notes.** Slides are then a view of one source, and a later correction is made in one place.
+4. **Derive the slides from the notes.** The slides then follow the notes, and a later correction is made once, in the notes.
 5. **Generate every figure from code.** Keep the script next to the figure so it can be rerun with new data.
 6. **Run a consistency pass.** Across all weeks: notation, numbering, cross-references, terms defined before use.
 
@@ -24,12 +24,12 @@ Aim for what can be taught in 100 minutes, with two worked examples.
 Compile the file and fix any errors before you finish.
 ```
 
-**What to watch.**
+**Common faults.**
 
 - **Length.** Agents write too much. State the teaching time and the number of examples.
 - **Level.** The agent has no information about what your students find hard. Say so in the plan: where to slow down, which step needs intuition before algebra.
 - **Invented support.** References, dates, numbers in a motivating example and attributed quotations all need checking against a source (chapter 8).
-- **Flat prose.** Material written from generic knowledge reads like a textbook summary. Your own notes give the module its character.
+- **Flat prose.** Material written from generic knowledge reads like a textbook summary, whereas material built from your own notes keeps your examples and emphasis.
 
 **Updating a module year to year.** Ask the agent to list what has dated: data ending in an old year, superseded references, examples overtaken by events. Rerun the figure scripts with current data. Review the changes as a comparison against last year's files before accepting them.
 

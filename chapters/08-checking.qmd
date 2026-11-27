@@ -15,17 +15,17 @@ Everything the agent produces is a draft until it has passed a check that does n
 | Inconsistent notation across weeks | Consistency pass against `MODULE.md` | Agent |
 | Wrong level, emphasis or tone | Your reading | You |
 
-**Why a fresh session.** A session that has just written a solution may simply confirm it when asked to check. A second session that sees only the question has not seen the first answer. Where the two disagree, one of them is wrong, and that is where to spend your time.
+**Fresh sessions.** A session that has just written a solution may simply confirm it when asked to check. A second session that sees only the question has not seen the first answer. Where the two disagree, at least one is wrong, and the disagreement is where to look first.
 
-**An independent reviewer for all material.** A second agent should review every piece of material before the lecturer reads it. The agent that wrote the slides does not check them; a separate one does, in three passes:
+**An independent reviewer for all material.** A second agent, not the one that wrote the material, should review every piece of it before the lecturer reads it, in three passes:
 
 1. **Correctness.** Every statement, equation, number and reference is checked against the sources and the code output.
 2. **Typos and mechanics.** Spelling, broken cross-references, mislabelled figures, equations that do not compile, slides that overflow.
 3. **Conformance to a written standard.** The material is compared with a document that states how it should be written: the notation and house style in the instruction file, or a longer style guide stored as a skill (chapter 12 and [template G](templates.qmd#tpl-g)). A guide to academic writing style, applied to papers and slides, is one example.
 
-The third pass depends on the standard being written down. "Make it sound like me" gives the reviewer nothing to check against. A page of explicit rules does.
+The third pass needs a written standard, such as a page of explicit rules. An instruction like "make it sound like me" gives the reviewer nothing to check against.
 
-Keep the passes separate and ask for a list of findings with locations rather than a corrected file. You then decide which findings to accept, and the writing agent applies them. This can catch errors before the lecturer's own reading, though it does not replace that reading.
+Keep the passes separate and ask for a list of findings with locations rather than a corrected file. You then decide which findings to accept, and the writing agent applies them. The review can catch errors before your own reading but does not replace it.
 
 **Independent re-derivation in practice.**
 
@@ -36,7 +36,7 @@ Keep the passes separate and ask for a list of findings with locations rather th
 
 **References.** Require a DOI or stable URL for every reference in material the agent writes, and have each one opened and checked. Do not accept a reference the agent cannot open. For the handful of papers a lecture rests on, check them yourself.
 
-**What cannot be delegated.** Only you can judge whether an explanation is pitched at the right level, whether an example is fair to all students, and whether an argument is the one you want to teach. Read everything that goes to students at least once in full.
+**Your own reading.** Only you can judge whether an explanation is pitched at the right level, whether an example is fair to all students, and whether an argument is the one you want to teach. Read everything that goes to students at least once in full.
 
 **Before release.**
 

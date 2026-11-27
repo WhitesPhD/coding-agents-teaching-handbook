@@ -234,8 +234,8 @@ ul.task-list li input[type="checkbox"] {
   assessment/          coursework briefs, exams, rubrics, marking schemes
   data/                datasets used in labs and coursework
   admin/               module outline, schedule, announcements</code></pre>
-<p>Keep <code>sources/</code> read-only by convention: the agent reads from it and never edits it. Keep <code>assessment/</code> out of any folder that is shared with students or synced to the virtual learning environment.</p>
-<p><strong>The module instruction file.</strong> This is the file the agent reads at the start of every session. It replaces the paragraph of context you would otherwise retype each time. It should hold:</p>
+<p>Keep <code>sources/</code> read-only by convention, so that the agent reads from it and never edits it. Keep <code>assessment/</code> out of any folder that is shared with students or synced to the virtual learning environment.</p>
+<p><strong>The module instruction file.</strong> The agent reads this file at the start of every session, so it replaces the paragraph of context you would otherwise retype each time. It should hold:</p>
 <ul>
 <li><strong>Module facts:</strong> code, title, level, credits, cohort size, prerequisites.</li>
 <li><strong>Learning outcomes:</strong> as approved in the module specification.</li>
@@ -246,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Rules:</strong> never invent a reference; never edit <code>sources/</code>; every numerical answer must come from code that has been run.</li>
 <li><strong>Decisions log:</strong> dated one-line notes on choices made, so they are not reopened next year.</li>
 </ul>
-<p>A skeleton is <a href="../chapters/templates.html#tpl-a">template A</a>. Keep it to one or two pages. A long file is followed less reliably than a short one. Put detail that applies to one task, such as a marking rubric, in its own file and point to it.</p>
+<p>Keep it to one or two pages, because a long file is followed less reliably than a short one, and put detail that applies to one task, such as a marking rubric, in its own file and point to it. A skeleton is <a href="../chapters/templates.html#tpl-a">template A</a>.</p>
 <p><strong>Other fields.</strong> For a theory or macroeconomics module, the notation and assumed-mathematics entries matter most. For an applied or policy module, add the data sources you use and the standard of evidence you expect in written work.</p>
 <blockquote class="blockquote">
 <p><strong>In Claude Code.</strong> The instruction file is called <code>CLAUDE.md</code> and sits at the top of the folder. It is loaded at the start of every session, and the documentation recommends keeping it under 200 lines (<a href="https://code.claude.com/docs/en/memory">memory</a>). The <code>/init</code> command drafts one from the folder’s contents. A line such as <code>@assessment/rubric.md</code> imports another file.</p>

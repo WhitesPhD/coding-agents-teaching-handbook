@@ -1,6 +1,6 @@
 # Assessment design when students have the same tools
 
-Before setting any unsupervised assessment, give it to an agent yourself and mark what comes back. The result tells you what the assessment still measures, which is more useful than a general view on whether students "will use AI".
+Before setting any unsupervised assessment, give it to an agent yourself and mark what comes back. The marks show which parts of the assessment an agent cannot complete well, and so what the assessment still measures.
 
 **The stress test.**
 
@@ -8,9 +8,9 @@ Before setting any unsupervised assessment, give it to an agent yourself and mar
 2. Give the agent exactly what a student receives: the brief, the data, the reading list.
 3. Ask it to complete the assessment in one pass, then once more with one round of the kind of follow-up a student would give ("make it more critical", "check the code runs").
 4. Mark both outputs against your rubric, ideally mixed in with past student scripts and marked blind.
-5. Record where it lost marks. Those are the parts of the assessment that still discriminate.
+5. Record where it lost marks, since those parts of the assessment still discriminate.
 
-[Template F](templates.qmd#tpl-f) turns these steps into a checklist. Repeat it each year. The answer changes as the tools improve, and a result from two years ago is not evidence about this year's cohort.
+[Template F](templates.qmd#tpl-f) turns these steps into a checklist. Repeat the test each year, because the tools improve and a result from two years ago says little about this year's cohort.
 
 **Decide what must be shown unaided.** Go through the learning outcomes and sort them into two groups: those a student must demonstrate without assistance, and those where using the tools well is part of the skill. The first group needs supervised conditions. The second can be assessed in coursework where AI use is permitted and the standard is raised accordingly.
 
@@ -25,7 +25,7 @@ Before setting any unsupervised assessment, give it to an agent yourself and mar
 | Coursework with AI permitted and assessed | Judgement: framing, verification, critique of output | Needs a rubric that rewards those things |
 | In-class tasks and presentations | Performance in real time | Timetabling; anxiety for some students |
 
-Individualised data or parameters (chapter 5) deter copying between students. They do not make a task harder for an agent.
+Individualised data or parameters (chapter 5) deter copying between students but do not make a task harder for an agent.
 
 **State the rule for each assessment.** Students need to know, per assessment, what use is allowed. A published scale helps keep this consistent across a programme. The [AI Assessment Scale](https://arxiv.org/abs/2412.09029) of Perkins, Roe and Furze is one such scale, with five levels running from "No AI" to "AI Exploration".
 

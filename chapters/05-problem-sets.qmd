@@ -1,11 +1,11 @@
 # Problem sets, solutions and code labs
 
-No solution goes to students unless it has been produced by code that ran, or re-derived independently. This rule is the main safeguard for agent-written exercises, and it is the main advantage an agent has over a chat window.
+No solution goes to students unless it has been produced by code that ran, or re-derived independently. The rule is the main safeguard for exercises written by an agent, and an agent, unlike a chat window, can run the code itself.
 
 **Writing a problem set.**
 
 1. **Specify before generating.** The topic, the learning outcome each question tests, the number of questions, the intended time, and the mix of mechanical, applied and stretch questions.
-2. **Supply two or three of your own past questions** as the standard for style and difficulty. Examples tend to calibrate the agent better than a written description.
+2. **Supply two or three of your own past questions** as the standard for style and difficulty. Examples set the standard more reliably than a written description.
 3. **Ask for questions and solutions as separate files**, with the solution code in a third.
 4. **Have the solution code executed** and the numbers in the written solutions taken from its output rather than typed by the model.
 5. **Have the questions solved again from scratch** by a separate session that has not seen the solutions, and compare (chapter 8 and [template D](templates.qmd#tpl-d)).
@@ -13,7 +13,7 @@ No solution goes to students unless it has been produced by code that ran, or re
 
 **Example: an empirical finance question.** Students estimate the CAPM beta of five stocks on monthly returns and test whether the alphas are jointly zero. The agent writes the question, a script that downloads or loads the data and runs the regressions, and a solution whose betas, standard errors and test statistic are read from the script's output. If the data file changes next year, rerunning the script updates the solution.
 
-**Variants.** Once a question is driven by a script, variants are cheap: change the seed, the sample period or the parameter values, rerun, and a new numerical answer follows. Variants are useful for tutorial groups, resits and individualised coursework. Keep the seed and parameters for each variant in a file so any version can be reproduced.
+**Variants.** Once a question is driven by a script, a variant needs only a new seed, sample period or set of parameter values, and a rerun. Variants are useful for tutorial groups, resits and individualised coursework. Keep the seed and parameters for each variant in a file so any version can be reproduced.
 
 **Code labs and notebooks.**
 
@@ -24,14 +24,14 @@ No solution goes to students unless it has been produced by code that ran, or re
 
 **Software other than Python.** The rule that numbers come from code that ran applies to any language the module uses. An agent can write a MATLAB, Stata or R script and run it from the command line, as long as the software is installed on the same computer and its licence covers that use: MATLAB through `matlab -batch`, Stata in batch mode, R through `Rscript`. The agent then reads the output as it would for Python. Some vendors also provide a connector that gives the agent more direct access to their software. Connectors use the Model Context Protocol (MCP), an open standard for linking an agent to other programs and services, and chapter 9 covers what to check before using one.
 
-> **In Claude Code.** MathWorks publishes an official [MATLAB MCP Server](https://github.com/matlab/matlab-mcp-server). It lets the agent start MATLAB, run code, scripts and unit tests, and check a script for style and errors without running it. It needs MATLAB R2021a or later installed on your computer, and is added with `claude mcp add --transport stdio matlab -- /fullpath/to/matlab-mcp-server-binary`. Its documentation states two points that matter for teaching. The server sends anonymised usage data to MathWorks unless it is started with `--disable-telemetry=true`. Under the MathWorks licence a server must not be shared by several users, so each lecturer or teaching assistant runs their own.
+> **In Claude Code.** MathWorks publishes an official [MATLAB MCP Server](https://github.com/matlab/matlab-mcp-server). It lets the agent start MATLAB, run code, scripts and unit tests, and check a script for style and errors without running it. It needs MATLAB R2021a or later installed on your computer, and is added with `claude mcp add --transport stdio matlab -- /fullpath/to/matlab-mcp-server-binary`. According to its documentation, the server sends anonymised usage data to MathWorks unless it is started with `--disable-telemetry=true`, and under the MathWorks licence a server must not be shared by several users, so each lecturer or teaching assistant runs their own.
 
 **Questions without code.**
 
 - **Derivations and proofs (theory, macro):** the equivalent of running the code is a symbolic or numerical check. Ask the agent to verify a closed-form answer with a computer algebra system, or to confirm a comparative-statics sign numerically at several parameter values. Such a check catches algebra slips but not flawed arguments.
 - **Short-answer and essay questions (applied, policy):** ask for a marking scheme alongside each question, stating what a pass, merit and distinction answer contains. Writing the scheme exposes questions that are vague or have several defensible answers.
 
-**What to watch.**
+**Common faults.**
 
 - Questions that are answerable without the intended method.
 - Numbers chosen so that the answer is uninformative, such as a test statistic nowhere near the critical value.
