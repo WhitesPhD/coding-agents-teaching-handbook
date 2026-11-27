@@ -21,7 +21,7 @@ Everything the agent produces is a draft until it has passed a check that does n
 
 1. **Correctness.** Every statement, equation, number and reference is checked against the sources and the code output.
 2. **Typos and mechanics.** Spelling, broken cross-references, mislabelled figures, equations that do not compile, slides that overflow.
-3. **Conformance to a written standard.** The material is compared with a document that states how it should be written: the notation and house style in the instruction file, or a longer style guide stored as a workflow file (chapter 11 and [template G](templates.qmd#tpl-g)). A guide to academic writing style, applied to papers and slides, is one example.
+3. **Conformance to a written standard.** The material is compared with a document that states how it should be written: the notation and house style in the instruction file, or a longer style guide stored as a skill (chapter 12 and [template G](templates.qmd#tpl-g)). A guide to academic writing style, applied to papers and slides, is one example.
 
 The third pass depends on the standard being written down. "Make it sound like me" gives the reviewer nothing to check against. A page of explicit rules does.
 

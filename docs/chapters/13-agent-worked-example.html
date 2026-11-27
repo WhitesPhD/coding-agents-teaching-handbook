@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Sharing workflows across a teaching team – Coding Agents for Teaching Economics</title>
+<title>13&nbsp; From assistant to agent: a worked example – Coding Agents for Teaching Economics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/12-agent-worked-example.html" rel="next">
-<link href="../chapters/10-telling-students.html" rel="prev">
+<link href="../chapters/templates.html" rel="next">
+<link href="../chapters/12-sharing-skills.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/11-sharing-workflows.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sharing workflows across a teaching team</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/13-agent-worked-example.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">From assistant to agent: a worked example</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -174,14 +174,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-sharing-workflows.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sharing workflows across a teaching team</span></span></a>
+  <a href="../chapters/11-writing-skills.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Writing skills</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-agent-worked-example.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">From assistant to agent: a worked example</span></span></a>
+  <a href="../chapters/12-sharing-skills.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Sharing skills across a teaching team</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-agent-worked-example.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">From assistant to agent: a worked example</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -201,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sharing workflows across a teaching team</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">From assistant to agent: a worked example</span></h1>
 </div>
 
 
@@ -218,71 +224,90 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Once a workflow works for one module, write it down as a file the agent can follow, and share the file. A department then needs each workflow to be worked out only once for all its lecturers.</p>
-<p><strong>What is worth sharing.</strong></p>
+<p>An assessment can be tested the way it will be used: one agent sets it, a second sits it, a third marks it, and the cycle repeats until the assessment holds up. This chapter builds that system. It is the one place in the handbook where the software decides its own next step.</p>
+<p><strong>Assistant or agent.</strong> In chapters 4 to 8 you set each task, approve the plan and fix the steps in advance. That is a supervised workflow. An agent, in the stricter sense, is given a goal and a stopping rule, and chooses its own actions from what it observes. The stress test in chapter 6 is the manual version of what follows.</p>
+<p><strong>Three roles, kept apart.</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Item</th>
-<th>What it is</th>
-<th>Who benefits</th>
+<th>Role</th>
+<th>Sees</th>
+<th>Produces</th>
+<th>Must not see</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Module template</td>
-<td>The empty folder layout and a skeleton instruction file (chapter 3)</td>
-<td>Anyone starting or inheriting a module</td>
+<td>Setter</td>
+<td>Learning outcomes, constraints, the examiner’s last report</td>
+<td>The brief, data and rubric; a log of each change and its reason</td>
+<td>The candidate’s working</td>
 </tr>
 <tr class="even">
-<td>Workflow files</td>
-<td>Step-by-step instructions for a recurring task: new lecture, new problem set, annual update, stress test</td>
-<td>Colleagues doing the same task</td>
+<td>Candidate</td>
+<td>Only what a student receives</td>
+<td>A complete submission</td>
+<td>The rubric’s marking notes, the setter’s intentions, earlier rounds</td>
 </tr>
 <tr class="odd">
-<td>Checker</td>
-<td>The independent checker from chapter 8, as a stored definition</td>
-<td>Lecturers and teaching assistants</td>
-</tr>
-<tr class="even">
-<td>Statement template</td>
-<td>The student-facing AI statement (chapter 10)</td>
-<td>The whole programme</td>
+<td>Examiner</td>
+<td>The submission and the rubric</td>
+<td>A mark per criterion with a one-line justification</td>
+<td>Who or what wrote the submission</td>
 </tr>
 </tbody>
 </table>
-<p><strong>How to write a workflow file.</strong> Write it as you would brief a capable teaching assistant who has never seen the module:</p>
-<ul>
-<li>What the task is and when to use it.</li>
-<li>What inputs it needs and where they are.</li>
-<li>The steps, in order, including the checks from chapter 8.</li>
-<li>What the finished output looks like and where it goes.</li>
-<li>What the agent must not do.</li>
-</ul>
-<p>Test it by running it on a module other than the one it was written for. If it only works on your module, the module-specific parts belong in the instruction file.</p>
-<p><strong>Building a written standard for the reviewer.</strong> The third review pass in chapter 8 needs a document that says how your material should be written. It is built from your own work.</p>
+<p>The design depends on this separation: a candidate that has seen the marking notes, or an examiner that knows the submission is machine-written, tells you nothing.</p>
+<p><strong>One round.</strong></p>
 <ol type="1">
-<li><strong>Collect examples.</strong> Five to ten pieces you consider your best: lecture notes, slides, problem sets, or papers if the standard is for research writing.</li>
-<li><strong>Have the agent extract the rules.</strong> Ask it to read them and list what is consistent: sentence and paragraph length, how a slide is structured, how a result is introduced, how equations are referenced, what is never done.</li>
-<li><strong>Edit the rules yourself.</strong> Delete what is accidental, correct what it misread, and add the rules you know you follow that the examples did not show.</li>
-<li><strong>Add pairs of examples.</strong> For each important rule, one passage that breaks it and the corrected version. The pair gives the reviewer something concrete to match.</li>
-<li><strong>Add a list of what to flag.</strong> The phrases and constructions you do not want, including those typical of machine-written text.</li>
-<li><strong>Say how to report.</strong> Findings as a list with location, the rule broken and a suggested fix. No rewriting.</li>
-<li><strong>Test it on old material.</strong> Run the reviewer on something you wrote before the standard existed, and on something an agent wrote. Adjust rules that produce false alarms.</li>
-<li><strong>Keep it current.</strong> Each time you correct the agent’s writing by hand, ask whether the correction is a rule. If so, add it.</li>
+<li>The setter writes or revises the assessment and records what changed and why.</li>
+<li>The candidate attempts it in a clean folder with only the student-facing files.</li>
+<li>The examiner marks the attempt against the rubric, criterion by criterion.</li>
+<li>The system checks the stopping rule.</li>
+<li>If it is not met, the setter reads the examiner’s report, identifies the criteria the candidate passed most easily, and revises.</li>
 </ol>
-<p>One to three pages is enough. A standard built this way is specific to its author, so share the method and the template with colleagues rather than your own rules. A skeleton is <a href="../chapters/templates.html#tpl-g">template G</a>.</p>
-<p><strong>Where to keep shared files.</strong> Keep them in a departmental repository or shared drive, with one owner per file, and keep that location free of student data and of assessment content: workflows and templates only.</p>
-<p><strong>Teaching assistants.</strong> Give assistants the checker and the problem-set workflow but not the assessment folder. Agree in advance what they may use an agent for, and apply the same rule to all assistants on a module.</p>
-<p><strong>Handing a module over.</strong> The instruction file with its decisions log, the figure and solution scripts, and the workflow files together are the handover. A successor can ask the agent to explain how any week’s material was built and regenerate it.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/assessment-loop.png" class="img-fluid figure-img"></p>
+<figcaption>The assessment loop: three roles and one decision</figcaption>
+</figure>
+</div>
+<p>Each pass runs left to right; an unmet stopping rule sends the examiner’s report back to the setter.</p>
+<p><strong>The stopping rule.</strong> Set it before the first round. For example: stop when the candidate’s mark falls below 50, or after five rounds, or when the setter cannot propose a change that respects the constraints. The third condition matters because some assessments cannot be made robust in their current format, and a report that says so is a useful result.</p>
+<p><strong>Constraints on the setter.</strong> Without them the loop converges on an assessment that defeats the candidate and is worthless for students. State them as rules the setter must satisfy in every round:</p>
+<ul>
+<li>Every learning outcome assessed in the original is still assessed.</li>
+<li>The format, weighting, word limit and time allowance are unchanged unless you allow otherwise.</li>
+<li>A well-prepared student can complete it in the time given, using only what the module taught.</li>
+<li>No change relies on obscurity, trick wording or information students cannot reasonably obtain.</li>
+<li>Each change is logged with the criterion it targets.</li>
+</ul>
+<p>The changes left open by these constraints mostly tie the task to something the candidate does not have: work done in class, data the student collects, a position defended orally, or a judgement that must be justified against material specific to the module.</p>
+<p><strong>What the report contains.</strong> The original and final versions side by side, the change log, the mark by criterion in every round, the final attempt in full, and the setter’s own assessment of which constraints came under strain.</p>
+<p><strong>What you still do.</strong></p>
+<ul>
+<li><strong>Mark the final attempt yourself.</strong> The examiner is a language model, and chapter 7 documents how such marks are compressed towards the middle. Its marks steer the loop but are not evidence that the assessment is safe.</li>
+<li><strong>Judge validity.</strong> Read the final version as a student would. A harder assessment is not necessarily a better one.</li>
+<li><strong>Check the examiner once.</strong> Before trusting the loop, give the examiner two or three model answers you have written at known standards and see whether it ranks them correctly. Do not use real student scripts for this unless your university permits it (chapter 9).</li>
+</ul>
+<p><strong>Limits.</strong></p>
+<ul>
+<li>The candidate is not a student. It models a capable student using a current tool with little effort, which is the case the assessment has to withstand. It says nothing about how real students at different levels will perform.</li>
+<li>The result is specific to the tool and the date. Record both and rerun each year.</li>
+<li>A full run uses many times the computation of a single request. Start with a round limit of three.</li>
+<li>This system has not been run on a live module. Treat the files in <a href="../chapters/templates.html#tpl-h">template H</a> as a starting design.</li>
+</ul>
+<p><strong>Other uses of the same three roles.</strong> For an invigilated exam, where AI use is not the concern, the loop still helps with quality: the candidate reports ambiguous wording and questions it could not finish in the time, and the examiner reports where the marking scheme gave no guidance. The setter revises for clarity instead of robustness.</p>
+<p><strong>By field.</strong> For empirical coursework, give the candidate the dataset and let it run code. For a theory problem set, the examiner needs full worked solutions in addition to final answers. For essay-based modules, expect the examiner’s marks to be least reliable, and rely more on your own marking of the final attempt.</p>
 <blockquote class="blockquote">
-<p><strong>In Claude Code.</strong> A workflow file is a <a href="https://code.claude.com/docs/en/skills">skill</a>: a folder containing a <code>SKILL.md</code>, stored in <code>.claude/skills/&lt;name&gt;/</code> inside the module folder, or in <code>~/.claude/skills/&lt;name&gt;/</code> for personal use across modules. It runs when you type <code>/&lt;name&gt;</code>, or automatically when its description matches the task. Sharing is by committing <code>.claude/skills/</code> to the shared repository.</p>
-<p>The checker is a subagent definition in <code>.claude/agents/</code>. Skills follow the open Agent Skills standard, so the same files are usable in other tools that support it.</p>
+<p><strong>In Claude Code.</strong> The candidate and examiner are <a href="https://code.claude.com/docs/en/sub-agents">subagents</a>, each a file in <code>.claude/agents/</code> with its own instructions and tool list. Setting <code>omitClaudeMd: true</code> starts a subagent without the module instruction file, which the candidate needs. The main session plays the setter and runs the loop from a skill.</p>
+<p>A subagent in the same folder can still open files it is told not to. For a stricter test, copy the student-facing files to an empty folder outside the module and run the candidate there.</p>
 </blockquote>
 
 
@@ -707,13 +732,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/10-telling-students.html" class="pagination-link" aria-label="What to tell students">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">What to tell students</span></span>
+      <a href="../chapters/12-sharing-skills.html" class="pagination-link" aria-label="Sharing skills across a teaching team">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Sharing skills across a teaching team</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/12-agent-worked-example.html" class="pagination-link" aria-label="From assistant to agent: a worked example">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">From assistant to agent: a worked example</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/templates.html" class="pagination-link" aria-label="Templates">
+        <span class="nav-page-text">Templates</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

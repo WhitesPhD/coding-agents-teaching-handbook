@@ -19,8 +19,9 @@ book:
     - chapters/08-checking.qmd
     - chapters/09-data-copyright-policy.qmd
     - chapters/10-telling-students.qmd
-    - chapters/11-sharing-workflows.qmd
-    - chapters/12-agent-worked-example.qmd
+    - chapters/11-writing-skills.qmd
+    - chapters/12-sharing-skills.qmd
+    - chapters/13-agent-worked-example.qmd
     - chapters/templates.qmd
   sidebar:
     style: docked

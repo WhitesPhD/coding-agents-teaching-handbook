@@ -15,5 +15,5 @@ A coding agent is a language model that works inside a folder on your computer: 
 **Reading paths.**
 
 - New to coding agents: chapters 2 and 3, then whichever of 4 to 7 matches the task in front of you.
-- Already using one: chapters 5 to 8, and the [templates](templates.qmd).
+- Already using one: chapters 5 to 8 and 11, and the [templates](templates.qmd).
 - Module or programme lead: chapters 6, 7, 9 and 10.

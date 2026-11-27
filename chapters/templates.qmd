@@ -5,7 +5,7 @@ toc-title: "Templates"
 
 # Templates {.unnumbered}
 
-Eight starting points to copy and edit. A, C, E and F work with any tool. B and G are skills, stored as a `SKILL.md` file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change, except that B hands its checking step to the subagent in D. D defines a subagent with Claude Code's settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.
+Twelve starting points to copy and edit. A, C, E, F and L work with any tool. B, G and I are skills, stored as a `SKILL.md` file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change, except that B hands its checking step to the subagent in D. J and K are skills that also use Claude Code settings, such as `disable-model-invocation`, which other tools may not accept. D defines a subagent with Claude Code's settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.
 
 ### A. Module instruction file {#tpl-a}
 
@@ -48,7 +48,7 @@ One lecture is 100 minutes: at most 25 slides and two worked examples.
 2026-11-26  Dropped the Kalman filter lecture; replaced by a second GMM lab.
 ```
 
-### B. Problem-set workflow {#tpl-b}
+### B. Problem-set skill {#tpl-b}
 
 Save as `.claude/skills/problem-set/SKILL.md`, with the checker from [template D](#tpl-d) in `.claude/agents/`. Run with `/problem-set week05`.
 
@@ -160,7 +160,7 @@ marks are set by the teaching team. [State any use in feedback.]
 
 ### G. A written standard as a skill {#tpl-g}
 
-Save as `.claude/skills/lecture-style/SKILL.md`, with more pairs of examples in `examples.md` in the same folder (a placeholder version is in the repository's `templates/` folder). The rules shown are placeholders: replace them with your own (chapter 11).
+Save as `.claude/skills/lecture-style/SKILL.md`, with more pairs of examples in `examples.md` in the same folder (a placeholder version is in the repository's `templates/` folder). The rules shown are placeholders: replace them with your own (chapter 12).
 
 ```text
 ---
@@ -194,7 +194,7 @@ Finish with a count of findings per rule.
 
 ### H. Assessment loop: setter, candidate, examiner {#tpl-h}
 
-Three files for the system in chapter 12. Untested: run it first on a short problem set with a round limit of two.
+Three files for the system in chapter 13. Untested: run it first on a short problem set with a round limit of two.
 
 Save as `.claude/agents/candidate.md`:
 
@@ -275,4 +275,155 @@ constraints came under strain. State plainly if the format could not be
 made robust.
 
 Never edit the original assessment files. Work on copies.
+```
+
+### I. Skill skeleton {#tpl-i}
+
+The parts of a skill from chapter 11, to fill in. Save as `SKILL.md` in a folder named after the task: `.claude/skills/<name>/` in Claude Code.
+
+```text
+---
+name: task-name
+description: What the skill does and when to use it. Put the main use first, in the words a colleague would use to ask for it.
+---
+
+[One line stating the task. In Claude Code, $ARGUMENTS stands for what is
+typed after the skill's name, for example the week.]
+
+Inputs
+- [file or folder]: [what it is]
+- If an input is missing, stop and list what is missing. Do not supply it.
+
+Steps
+1. ...
+2. [a check from chapter 8, written as a step]
+3. ...
+
+Output
+- [files, and where they go]
+- A report: what was produced, what was verified and how, and anything
+  that could not be verified.
+
+Do not
+- [what the agent must not do]
+
+Supporting files, read only when needed
+- [rubric.md]: [when to read it]
+
+Owner: [name]. Last tested: [date], on [module].
+Changes:
+- [date] [what changed and why]
+```
+
+### J. Annual update {#tpl-j}
+
+The year-to-year update from chapter 4. Save as `.claude/skills/annual-update/SKILL.md`. Run with `/annual-update 2027-28`.
+
+```text
+---
+name: annual-update
+description: Prepare the module for a new academic year. Finds dated material, reruns figure and solution scripts on current data, and reports every change against last year. Use once a year before teaching starts.
+disable-model-invocation: true
+argument-hint: "[academic year, e.g. 2027-28]"
+---
+
+Prepare the module for the academic year $ARGUMENTS.
+
+1. Read CLAUDE.md, including the decisions log.
+2. List everything that has dated, with file and location: data ending in
+   an old year, superseded references, examples overtaken by events, dates
+   and deadlines in admin/. Change nothing yet.
+3. Wait for me to mark which items to update.
+4. If the folder is under version control, commit its current state first.
+5. Rerun every figure and solution script on current data. Record the
+   download date of each dataset next to it.
+6. Where a rerun changes a number in the notes, slides or solutions, take
+   the new number from the output and list the change.
+7. Make the other approved updates.
+8. Compile or run every changed file and fix any errors.
+9. Report: each change against last year's version, file by file; every
+   number that changed, old and new; anything you could not update.
+
+Never edit sources/. Do not change learning outcomes or assessment
+weightings: list any that look out of date for me to raise at module review.
+```
+
+### K. Notebook release {#tpl-k}
+
+The release checks from chapter 5, with the mechanical part in a script (chapter 11). Save as `.claude/skills/notebook-release/SKILL.md`, with the script `scripts/release.py` from the repository's `templates/` folder in the same skill folder. Mark solution cells with the tag `solution` in Jupyter. The script needs Jupyter installed in the module's environment. Run with `/notebook-release problem-sets/ps3/ps3.ipynb`.
+
+```text
+---
+name: notebook-release
+description: Check that a solution notebook runs from top to bottom and produce the student version without the solution cells. Use before releasing any notebook to students.
+disable-model-invocation: true
+argument-hint: "[path to the solution notebook]"
+allowed-tools: Bash(${CLAUDE_SKILL_DIR}/scripts/release.py *)
+---
+
+Release the notebook $ARGUMENTS.
+
+1. Check that the installed package versions match the pinned versions in
+   the module (requirements.txt or its equivalent in CLAUDE.md). Report any
+   difference and stop.
+2. Run ${CLAUDE_SKILL_DIR}/scripts/release.py on the notebook. The script
+   runs the notebook in a fresh kernel and stops at the first error. If it
+   ran, it writes NAME-student.ipynb next to it, without the cells tagged
+   "solution" and with all outputs cleared.
+3. If the run fails, report the cell and the error. Do not edit the
+   notebook to make it pass without telling me exactly what you changed.
+4. Read the student version. Check that every question still makes sense
+   without the removed cells, and that no answer survives in a markdown cell
+   or a comment.
+5. Report: whether the notebook ran and how long it took, which cells were
+   removed, and anything in the student version that needs my attention.
+
+Never release a student version from a notebook that did not run.
+```
+
+### L. Test cases for a skill {#tpl-l}
+
+The test file from chapter 11, filled in for template B. Save as `tests.md` in the skill's folder, and do not mention it in `SKILL.md`.
+
+```text
+# Test cases for the problem-set skill
+
+Not read in normal use: SKILL.md does not point to this file. Run each case
+in a fresh session after any edit to the skill and after each update to the
+tool or model, and record the result below.
+
+## Case 1: empirical questions with data
+Input: /problem-set week05, with lecture notes for week 5 and a dataset in data/.
+A correct output:
+- every number in solutions.tex appears in the output of solve.py
+- the checker ran, and its disagreements are listed (or it found none)
+- the report lists the stretch questions
+- no question reproduces or paraphrases an exercise from sources/
+
+## Case 2: derivations only
+Input: /problem-set week07, a week whose material is derivations with no data.
+A correct output:
+- each final expression is verified symbolically or numerically, and the
+  report says how
+- solve.py contains the verification, not an empty placeholder
+- the checker and report items from case 1
+
+## Case 3: missing input
+Input: /problem-set week11, with no lecture notes for week 11.
+A correct output:
+- the skill stops and lists what is missing; no files are written
+
+## Requests that should start the skill
+- "Write next week's problem set"
+- "I need exercises with solutions for week 6"
+
+## Requests that should not
+- "Mark these problem-set answers"
+- "Fix the typo in question 3 of ps5"
+
+## Results
+
+| Date | Tool and model | Case 1 | Case 2 | Case 3 | Trigger | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |
 ```
