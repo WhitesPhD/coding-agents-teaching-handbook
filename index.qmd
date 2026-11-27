@@ -2,9 +2,13 @@
 
 This handbook is for people who teach economics and want to use a coding agent to prepare and run a module. It covers lecture material, problem sets and code labs, assessment design, marking, checking and the rules that apply at UK universities, together with version control, reusable skills and automation.
 
+No programming is needed to follow it. Chapter 1 marks the level each chapter assumes, and chapters 2 to 11 are enough to start.
+
 The main text does not depend on a particular product. Notes headed *In Claude Code* give the specifics for that tool. Those notes, and the university policies cited, were checked on 26 and 27 November 2026 and will date.
 
 The [templates](chapters/templates.qmd) at the end of the handbook are also files in the `templates/` folder of the repository. None has been tested on a live module.
+
+Comments and corrections are welcome as issues on the [GitHub repository](https://github.com/WhitesPhD/coding-agents-teaching-handbook), in particular examples from theory, macroeconomics and applied modules.
 
 The handbook gives general guidance, not legal advice. Your own institution's policy takes precedence.
 
