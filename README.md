@@ -13,7 +13,7 @@ The main text is tool-agnostic. Notes headed *In Claude Code* give the specifics
   - `claude-code/.claude/` skills (with a bundled script and test cases), subagent definitions and a hook for Claude Code
   - `github-actions/` a workflow that compiles documents and runs notebooks on every change
   - `prompts/`, `student-ai-statement.md`, `assessment-stress-test.md`
-- `docs/` the rendered HTML book
+- `.github/workflows/publish.yml` renders the book and publishes it to GitHub Pages on every push to main
 
 ## Status
 
@@ -24,11 +24,11 @@ Tool details and university policies were checked on 26 November 2026. The templ
 Install [Quarto](https://quarto.org), then:
 
 ```
-quarto render            # HTML book in docs/
+quarto render            # HTML book in docs/, for a local preview
 quarto render --to pdf   # PDF (needs a LaTeX installation)
 ```
 
-To publish the HTML with GitHub Pages, set Pages to serve the `docs/` folder of the main branch.
+`docs/` is not committed. The published site is built by the workflow in `.github/workflows/publish.yml` on every push to main, with Pages set to deploy from GitHub Actions (Settings → Pages → Source). The workflow can also be started by hand from the Actions tab.
 
 ## Author
 
