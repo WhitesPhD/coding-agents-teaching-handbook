@@ -5,11 +5,11 @@ toc-title: "Templates"
 
 # Templates {.unnumbered}
 
-Eight starting points to copy and edit. B, D, G and H use Claude Code's file formats and are easily adapted; the others work with any tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.
+Eight starting points to copy and edit. A, C, E and F work with any tool. B and G are skills, stored as a `SKILL.md` file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change. D defines a subagent with Claude Code's settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the `templates/` folder of the repository.
 
 ### A. Module instruction file {#tpl-a}
 
-Save as `MODULE.md`, or as `CLAUDE.md` in Claude Code.
+Save as `MODULE.md`, or under the name your agent reads at the start of every session: `CLAUDE.md` in Claude Code, `AGENTS.md` in Codex, `GEMINI.md` in Gemini CLI.
 
 ```text
 # ECN000 Module Title

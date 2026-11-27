@@ -232,10 +232,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Eight starting points to copy and edit. B, D, G and H use Claude Code’s file formats and are easily adapted; the others work with any tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the <code>templates/</code> folder of the repository.</p>
+<p>Eight starting points to copy and edit. A, C, E and F work with any tool. B and G are skills, stored as a <code>SKILL.md</code> file, a format that Claude Code, Codex and Gemini CLI all read, so they should need little change. D defines a subagent with Claude Code’s settings, such as the list of tools it may use, and H combines a skill with two such subagents; both need rewriting for another tool. None has been tested on a live module, so run each on a small example first. Each is also a file in the <code>templates/</code> folder of the repository.</p>
 <section id="tpl-a" class="level3">
 <h3 class="anchored" data-anchor-id="tpl-a">A. Module instruction file</h3>
-<p>Save as <code>MODULE.md</code>, or as <code>CLAUDE.md</code> in Claude Code.</p>
+<p>Save as <code>MODULE.md</code>, or under the name your agent reads at the start of every session: <code>CLAUDE.md</code> in Claude Code, <code>AGENTS.md</code> in Codex, <code>GEMINI.md</code> in Gemini CLI.</p>
 <pre class="text"><code># ECN000 Module Title
 
 ## Module facts

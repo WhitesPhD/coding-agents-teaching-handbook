@@ -10,6 +10,8 @@ A coding agent works directly on the files in a folder, whereas a chat window wo
 | Continuity | Depends on what you re-supply or what the product remembers | Reads a standing instruction file at the start of every session |
 | Scale | One document at a time | A whole module, or a folder of scripts, in one task |
 
+**Products.** Anthropic, OpenAI and Google each offer a coding agent alongside their chat products: Claude Code, Codex and Gemini CLI. The chapters that follow apply to all three. The notes headed *In Claude Code* give the specifics for one of them, and the other two have equivalent settings under different names.
+
 **What this changes in practice.** You can ask for a problem set and its solutions, have the solutions executed, and get back the files with the numerical answers already checked. You can ask for the notation in ten weeks of slides to be made consistent. Neither is practical by copying and pasting.
 
 **What it does not change.** The model still makes confident mistakes: a sign error in a derivation, a reference that does not exist, a question that is harder than intended. Running code catches numerical errors but not a wrong economic argument; chapter 8 covers checking.
