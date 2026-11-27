@@ -15,7 +15,7 @@ Everything the agent produces is a draft until it has passed a check that does n
 | Inconsistent notation across weeks | Consistency pass against `MODULE.md` | Agent |
 | Wrong level, emphasis or tone | Your reading | You |
 
-**Fresh sessions.** A session that has just written a solution may simply confirm it when asked to check. A second session that sees only the question has not seen the first answer. Where the two disagree, at least one is wrong, and the disagreement is where to look first.
+**Fresh sessions.** A session that has just written a solution may confirm it when asked to check. A second session that sees only the question has not seen the first answer. Where the two disagree, at least one is wrong, and the disagreement is where to look first.
 
 **An independent reviewer for all material.** A second agent, not the one that wrote the material, should review every piece of it before the lecturer reads it, in three passes:
 

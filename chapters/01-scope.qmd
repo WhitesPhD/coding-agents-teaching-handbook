@@ -1,8 +1,17 @@
 # Scope and how to use this handbook
 
-This handbook is for colleagues who teach economics and want to use a coding agent to prepare and run a module. It covers lecture material, problem sets and code labs, assessment design, marking, checking, and the rules that apply.
+This handbook is for colleagues who teach economics and want to use a coding agent to prepare and run a module. It covers lecture material, problem sets and code labs, assessment design, marking, checking and the rules that apply, together with version control, reusable skills and automation.
 
-A coding agent is a language model that reads the files in a folder on your computer, writes new ones and runs code. Chapter 2 explains how that differs from a chat window. No programming is needed to follow the handbook, although chapter 6 is most useful for modules with a computational component.
+A coding agent is a language model that reads the files in a folder on your computer, writes new ones and runs code. Chapter 2 explains how that differs from a chat window. No programming is needed to follow the handbook, although chapter 6 is most useful for modules with a computational component. Chapter 4 assumes no knowledge of Git or GitHub.
+
+**Structure.**
+
+- Chapters 2 to 4 cover what a coding agent is, the module folder, and version control with GitHub.
+- Chapters 5 to 9 follow the work of a module through the year: lectures, problem sets, assessment design, marking and checking.
+- Chapters 10 and 11 cover student data, copyright and university policy, and what to tell students.
+- Chapters 12 and 13 turn tasks you repeat into skills and share them across a teaching team.
+- Chapter 14 covers checks and agents that run without you starting them, and chapter 15 builds a system in which the agent chooses its own next step.
+- The [templates](templates.qmd) are files to copy, each linked from the chapter it belongs to.
 
 **Tool.** The main text does not depend on a particular product. Where the mechanics matter, a short note headed *In Claude Code* gives the specifics. Those notes were checked against the Claude Code documentation on 26 and 27 November 2026 and will date faster than the rest.
 
@@ -14,6 +23,7 @@ A coding agent is a language model that reads the files in a folder on your comp
 
 **Reading paths.**
 
-- New to coding agents: chapters 2 to 4, then whichever of 5 to 8 matches the task in front of you.
+- New to coding agents: chapters 2 to 4, then whichever of 5 to 9 matches the task in front of you.
 - Already using one: chapters 6 to 9, 12 and 14, and the [templates](templates.qmd).
-- Module or programme lead: chapters 7, 8, 10 and 11.
+- Module or programme lead: chapters 7, 8, 10, 11 and 13.
+- Ready to automate: chapters 4, 14 and 15.

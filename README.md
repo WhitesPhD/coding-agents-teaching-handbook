@@ -1,6 +1,6 @@
 # Coding Agents for Teaching Economics
 
-A handbook for lecturers on using a coding agent to prepare and run a module: lecture material, problem sets, assessment design, marking, checking, and the rules that apply at UK universities.
+A handbook for lecturers on using a coding agent to prepare and run a module: lecture material, problem sets, assessment design, marking, checking and the rules that apply at UK universities, together with version control, reusable skills and automation.
 
 The main text is tool-agnostic. Notes headed *In Claude Code* give the specifics for that tool.
 

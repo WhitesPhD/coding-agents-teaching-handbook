@@ -1,6 +1,6 @@
 # Preface {.unnumbered}
 
-This handbook is for people who teach economics and want to use a coding agent to prepare and run a module. It covers lecture material, problem sets and code labs, assessment design, marking, checking, and the rules that apply at UK universities.
+This handbook is for people who teach economics and want to use a coding agent to prepare and run a module. It covers lecture material, problem sets and code labs, assessment design, marking, checking and the rules that apply at UK universities, together with version control, reusable skills and automation.
 
 The main text does not depend on a particular product. Notes headed *In Claude Code* give the specifics for that tool. Those notes, and the university policies cited, were checked on 26 and 27 November 2026 and will date.
 
