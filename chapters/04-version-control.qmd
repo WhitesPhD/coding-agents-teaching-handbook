@@ -33,6 +33,8 @@ An agent can change dozens of files in one task, so you need to see exactly what
 
 The `.gitignore` file keeps this material out automatically. The one in [template M](templates.qmd#tpl-m) excludes `assessment/`, the third-party subfolder of `sources/` and licensed data, so exam drafts need to be kept in whatever storage your university approves for them. A private repository is still held on GitHub's servers, so the question in chapter 10 about approved tools applies to GitHub as well as to the agent.
 
+The sections above are all you need at the start. The rest of the chapter can wait until committing changes has become routine.
+
 **Branches and pull requests.** A branch is a trial version of the module. Restructure weeks 3 and 4 on a branch, compare the result with the main version, and keep or discard it; the main version is untouched until you decide. A pull request proposes bringing a branch into the main version and shows its diff, which you, a co-lecturer or a teaching assistant can comment on line by line before it is accepted. The independent review in chapter 9 then leaves a written record of what was checked and by whom.
 
 > **In Claude Code.** The desktop app shows the agent's changes file by file and takes comments on individual lines, which the agent then acts on. It can also open a pull request from the session ([desktop](https://code.claude.com/docs/en/desktop)).

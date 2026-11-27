@@ -1,6 +1,6 @@
 # Automation
 
-Once a module is on GitHub (chapter 4), checks and agents can run without you starting them. They run on GitHub's or the provider's servers, so the rules in chapter 10 apply, and they draw on a paid allowance.
+Once a module is on GitHub (chapter 4), checks and agents can run without you starting them. They run on GitHub's or the provider's servers, so the rules in chapter 10 apply, and they draw on a paid allowance. The chapter is for readers who already keep a module on GitHub; nothing in chapters 2 to 11 depends on it.
 
 **Checks on every change.** GitHub Actions runs the steps in a workflow file, kept in the repository's `.github/workflows/` folder, whenever the repository changes. For a module, the useful steps are the ones on the release checklist in chapter 9 that a machine can do: compiling every LaTeX file, and running every notebook from top to bottom in a clean environment. A failure is reported against the change that caused it, so a broken notebook is found on the day it breaks. [Template O](templates.qmd#tpl-o) is a workflow for both checks. To start it, commit the file and push it to GitHub. From then on it runs on every push and pull request, each commit on GitHub shows a tick or a cross, and the Actions tab holds the log of every run.
 

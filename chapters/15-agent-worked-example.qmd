@@ -1,6 +1,6 @@
 # From assistant to agent: a worked example
 
-An assessment can be tested by three agents, one that sets it, one that sits it and one that marks it, in a cycle that repeats until a stopping rule set in advance is met. It is the only system in the handbook in which the software decides its own next step.
+An assessment can be tested by three agents, one that sets it, one that sits it and one that marks it, in a cycle that repeats until a stopping rule set in advance is met. It is the only system in the handbook in which the software decides its own next step, and it assumes you have used skills and subagents (chapter 12).
 
 **Assistant or agent.** In chapters 5 to 9 you set each task, approve the plan and fix the steps in advance. The work is therefore supervised. An agent in the stricter sense is given a goal and a stopping rule and chooses its own actions from what it observes. The stress test in chapter 7 is the manual version of this system.
 

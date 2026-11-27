@@ -4,14 +4,26 @@ This handbook is for colleagues who teach economics and want to use a coding age
 
 A coding agent is a language model that reads the files in a folder on your computer, writes new ones and runs code. Chapter 2 explains how that differs from a chat window. No programming is needed to follow the handbook, although chapter 6 is most useful for modules with a computational component. Chapter 4 assumes no knowledge of Git or GitHub.
 
-**Structure.**
+**Structure and level.** The level says how much experience a chapter assumes. A chapter marked *start here* needs nothing beyond the agent itself. *Once comfortable* assumes you have used an agent for some weeks, and an *advanced* chapter also needs a GitHub repository and some use of a terminal.
 
-- Chapters 2 to 4 cover what a coding agent is, the module folder, and version control with GitHub.
-- Chapters 5 to 9 follow the work of a module through the year: lectures, problem sets, assessment design, marking and checking.
-- Chapters 10 and 11 cover student data, copyright and university policy, and what to tell students.
-- Chapters 12 and 13 turn tasks you repeat into skills and share them across a teaching team.
-- Chapter 14 covers checks and agents that run without you starting them, and chapter 15 builds a system in which the agent chooses its own next step.
-- The [templates](templates.qmd) are files to copy, each linked from the chapter it belongs to.
+| Chapter | Topic | Level |
+| --- | --- | --- |
+| 2 | What a coding agent is | Start here |
+| 3 | Setting up a module folder | Start here |
+| 4 | Version control and GitHub | Start here, up to "Material to keep out"; the rest once comfortable |
+| 5 | Lecture material | Start here |
+| 6 | Problem sets, solutions and code labs | Start here |
+| 7 | Assessment design | Start here |
+| 8 | Marking and feedback | Start here |
+| 9 | Checking the output | Start here |
+| 10 | Student data, copyright and policy | Everyone |
+| 11 | What to tell students | Everyone |
+| 12 | Writing skills | Once comfortable |
+| 13 | Sharing skills across a teaching team | Once comfortable |
+| 14 | Automation | Advanced |
+| 15 | From assistant to agent: a worked example | Advanced |
+
+Chapters 2 to 11 are enough to use an agent well in teaching. Where they mention a later chapter, the later material is optional. The [templates](templates.qmd) are linked from the chapter each belongs to and carry the same level.
 
 **Tool.** The main text does not depend on a particular product. Where the mechanics matter, a short note headed *In Claude Code* gives the specifics. Those notes were checked against the Claude Code documentation on 26 and 27 November 2026 and will date faster than the rest.
 
@@ -19,11 +31,11 @@ A coding agent is a language model that reads the files in a folder on your comp
 
 **Policy.** Chapters 7, 8, 10 and 11 describe the position at UK universities in general. Your own institution's policy takes precedence, and several of the rules differ across universities.
 
-**Out of scope.** This is not a guide for students, and it does not cover research use. It does not compare products or discuss procurement.
+**Out of scope.** The handbook is not a guide for students, and it does not cover research use. It does not compare products or discuss procurement.
 
 **Reading paths.**
 
-- New to coding agents: chapters 2 to 4, then whichever of 5 to 9 matches the task in front of you.
+- New to coding agents: chapters 2 and 3 and the first part of chapter 4, then whichever of 5 to 9 matches the task in front of you.
 - Already using one: chapters 6 to 9, 12 and 14, and the [templates](templates.qmd).
 - Module or programme lead: chapters 7, 8, 10, 11 and 13.
 - Ready to automate: chapters 4, 14 and 15.

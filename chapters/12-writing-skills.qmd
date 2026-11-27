@@ -1,6 +1,6 @@
 # Writing skills
 
-A skill is a task you have done well once, written down so that the agent does it the same way every time. A tested skill can be reused for years and handed to a colleague.
+A skill is a task you have done well once, written down so that the agent does it the same way every time. A tested skill can be reused for years and handed to a colleague. The chapter assumes you have used an agent for some weeks and have tasks you repeat.
 
 **Where instructions go.**
 
