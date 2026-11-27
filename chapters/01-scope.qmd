@@ -4,7 +4,7 @@ This handbook is for colleagues who teach economics and want to use a coding age
 
 A coding agent is a language model that works inside a folder on your computer: it reads your files, writes new ones and runs code. Chapter 2 explains how that differs from a chat window. No programming is needed to follow the handbook, although chapter 5 is most useful for modules with a computational component.
 
-**Tool.** The main text does not depend on a particular product. Where the mechanics matter, a short note headed *In Claude Code* gives the specifics. Those notes were checked against the Claude Code documentation on 26 November 2026 and will date faster than the rest.
+**Tool.** The main text does not depend on a particular product. Where the mechanics matter, a short note headed *In Claude Code* gives the specifics. Those notes were checked against the Claude Code documentation on 26 and 27 November 2026 and will date faster than the rest.
 
 **Examples.** Most worked examples come from quantitative finance and econometrics. Each section also says how the same workflow applies to macroeconomics, applied economics and economic theory, where the material is more often derivations, models and essays than code.
 

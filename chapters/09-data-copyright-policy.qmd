@@ -24,6 +24,10 @@ Anonymising helps but does not settle the matter: an essay can identify its auth
 >
 > Session transcripts are also stored on your own machine, unencrypted, for 30 days by default, and transcripts of sessions started in the desktop app are kept with no age limit unless you set one. On a shared or unencrypted laptop, that is a further copy of anything you worked on.
 
+**Connectors.** A connector links the agent to another program or service, such as a cloud drive, a data provider or a statistical package (chapter 5). Anything the agent reads or sends through a connector falls under the same rules as the rest of this chapter, and a connector to an external service is one more place where student work or licensed data can end up. Before using a connector in a folder that holds student work or licensed material, check what it reads and sends, and to whom. Your university's approval of the agent may not cover the services its connectors reach.
+
+> **In Claude Code.** Connectors are [MCP servers](https://code.claude.com/docs/en/mcp). The documentation advises verifying that you trust each server before connecting it, because a server that fetches external content can expose the agent to prompt injection: instructions hidden in that content which the agent may follow. Even a connector that runs on your own computer, such as the MATLAB server, may send usage data to its developer.
+
 **Third-party teaching material.** Putting a textbook chapter or a publisher's test bank into a prompt is likely to count as copying for copyright purposes. Whether it is licensed depends on your university's agreements.
 
 - The Copyright Licensing Agency added permission for copying into generative AI prompts to its business licences in May 2025. For the Higher Education licence, publishers were [consulted in summer 2026](https://www.alpsp.org/news-publications/industry-news/pls-consultation-on-workplace-generative-ai-permissions-in-cla-education-and-higher-education-licences/) on adding equivalent permissions. Whether these are now in force was not confirmed at the time of writing, so ask your library.
